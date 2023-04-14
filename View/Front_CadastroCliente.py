@@ -48,7 +48,7 @@ class J_FrmCadastroCliente(QMainWindow):
             QtCore.Qt.WindowSystemMenuHint  # Exibe um menu de sistema para a janela
         )
 
-        # Exibe a imagem padrão caso não tenhauma imagem "Foto"
+        # Exibe a imagem padrão caso não tenhauma imagem "Foto do cliente"
         pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\user.png')
         self.ui.imagemcamera_label.setPixmap(pixmap)
 
