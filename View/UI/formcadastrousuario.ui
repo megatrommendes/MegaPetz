@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormCadastroUsuario</class>
+ <widget class="QWidget" name="FormCadastroUsuario">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>190</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastra Usuário</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(21, 143, 157);</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>281</width>
+     <height>170</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 202, 206);
+border-radius:5px</string>
+   </property>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>9</y>
+      <width>43</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Usuário</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_conf_senha">
+    <property name="geometry">
+     <rect>
+      <x>84</x>
+      <y>107</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>89</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Confirmar a Senha&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_cad_usuario">
+    <property name="geometry">
+     <rect>
+      <x>84</x>
+      <y>27</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>49</y>
+      <width>36</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Senha</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cad_usu_cadastrar">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>137</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cadastrar</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icones/icons8-add-25.png</normaloff>icones/icons8-add-25.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_cad_senha">
+    <property name="geometry">
+     <rect>
+      <x>84</x>
+      <y>67</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cad_usu_sair">
+    <property name="geometry">
+     <rect>
+      <x>183</x>
+      <y>137</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Sair</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icones/icons-sinal-de-saída-25.png</normaloff>icones/icons-sinal-de-saída-25.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>13</y>
+      <width>61</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>imagens/icon_title.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>txt_cad_usuario</tabstop>
+  <tabstop>txt_cad_senha</tabstop>
+  <tabstop>txt_conf_senha</tabstop>
+  <tabstop>btn_cad_usu_cadastrar</tabstop>
+  <tabstop>btn_cad_usu_sair</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

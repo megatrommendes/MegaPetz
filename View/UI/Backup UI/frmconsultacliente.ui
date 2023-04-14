@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrmConsultaCliente</class>
+ <widget class="QWidget" name="FrmConsultaCliente">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>470</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Consulta Cliente</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../imagens/icon-cachorro-marrom-30.png</normaloff>../../imagens/icon-cachorro-marrom-30.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>450</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 202, 206);
+border-radius:5px</string>
+   </property>
+   <widget class="QPushButton" name="btn_cli_Consultar">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>98</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>ok</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cli_sair">
+    <property name="geometry">
+     <rect>
+      <x>228</x>
+      <y>98</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Sair</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../imagens/icons-sinal-saída.png</normaloff>../../imagens/icons-sinal-saída.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cons_cli_txt_nome">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>63</y>
+      <width>330</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="maxLength">
+     <number>60</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>9</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>RG / CPF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>49</y>
+      <width>100</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Pesquisa por Nome</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>13</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../imagens/user.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_lista_usuarios">
+    <property name="geometry">
+     <rect>
+      <x>167</x>
+      <y>24</y>
+      <width>224</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>168</x>
+      <y>10</y>
+      <width>100</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Lista de Clientes</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>24</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="inputMask">
+     <string>99999999999999</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>comboBox_lista_usuarios</tabstop>
+  <tabstop>cons_cli_txt_nome</tabstop>
+  <tabstop>btn_cli_Consultar</tabstop>
+  <tabstop>btn_cli_sair</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_cli_sair</sender>
+   <signal>clicked()</signal>
+   <receiver>FrmConsultaCliente</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>234</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

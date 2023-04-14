@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormCadastroAcesso</class>
+ <widget class="QWidget" name="FormCadastroAcesso">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>271</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastra Acesso</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../imagens/icon-cachorro-marrom-30.png</normaloff>../../imagens/icon-cachorro-marrom-30.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(21, 143, 157);</string>
+  </property>
+  <widget class="QTableWidget" name="lista">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>10</y>
+     <width>401</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 202, 206);
+border-radius:5px</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="showDropIndicator" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::NoPen</enum>
+   </property>
+   <column>
+    <property name="text">
+     <string>Acesso</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Liberar</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>344</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 202, 206);
+border-radius:5px</string>
+   </property>
+   <widget class="QLineEdit" name="txt_cad_usuario">
+    <property name="geometry">
+     <rect>
+      <x>62</x>
+      <y>63</y>
+      <width>224</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>63</x>
+      <y>6</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Funcionário</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_lista_usuarios">
+    <property name="geometry">
+     <rect>
+      <x>62</x>
+      <y>22</y>
+      <width>224</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>63</x>
+      <y>47</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pesquisa Nome</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>11</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../imagens/user.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>127</y>
+     <width>344</width>
+     <height>76</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 202, 206);
+border-radius:5px</string>
+   </property>
+   <widget class="QCheckBox" name="cad_ace_checkBox_admim">
+    <property name="geometry">
+     <rect>
+      <x>63</x>
+      <y>8</y>
+      <width>263</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Permitir como administrador / acesso total</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cad_ace_checkBox_usuario">
+    <property name="geometry">
+     <rect>
+      <x>63</x>
+      <y>29</y>
+      <width>263</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Permitir como usuário / acesso parcial</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cad_ace_checkBox_manual">
+    <property name="geometry">
+     <rect>
+      <x>63</x>
+      <y>50</y>
+      <width>263</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Permitir seleionar / esolher acesso </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../imagens/icons-ok.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>344</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 202, 206);
+border-radius:5px</string>
+   </property>
+   <widget class="QPushButton" name="btn_cad_acesso_sair">
+    <property name="geometry">
+     <rect>
+      <x>175</x>
+      <y>11</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Sair</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../imagens/icons-sinal-saída.png</normaloff>../../imagens/icons-sinal-saída.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cad_acesso">
+    <property name="geometry">
+     <rect>
+      <x>77</x>
+      <y>11</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+    </property>
+   </widget>
+  </widget>
+  <zorder>widget</zorder>
+  <zorder>lista</zorder>
+  <zorder>widget_2</zorder>
+  <zorder>widget_3</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>comboBox_lista_usuarios</tabstop>
+  <tabstop>txt_cad_usuario</tabstop>
+  <tabstop>cad_ace_checkBox_admim</tabstop>
+  <tabstop>cad_ace_checkBox_usuario</tabstop>
+  <tabstop>cad_ace_checkBox_manual</tabstop>
+  <tabstop>lista</tabstop>
+  <tabstop>btn_cad_acesso</tabstop>
+  <tabstop>btn_cad_acesso_sair</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_cad_acesso_sair</sender>
+   <signal>clicked()</signal>
+   <receiver>FormCadastroAcesso</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>160</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

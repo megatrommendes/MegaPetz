@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrmCadastroCliente</class>
+ <widget class="QMainWindow" name="FrmCadastroCliente">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>952</width>
+    <height>465</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>49</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>490</width>
+    <height>282</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>490</width>
+    <height>282</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>490</width>
+    <height>282</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastra Cliente</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>imagens/icon-cachorro-marrom-30.png</normaloff>imagens/icon-cachorro-marrom-30.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 47);</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>11</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>CPF</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>312</x>
+      <y>215</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Bairro</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>215</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Cidade</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>312</x>
+      <y>317</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Observações</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_fone_alternativo">
+    <property name="geometry">
+     <rect>
+      <x>471</x>
+      <y>286</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>14</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="cad_cli_txt_observacao">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>337</y>
+      <width>631</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>471</x>
+      <y>266</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Tel. Alternativo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_end0">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>133</y>
+      <width>530</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="maxLength">
+     <number>62</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_nome0">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>82</y>
+      <width>530</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="maxLength">
+     <number>62</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>164</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Estado</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_end_numero0">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>133</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>5</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cli_cadastrar">
+    <property name="geometry">
+     <rect>
+      <x>502</x>
+      <y>430</y>
+      <width>120</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>266</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Nome do Contato</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_UF">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>184</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>AC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>AL</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>AP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>AM</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DF</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ES</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>GO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MG</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PI</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RJ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RN</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>TO</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>312</x>
+      <y>266</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Tel. Preferêncial</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_cepC">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>82</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>9</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_contato_alternativo">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>286</y>
+      <width>310</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="maxLength">
+     <number>60</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cli_sair">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>430</y>
+      <width>120</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Sair</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../imagens/icons-sinal-saída.png</normaloff>../../imagens/icons-sinal-saída.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_data_nasc0D">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>31</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="inputMask">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_bairro0">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>235</y>
+      <width>310</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="maxLength">
+     <number>40</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_fone_preferencial0">
+    <property name="geometry">
+     <rect>
+      <x>312</x>
+      <y>286</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>14</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_doc01">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>31</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="inputMask">
+     <string notr="true"/>
+    </property>
+    <property name="maxLength">
+     <number>14</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="cursorMoveStyle">
+     <enum>Qt::LogicalMoveStyle</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>62</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>CEP</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_cidade0">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>235</y>
+      <width>310</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="maxLength">
+     <number>40</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cad_cli_data_cadastro">
+    <property name="geometry">
+     <rect>
+      <x>777</x>
+      <y>11</y>
+      <width>165</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>113</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Número</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>164</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Complemento</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_abre_formcapturaimagem">
+    <property name="geometry">
+     <rect>
+      <x>93</x>
+      <y>243</y>
+      <width>120</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:5px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:5px
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Foto</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../imagens/icons8-câmera-24.png</normaloff>../../imagens/icons8-câmera-24.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cad_cli_txt_complemento">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>184</y>
+      <width>530</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="maxLength">
+     <number>62</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imagemcamera_label">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>16</y>
+      <width>278</width>
+      <height>209</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>500</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>113</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Endereço</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>62</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Nome</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>11</y>
+      <width>150</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Data. Nascimento</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fotoimagemcamera_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>11</y>
+      <width>290</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>500</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(21, 143, 157);
+border-radius:5px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>fotoimagemcamera_2</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_15</zorder>
+   <zorder>cad_cli_txt_fone_alternativo</zorder>
+   <zorder>cad_cli_txt_observacao</zorder>
+   <zorder>label_12</zorder>
+   <zorder>cad_cli_txt_end0</zorder>
+   <zorder>cad_cli_txt_nome0</zorder>
+   <zorder>label_8</zorder>
+   <zorder>cad_cli_txt_end_numero0</zorder>
+   <zorder>btn_cli_cadastrar</zorder>
+   <zorder>label_16</zorder>
+   <zorder>comboBox_UF</zorder>
+   <zorder>label_11</zorder>
+   <zorder>cad_cli_txt_cepC</zorder>
+   <zorder>cad_cli_txt_contato_alternativo</zorder>
+   <zorder>btn_cli_sair</zorder>
+   <zorder>cad_cli_txt_data_nasc0D</zorder>
+   <zorder>cad_cli_txt_bairro0</zorder>
+   <zorder>cad_cli_txt_fone_preferencial0</zorder>
+   <zorder>cad_cli_txt_doc01</zorder>
+   <zorder>label_9</zorder>
+   <zorder>cad_cli_txt_cidade0</zorder>
+   <zorder>cad_cli_data_cadastro</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_3</zorder>
+   <zorder>btn_abre_formcapturaimagem</zorder>
+   <zorder>cad_cli_txt_complemento</zorder>
+   <zorder>imagemcamera_label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label</zorder>
+   <zorder>label_14</zorder>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>cad_cli_txt_doc01</tabstop>
+  <tabstop>cad_cli_txt_data_nasc0D</tabstop>
+  <tabstop>cad_cli_txt_nome0</tabstop>
+  <tabstop>cad_cli_txt_cepC</tabstop>
+  <tabstop>cad_cli_txt_end0</tabstop>
+  <tabstop>cad_cli_txt_end_numero0</tabstop>
+  <tabstop>cad_cli_txt_complemento</tabstop>
+  <tabstop>comboBox_UF</tabstop>
+  <tabstop>cad_cli_txt_bairro0</tabstop>
+  <tabstop>cad_cli_txt_cidade0</tabstop>
+  <tabstop>cad_cli_txt_fone_preferencial0</tabstop>
+  <tabstop>cad_cli_txt_fone_alternativo</tabstop>
+  <tabstop>cad_cli_txt_contato_alternativo</tabstop>
+  <tabstop>cad_cli_txt_observacao</tabstop>
+  <tabstop>btn_cli_cadastrar</tabstop>
+  <tabstop>btn_cli_sair</tabstop>
+  <tabstop>btn_abre_formcapturaimagem</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

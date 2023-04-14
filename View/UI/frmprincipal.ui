@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrmPrincipal</class>
+ <widget class="QMainWindow" name="FrmPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>782</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Bem Limpinho</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(21, 143, 157);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>761</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>451</width>
+      <height>371</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(156, 202, 206);
+border-radius:5px</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>782</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <widget class="QMenu" name="menuCadastro">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Cadastro</string>
+    </property>
+    <widget class="QMenu" name="menuUsu_rio">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Usuário</string>
+     </property>
+     <addaction name="actionCadastra_Usu_rio"/>
+     <addaction name="actionAltera_Senha"/>
+     <addaction name="actionControle_de_Acesso"/>
+    </widget>
+    <widget class="QMenu" name="menuCliente">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Cliente</string>
+     </property>
+     <addaction name="actionCadasta_Cliente"/>
+     <addaction name="actionAltera_Cliente"/>
+     <addaction name="actionConsulta_Cliente"/>
+     <addaction name="actionExclui_Cliente"/>
+    </widget>
+    <widget class="QMenu" name="menuMascote">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Mascote</string>
+     </property>
+     <addaction name="actionCadastro_Mascote"/>
+     <addaction name="actionAltera_Mascote"/>
+     <addaction name="actionConsulta_Mascote"/>
+     <addaction name="actionExclui_Mascote"/>
+    </widget>
+    <addaction name="menuCliente"/>
+    <addaction name="menuMascote"/>
+    <addaction name="separator"/>
+    <addaction name="actionProduto"/>
+    <addaction name="actionServi_o"/>
+    <addaction name="separator"/>
+    <addaction name="actionAgenda"/>
+    <addaction name="menuUsu_rio"/>
+   </widget>
+   <widget class="QMenu" name="menuRelat_rio">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Relatório</string>
+    </property>
+    <addaction name="actionUsu_rios"/>
+   </widget>
+   <widget class="QMenu" name="menuSair">
+    <property name="title">
+     <string>Sair</string>
+    </property>
+    <addaction name="actionFinalizar_Aplicativo"/>
+   </widget>
+   <addaction name="menuCadastro"/>
+   <addaction name="menuRelat_rio"/>
+   <addaction name="menuSair"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
+  <action name="actionProduto">
+   <property name="text">
+    <string>Produto</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionServi_o">
+   <property name="text">
+    <string>Serviço</string>
+   </property>
+  </action>
+  <action name="actionAgenda">
+   <property name="text">
+    <string>Agenda</string>
+   </property>
+  </action>
+  <action name="actionUsu_rios">
+   <property name="text">
+    <string>Exibe Usuários</string>
+   </property>
+  </action>
+  <action name="actionCadastra_Usu_rio">
+   <property name="text">
+    <string>Cadastra Usuário</string>
+   </property>
+  </action>
+  <action name="actionAltera_Senha">
+   <property name="text">
+    <string>Altera Senha</string>
+   </property>
+  </action>
+  <action name="actionControle_de_Acesso">
+   <property name="text">
+    <string>Cadastro de Acesso</string>
+   </property>
+  </action>
+  <action name="actionCadasta_Cliente">
+   <property name="text">
+    <string>Cadasta Cliente</string>
+   </property>
+  </action>
+  <action name="actionAltera_Cliente">
+   <property name="text">
+    <string>Altera Cliente</string>
+   </property>
+  </action>
+  <action name="actionConsulta_Cliente">
+   <property name="text">
+    <string>Consulta Cliente</string>
+   </property>
+  </action>
+  <action name="actionCadastro_Mascote">
+   <property name="text">
+    <string>Cadastro Mascote</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionAltera_Mascote">
+   <property name="text">
+    <string>Altera Mascote</string>
+   </property>
+  </action>
+  <action name="actionConsulta_Mascote">
+   <property name="text">
+    <string>Consulta Mascote</string>
+   </property>
+  </action>
+  <action name="actionExclui_Cliente">
+   <property name="text">
+    <string>Exclui Cliente</string>
+   </property>
+  </action>
+  <action name="actionExclui_Mascote">
+   <property name="text">
+    <string>Exclui Mascote</string>
+   </property>
+  </action>
+  <action name="actionFinalizar_Aplicativo">
+   <property name="text">
+    <string>Finalizar Aplicativo</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
