@@ -2,7 +2,7 @@ import re
 from datetime import datetime
 from PyQt5.QtGui import QFocusEvent
 from PyQt5.QtWidgets import QLineEdit, QComboBox, QPlainTextEdit, QLabel
-from PyQt5.QtCore import Qt, QObject, QEvent
+from PyQt5.QtCore import Qt, QObject
 from PyQt5 import QtWidgets, QtCore
 import requests
 
