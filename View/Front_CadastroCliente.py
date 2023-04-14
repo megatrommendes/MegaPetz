@@ -1,12 +1,10 @@
 import sys
-from PyQt5.QtCore import Qt, QObject
-from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit
-from Model.DAO.FuncoesDAO import consulta_cep, Cancela_Tab, so_numero, valida_campo, \
-    formatar_data, formata_cep, formata_telefone, formata_cpf, cor_foco
-from Controller.ClienteCTR import ClienteCTR
-from datetime import datetime
-from View.FrmCadastroCliente import Ui_FrmCadastroCliente
 from PyQt5 import QtCore
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit
+from Model.DAO.FuncoesDAO import consulta_cep, Cancela_Tab, so_numero, valida_campo, formatar_data, formata_cep, \
+    formata_telefone, formata_cpf, cor_foco
+from View.FrmCadastroCliente import Ui_FrmCadastroCliente
 from PyQt5.QtGui import QPixmap
 
 
