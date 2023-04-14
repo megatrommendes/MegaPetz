@@ -55,7 +55,7 @@ class J_FrmCadastroCliente(QMainWindow):
         # Centraliza a imagem
         self.ui.imagemcamera_label.setAlignment(QtCore.Qt.AlignCenter)
 
-        # Definida a janela com o tamanho atual e cancela o redimencionamento da janela
+        # Definida a janela com o tamanho atual e cancela o redimencionamento da janela atual
         self.setFixedSize(self.size())
 
         index = self.ui.comboBox_UF.findText("SP", Qt.MatchStartsWith)
