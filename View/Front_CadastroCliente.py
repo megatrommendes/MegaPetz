@@ -58,6 +58,7 @@ class J_FrmCadastroCliente(QMainWindow):
         # Definida a janela com o tamanho atual e cancela o redimencionamento da janela atual
         self.setFixedSize(self.size())
 
+        # Inicializa o formulário com o campo UF sempre com a sigla SP
         index = self.ui.comboBox_UF.findText("SP", Qt.MatchStartsWith)
         if index != -1:
             self.ui.comboBox_UF.setCurrentIndex(index)
