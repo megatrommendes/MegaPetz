@@ -49,7 +49,7 @@ class J_FrmCadastroCliente(QMainWindow):
         )
 
         # Exibe a imagem padrão caso não tenhauma imagem "Foto"
-        pixmap = QPixmap('C:\\BemLimpinho\\imagens\\imagem_icones\\user.png')
+        pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\user.png')
         self.ui.imagemcamera_label.setPixmap(pixmap)
 
         # Centraliza a imagem
