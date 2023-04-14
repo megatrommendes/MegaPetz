@@ -68,7 +68,7 @@
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="4" column="0">
-      <widget class="QLabel" name="label_endereco">
+      <widget class="QLabel" name="cad_cli_txt_end02_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -114,7 +114,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="10" column="1">
-      <widget class="QLabel" name="label_tel_alt">
+      <widget class="QLabel" name="cad_cli_txt_fone_alternativo_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -164,7 +164,7 @@ border-radius:0px</string>
       </spacer>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label_nome">
+      <widget class="QLabel" name="cad_cli_txt_nome02_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -187,7 +187,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QLabel" name="label_complemento">
+      <widget class="QLabel" name="cad_cli_txt_complemento_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -230,7 +230,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="label_cpf">
+      <widget class="QLabel" name="cad_cli_txt_doc01_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -253,7 +253,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="8" column="3">
-      <widget class="QLabel" name="label_cidade">
+      <widget class="QLabel" name="cad_cli_txt_cidade02_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -276,7 +276,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="8" column="0">
-      <widget class="QLabel" name="label_bairro">
+      <widget class="QLabel" name="cad_cli_txt_bairro02_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -325,7 +325,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="4" column="5">
-      <widget class="QLabel" name="label_numero">
+      <widget class="QLabel" name="cad_cli_txt_end_numero02_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -348,7 +348,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="2" column="5">
-      <widget class="QLabel" name="label_cep">
+      <widget class="QLabel" name="cad_cli_txt_cepC_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -371,7 +371,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label_data_nascimento">
+      <widget class="QLabel" name="cad_cli_txt_data_nasc0D_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -572,7 +572,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="6" column="5">
-      <widget class="QLabel" name="label_uf">
+      <widget class="QLabel" name="comboBox_UF_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -715,7 +715,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="10" column="0">
-      <widget class="QLabel" name="label_tel_pre">
+      <widget class="QLabel" name="cad_cli_txt_fone_preferencial02_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -738,7 +738,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="12" column="0">
-      <widget class="QLabel" name="label_observacao">
+      <widget class="QLabel" name="cad_cli_txt_observacao_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -807,7 +807,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="10" column="3">
-      <widget class="QLabel" name="label_contato">
+      <widget class="QLabel" name="cad_cli_txt_contato_alternativo_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>

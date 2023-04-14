@@ -1,7 +1,7 @@
 import sys
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit
+from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel, QWidget
 from Model.DAO.FuncoesDAO import consulta_cep, Cancela_Tab, so_numero, valida_campo, formatar_data, formata_cep, \
     formata_telefone, formata_cpf, cor_foco
 from View.FrmCadastroCliente import Ui_FrmCadastroCliente
@@ -63,15 +63,16 @@ class J_FrmCadastroCliente(QMainWindow):
         if index != -1:
             self.ui.comboBox_UF.setCurrentIndex(index)
 
-        # loop pelos objetos no formulário e aplica um filtro de evento em cada um deles,
-        # que irá monitorar quando esses objetos receberem ou perderem o foco.
         for obj in self.findChildren((QLineEdit, QComboBox, QPlainTextEdit)):
+            # Encontra o QLabel correspondente ao QLineEdit
+            label_name = obj.objectName() + '_label'
+            label = obj.parent().findChild(QLabel, label_name)
             # Instala um filtro de eventos nos objetos
             obj.installEventFilter(self)
             # Define a função lambda para o evento focusIn
-            obj.focusInEvent = lambda event, obj=obj: cor_foco(obj, event)
+            obj.focusInEvent = lambda event, obj=obj, label=label: cor_foco(obj, label, event)
             # Define a função lambda para o evento focusOut
-            obj.focusOutEvent = lambda event, obj=obj: cor_foco(obj, event)
+            obj.focusOutEvent = lambda event, obj=obj, label=label: cor_foco(obj, label, event)
 
     @QtCore.pyqtSlot()
     def abre_capturaimagemcliente(self):
