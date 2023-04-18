@@ -68,7 +68,7 @@
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="4" column="0">
-      <widget class="QLabel" name="cad_cli_txt_end02_label">
+      <widget class="QLabel" name="cad_cli_05_ob_end_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -91,7 +91,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="11" column="0">
-      <widget class="QLineEdit" name="cad_cli_txt_fone_preferencial02">
+      <widget class="QLineEdit" name="cad_cli_11_ob_fone_pref">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -114,7 +114,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="10" column="1">
-      <widget class="QLabel" name="cad_cli_txt_fone_alternativo_label">
+      <widget class="QLabel" name="cad_cli_12_fone_alt_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -137,7 +137,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="13" column="0" colspan="6">
-      <widget class="QPlainTextEdit" name="cad_cli_txt_observacao">
+      <widget class="QPlainTextEdit" name="cad_cli_14_obs">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -164,7 +164,7 @@ border-radius:0px</string>
       </spacer>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="cad_cli_txt_nome02_label">
+      <widget class="QLabel" name="cad_cli_03_ob_nome_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -187,7 +187,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QLabel" name="cad_cli_txt_complemento_label">
+      <widget class="QLabel" name="cad_cli_07_complemento_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -210,7 +210,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="9" column="3" colspan="3">
-      <widget class="QLineEdit" name="cad_cli_txt_cidade02">
+      <widget class="QLineEdit" name="cad_cli_10_ob_cidade">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -230,7 +230,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="cad_cli_txt_doc01_label">
+      <widget class="QLabel" name="cad_cli_01_ob_doc_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -253,7 +253,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="8" column="3">
-      <widget class="QLabel" name="cad_cli_txt_cidade02_label">
+      <widget class="QLabel" name="cad_cli_10_ob_cidade_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -276,7 +276,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="8" column="0">
-      <widget class="QLabel" name="cad_cli_txt_bairro02_label">
+      <widget class="QLabel" name="cad_cli_09_ob_bairro_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -299,7 +299,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="cad_cli_txt_data_nasc0D">
+      <widget class="QLineEdit" name="cad_cli_02_ob_nasc">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -325,7 +325,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="4" column="5">
-      <widget class="QLabel" name="cad_cli_txt_end_numero02_label">
+      <widget class="QLabel" name="cad_cli_06_ob_num_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -348,7 +348,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="2" column="5">
-      <widget class="QLabel" name="cad_cli_txt_cepC_label">
+      <widget class="QLabel" name="cad_cli_04_ob_cep_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -371,7 +371,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="cad_cli_txt_data_nasc0D_label">
+      <widget class="QLabel" name="cad_cli_02_ob_nasc_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -391,7 +391,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="7" column="5">
-      <widget class="QComboBox" name="comboBox_UF">
+      <widget class="QComboBox" name="cad_cli_08_UF">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -540,7 +540,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLineEdit" name="cad_cli_txt_doc01">
+      <widget class="QLineEdit" name="cad_cli_01_ob_doc">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -572,7 +572,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="6" column="5">
-      <widget class="QLabel" name="comboBox_UF_label">
+      <widget class="QLabel" name="cad_cli_08_UF_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -595,7 +595,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="3" column="0" colspan="5">
-      <widget class="QLineEdit" name="cad_cli_txt_nome02">
+      <widget class="QLineEdit" name="cad_cli_03_ob_nome">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -615,7 +615,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="5" column="0" colspan="5">
-      <widget class="QLineEdit" name="cad_cli_txt_end02">
+      <widget class="QLineEdit" name="cad_cli_05_ob_end">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -698,7 +698,7 @@ border-radius:0px
       </widget>
      </item>
      <item row="9" column="0" colspan="2">
-      <widget class="QLineEdit" name="cad_cli_txt_bairro02">
+      <widget class="QLineEdit" name="cad_cli_09_ob_bairro">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -715,7 +715,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="10" column="0">
-      <widget class="QLabel" name="cad_cli_txt_fone_preferencial02_label">
+      <widget class="QLabel" name="cad_cli_11_ob_fone_pref_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -738,7 +738,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="12" column="0">
-      <widget class="QLabel" name="cad_cli_txt_observacao_label">
+      <widget class="QLabel" name="cad_cli_14_obs_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -761,7 +761,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="11" column="3" colspan="3">
-      <widget class="QLineEdit" name="cad_cli_txt_contato_alternativo">
+      <widget class="QLineEdit" name="cad_cli_13_contato">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -781,7 +781,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="11" column="1">
-      <widget class="QLineEdit" name="cad_cli_txt_fone_alternativo">
+      <widget class="QLineEdit" name="cad_cli_12_fone_alt">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -807,7 +807,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="10" column="3">
-      <widget class="QLabel" name="cad_cli_txt_contato_alternativo_label">
+      <widget class="QLabel" name="cad_cli_13_contato_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -830,7 +830,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="7" column="0" colspan="5">
-      <widget class="QLineEdit" name="cad_cli_txt_complemento">
+      <widget class="QLineEdit" name="cad_cli_07_complemento">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -847,7 +847,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="5" column="5">
-      <widget class="QLineEdit" name="cad_cli_txt_end_numero02">
+      <widget class="QLineEdit" name="cad_cli_06_ob_num">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -870,7 +870,7 @@ border-radius:0px</string>
       </widget>
      </item>
      <item row="3" column="5">
-      <widget class="QLineEdit" name="cad_cli_txt_cepC">
+      <widget class="QLineEdit" name="cad_cli_04_ob_cep">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -966,20 +966,20 @@ border-radius:0px</string>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>cad_cli_txt_doc01</tabstop>
-  <tabstop>cad_cli_txt_data_nasc0D</tabstop>
-  <tabstop>cad_cli_txt_nome02</tabstop>
-  <tabstop>cad_cli_txt_cepC</tabstop>
-  <tabstop>cad_cli_txt_end02</tabstop>
-  <tabstop>cad_cli_txt_end_numero02</tabstop>
-  <tabstop>cad_cli_txt_complemento</tabstop>
-  <tabstop>comboBox_UF</tabstop>
-  <tabstop>cad_cli_txt_bairro02</tabstop>
-  <tabstop>cad_cli_txt_cidade02</tabstop>
-  <tabstop>cad_cli_txt_fone_preferencial02</tabstop>
-  <tabstop>cad_cli_txt_fone_alternativo</tabstop>
-  <tabstop>cad_cli_txt_contato_alternativo</tabstop>
-  <tabstop>cad_cli_txt_observacao</tabstop>
+  <tabstop>cad_cli_01_ob_doc</tabstop>
+  <tabstop>cad_cli_02_ob_nasc</tabstop>
+  <tabstop>cad_cli_03_ob_nome</tabstop>
+  <tabstop>cad_cli_04_ob_cep</tabstop>
+  <tabstop>cad_cli_05_ob_end</tabstop>
+  <tabstop>cad_cli_06_ob_num</tabstop>
+  <tabstop>cad_cli_07_complemento</tabstop>
+  <tabstop>cad_cli_08_UF</tabstop>
+  <tabstop>cad_cli_09_ob_bairro</tabstop>
+  <tabstop>cad_cli_10_ob_cidade</tabstop>
+  <tabstop>cad_cli_11_ob_fone_pref</tabstop>
+  <tabstop>cad_cli_12_fone_alt</tabstop>
+  <tabstop>cad_cli_13_contato</tabstop>
+  <tabstop>cad_cli_14_obs</tabstop>
   <tabstop>btn_cli_cadastrar</tabstop>
   <tabstop>btn_cli_sair</tabstop>
   <tabstop>btn_abre_formcapturaimagem</tabstop>

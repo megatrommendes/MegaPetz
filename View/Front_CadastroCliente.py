@@ -1,11 +1,21 @@
 import sys
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel, QWidget
-from Model.DAO.FuncoesDAO import consulta_cep, Cancela_Tab, so_numero, valida_campo, formatar_data, formata_cep, \
-    formata_telefone, formata_cpf, cor_foco
+from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel
 from View.FrmCadastroCliente import Ui_FrmCadastroCliente
 from PyQt5.QtGui import QPixmap
+
+# Funções auxiliares
+from Model.DAO.FuncoesAuxiliares.CancelaTab import Cancela_Tab
+from Model.DAO.FuncoesAuxiliares.MudaCorFoco import muda_cor_foco
+from Model.DAO.FuncoesAuxiliares.FormataData import formatar_data
+from Model.DAO.FuncoesAuxiliares.SoNumero import so_numero
+from Model.DAO.FuncoesAuxiliares.FormataCEP import formata_cep
+from Model.DAO.FuncoesAuxiliares.FormataTelefone import formata_telefone
+from Model.DAO.FuncoesAuxiliares.FormataCPF import formata_cpf
+from Model.DAO.FuncoesAuxiliares.ValidaCampo import valida_campo
+from Model.DAO.FuncoesAuxiliares.BotaoSalvarCliente import botao_salvar_cliente
+from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
 
 
 class J_FrmCadastroCliente(QMainWindow):
@@ -17,29 +27,34 @@ class J_FrmCadastroCliente(QMainWindow):
         # self.ui.btn_cli_cadastrar.clicked.connect(self.btn_cadastra)
         self.ui.btn_cli_sair.clicked.connect(self.close)
         # self.ui.cad_cli_data_cadastro.setText(datetime.now().strftime('%d/%m/%Y  %H:%M h'))
-        self.ui.cad_cli_txt_cepC.returnPressed.connect(self.recebe_dados_correio)
+        # self.ui.cad_cli_04_ob_cep.returnPressed.connect(self.recebe_dados_correio)
+        # self.ui.cad_cli_04_ob_cep.returnPressed.connect(consulta_cep(self.ui.cad_cli_04_ob_cep.text()))
+
         self.ui.btn_abre_formcapturaimagem.clicked.connect(self.abre_capturaimagemcliente)
 
         # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
-        self.keyPressEvent = lambda event: valida_campo(self, event)
+        self.keyPressEvent = lambda event: valida_campo(self, event, None)
 
-        self.ui.cad_cli_txt_data_nasc0D.textChanged.connect(
-            lambda text: self.ui.cad_cli_txt_data_nasc0D.setText(formatar_data(text)))
+        # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
+        self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self, None, Qt.LeftButton))
 
-        self.ui.cad_cli_txt_cepC.textChanged.connect(
-            lambda text: self.ui.cad_cli_txt_cepC.setText(formata_cep(text)))
+        self.ui.cad_cli_02_ob_nasc.textChanged.connect(
+            lambda text: self.ui.cad_cli_02_ob_nasc.setText(formatar_data(text)))
 
-        self.ui.cad_cli_txt_end_numero02.textChanged.connect(
-            lambda text: self.ui.cad_cli_txt_end_numero02.setText(so_numero(text)))
+        self.ui.cad_cli_04_ob_cep.textChanged.connect(
+            lambda text: self.ui.cad_cli_04_ob_cep.setText(formata_cep(text)))
 
-        self.ui.cad_cli_txt_fone_preferencial02.textChanged.connect(
-            lambda text: self.ui.cad_cli_txt_fone_preferencial02.setText(formata_telefone(text)))
+        self.ui.cad_cli_06_ob_num.textChanged.connect(
+            lambda text: self.ui.cad_cli_06_ob_num.setText(so_numero(text)))
 
-        self.ui.cad_cli_txt_fone_alternativo.textChanged.connect(
-            lambda text: self.ui.cad_cli_txt_fone_alternativo.setText(formata_telefone(text)))
+        self.ui.cad_cli_11_ob_fone_pref.textChanged.connect(
+            lambda text: self.ui.cad_cli_11_ob_fone_pref.setText(formata_telefone(text)))
 
-        self.ui.cad_cli_txt_doc01.textChanged.connect(
-            lambda text: self.ui.cad_cli_txt_doc01.setText(formata_cpf(text)))
+        self.ui.cad_cli_12_fone_alt.textChanged.connect(
+            lambda text: self.ui.cad_cli_12_fone_alt.setText(formata_telefone(text)))
+
+        self.ui.cad_cli_01_ob_doc.textChanged.connect(
+            lambda text: self.ui.cad_cli_01_ob_doc.setText(formata_cpf(text)))
 
         self.setWindowFlags(
             QtCore.Qt.Window |  # Define que a janela é um objeto Qt de nível superior
@@ -49,7 +64,7 @@ class J_FrmCadastroCliente(QMainWindow):
         )
 
         # Exibe a imagem padrão caso não tenhauma imagem "Foto do cliente"
-        pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\user.png')
+        pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\icons-câmera.png')
         self.ui.imagemcamera_label.setPixmap(pixmap)
 
         # Centraliza a imagem
@@ -59,9 +74,9 @@ class J_FrmCadastroCliente(QMainWindow):
         self.setFixedSize(self.size())
 
         # Inicializa o formulário com o campo UF sempre com a sigla SP
-        index = self.ui.comboBox_UF.findText("SP", Qt.MatchStartsWith)
+        index = self.ui.cad_cli_08_UF.findText("SP", Qt.MatchStartsWith)
         if index != -1:
-            self.ui.comboBox_UF.setCurrentIndex(index)
+            self.ui.cad_cli_08_UF.setCurrentIndex(index)
 
         for obj in self.findChildren((QLineEdit, QComboBox, QPlainTextEdit)):
             # Encontra o QLabel correspondente ao QLineEdit
@@ -70,9 +85,9 @@ class J_FrmCadastroCliente(QMainWindow):
             # Instala um filtro de eventos nos objetos
             obj.installEventFilter(self)
             # Define a função lambda para o evento focusIn
-            obj.focusInEvent = lambda event, obj=obj, label=label: cor_foco(obj, label, event)
+            obj.focusInEvent = lambda event, obj=obj, label=label: muda_cor_foco(obj, label, event)
             # Define a função lambda para o evento focusOut
-            obj.focusOutEvent = lambda event, obj=obj, label=label: cor_foco(obj, label, event)
+            obj.focusOutEvent = lambda event, obj=obj, label=label: muda_cor_foco(obj, label, event)
 
     @QtCore.pyqtSlot()
     def abre_capturaimagemcliente(self):
@@ -95,16 +110,17 @@ class J_FrmCadastroCliente(QMainWindow):
     def recebe_dados_correio(self):
         # Função para verifica se o CEP esta correto quando a tecla ENTER é pressionada,
         # e traz os dados caso seja encontrado na base dos correios
-        logradouro, bairro, localidade, uf = consulta_cep(self.ui.cad_cli_txt_cepC.text())
-        self.ui.cad_cli_txt_end02.setText(logradouro)
-        self.ui.cad_cli_txt_bairro02.setText(bairro)
-        self.ui.cad_cli_txt_cidade02.setText(localidade)
-        index = self.ui.comboBox_UF.findText(uf, Qt.MatchStartsWith)
+        logradouro, bairro, localidade, uf = consulta_cep_correio(self.ui.cad_cli_04_ob_cep.text())
+        self.ui.cad_cli_05_ob_end.setText(logradouro)
+        self.ui.cad_cli_09_ob_bairro.setText(bairro)
+        self.ui.cad_cli_10_ob_cidade.setText(localidade)
+        index = self.ui.cad_cli_08_UF.findText(uf, Qt.MatchStartsWith)
         if index != -1:
-            self.ui.comboBox_UF.setCurrentIndex(index)
+            self.ui.cad_cli_08_UF.setCurrentIndex(index)
         # Verifica se a função retornou dados e caso não tenha limpa o campo CEP
         if logradouro == '':
-            self.ui.cad_cli_txt_cepC.setText('')
+            self.ui.cad_cli_04_ob_cep.setText('')
+            self.ui.cad_cli_04_ob_cep.setFocus()
             return False
         else:
             self.focusNextChild()
