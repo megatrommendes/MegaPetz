@@ -6,6 +6,7 @@ from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 from Model.DAO.FuncoesAuxiliares.ValidaCPF import valida_cpf
 from Model.DAO.FuncoesAuxiliares.ValidaData import valida_data
 from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
+from Model.DAO.FuncoesAuxiliares.ValidaTelefone import valida_telefone
 
 
 def valida_campo(self, event, click):
@@ -52,21 +53,37 @@ def valida_campo(self, event, click):
         if valida_cpf(widget_text):
             self.focusNextChild()
         else:
-            envia_mensagem("Erro de validação", "CPF inválido, tente novamente por favor.")
             current_widget.setText('')
 
     elif 'nasc' in widget_name:
         if valida_data(widget_text):
             self.focusNextChild()
         else:
-            envia_mensagem("Erro de validação", "Data inválida, tente novamente por favor.")
+            envia_mensagem("Erro de validação", "Data incorreta.")
             current_widget.setText('')
+
+    elif 'fone_pref' in widget_name:
+        if valida_telefone(widget_text) is True:
+            self.focusNextChild()
+        else:
+            envia_mensagem("Erro de validação", "Número de telefone incorreto.")
+            current_widget.setText('')
+
+    elif 'fone_alt' in widget_name:
+        if widget_text != '':
+            if valida_telefone(widget_text) is True:
+                self.focusNextChild()
+            else:
+                envia_mensagem("Erro de validação", "Número de telefone incorreto.")
+                current_widget.setText('')
+        else:
+            self.focusNextChild()
 
     elif 'ob' in widget_name:
         if widget_text != '':
             self.focusNextChild()
         else:
-            envia_mensagem("Erro de validação", "Esse campo é obrigatório, preencha por favor.")
+            envia_mensagem("Erro de validação", "Esse campo é obrigatório.")
             current_widget.setText('')
 
     elif 'ob' not in widget_name:
