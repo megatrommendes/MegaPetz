@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmcapturaimagemcliente</class>
+ <widget class="QWidget" name="frmcapturaimagemcliente">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>341</width>
+    <height>161</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Emite Foto do Cliente</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../imagens/icon-cachorro-marrom-30.png</normaloff>../../imagens/icon-cachorro-marrom-30.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(21, 143, 157);</string>
+  </property>
+  <widget class="QLabel" name="fotoimagemcamera">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>191</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(110, 165, 165);
+border-radius:5px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>121</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="btn_capturar">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:0px
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Capturar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_salvar_imagem">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:0px
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Salvar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../imagens/icons-sinal-saída.png</normaloff>../../imagens/icons-sinal-saída.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_cancelar_imagem">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:0px
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Cancelar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_sair_imagem">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:0px
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Sair</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../imagens/icons-sinal-saída.png</normaloff>../../imagens/icons-sinal-saída.png</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
