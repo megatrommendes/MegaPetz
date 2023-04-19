@@ -15,7 +15,7 @@ class Ui_FrmCadastroCliente(object):
     def setupUi(self, FrmCadastroCliente):
         FrmCadastroCliente.setObjectName("FrmCadastroCliente")
         FrmCadastroCliente.setWindowModality(QtCore.Qt.ApplicationModal)
-        FrmCadastroCliente.resize(934, 480)
+        FrmCadastroCliente.resize(833, 480)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(49)
         sizePolicy.setVerticalStretch(0)
@@ -423,17 +423,17 @@ class Ui_FrmCadastroCliente(object):
         self.cad_cli_04_ob_cep.setObjectName("cad_cli_04_ob_cep")
         self.gridLayout_2.addWidget(self.cad_cli_04_ob_cep, 3, 5, 1, 1)
         self.gridLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(630, 10, 291, 251))
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(630, 10, 191, 221))
         self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        self.btn_abre_formcapturaimagem = QtWidgets.QPushButton(self.gridLayoutWidget_2)
+        self.btn_abre_formcapturaimagem_frente = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.btn_abre_formcapturaimagem.setFont(font)
-        self.btn_abre_formcapturaimagem.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_abre_formcapturaimagem.setStyleSheet("QPushButton{\n"
+        self.btn_abre_formcapturaimagem_frente.setFont(font)
+        self.btn_abre_formcapturaimagem_frente.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_abre_formcapturaimagem_frente.setStyleSheet("QPushButton{\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 145, 10);\n"
 "border-radius:0px\n"
@@ -447,18 +447,53 @@ class Ui_FrmCadastroCliente(object):
 "")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("../../imagens/icons8-câmera-24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_abre_formcapturaimagem.setIcon(icon3)
-        self.btn_abre_formcapturaimagem.setObjectName("btn_abre_formcapturaimagem")
-        self.gridLayout_3.addWidget(self.btn_abre_formcapturaimagem, 1, 1, 1, 2)
-        self.imagemcamera_label = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.imagemcamera_label.setMinimumSize(QtCore.QSize(0, 0))
-        self.imagemcamera_label.setMaximumSize(QtCore.QSize(500, 500))
-        self.imagemcamera_label.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.btn_abre_formcapturaimagem_frente.setIcon(icon3)
+        self.btn_abre_formcapturaimagem_frente.setObjectName("btn_abre_formcapturaimagem_frente")
+        self.gridLayout_3.addWidget(self.btn_abre_formcapturaimagem_frente, 1, 1, 1, 2)
+        self.imagemcamera_frontal_label = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        self.imagemcamera_frontal_label.setMinimumSize(QtCore.QSize(0, 0))
+        self.imagemcamera_frontal_label.setMaximumSize(QtCore.QSize(500, 500))
+        self.imagemcamera_frontal_label.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color:rgb(110, 165, 165);\n"
 "border-radius:0px")
-        self.imagemcamera_label.setText("")
-        self.imagemcamera_label.setObjectName("imagemcamera_label")
-        self.gridLayout_3.addWidget(self.imagemcamera_label, 0, 0, 1, 4)
+        self.imagemcamera_frontal_label.setText("")
+        self.imagemcamera_frontal_label.setObjectName("imagemcamera_frontal_label")
+        self.gridLayout_3.addWidget(self.imagemcamera_frontal_label, 0, 0, 1, 4)
+        self.gridLayoutWidget_3 = QtWidgets.QWidget(self.centralwidget)
+        self.gridLayoutWidget_3.setGeometry(QtCore.QRect(630, 250, 191, 221))
+        self.gridLayoutWidget_3.setObjectName("gridLayoutWidget_3")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.gridLayoutWidget_3)
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.btn_abre_formcapturaimagem_tras = QtWidgets.QPushButton(self.gridLayoutWidget_3)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.btn_abre_formcapturaimagem_tras.setFont(font)
+        self.btn_abre_formcapturaimagem_tras.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_abre_formcapturaimagem_tras.setStyleSheet("QPushButton{\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 145, 10);\n"
+"border-radius:0px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color:rgb(255, 145, 10);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:0px\n"
+"}\n"
+"")
+        self.btn_abre_formcapturaimagem_tras.setIcon(icon3)
+        self.btn_abre_formcapturaimagem_tras.setObjectName("btn_abre_formcapturaimagem_tras")
+        self.gridLayout_4.addWidget(self.btn_abre_formcapturaimagem_tras, 1, 1, 1, 2)
+        self.imagemcamera_tras_label = QtWidgets.QLabel(self.gridLayoutWidget_3)
+        self.imagemcamera_tras_label.setMinimumSize(QtCore.QSize(0, 0))
+        self.imagemcamera_tras_label.setMaximumSize(QtCore.QSize(500, 500))
+        self.imagemcamera_tras_label.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:0px")
+        self.imagemcamera_tras_label.setText("")
+        self.imagemcamera_tras_label.setObjectName("imagemcamera_tras_label")
+        self.gridLayout_4.addWidget(self.imagemcamera_tras_label, 0, 0, 1, 4)
         FrmCadastroCliente.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(FrmCadastroCliente)
@@ -478,7 +513,7 @@ class Ui_FrmCadastroCliente(object):
         FrmCadastroCliente.setTabOrder(self.cad_cli_13_contato, self.cad_cli_14_obs)
         FrmCadastroCliente.setTabOrder(self.cad_cli_14_obs, self.btn_cli_cadastrar)
         FrmCadastroCliente.setTabOrder(self.btn_cli_cadastrar, self.btn_cli_sair)
-        FrmCadastroCliente.setTabOrder(self.btn_cli_sair, self.btn_abre_formcapturaimagem)
+        FrmCadastroCliente.setTabOrder(self.btn_cli_sair, self.btn_abre_formcapturaimagem_frente)
 
     def retranslateUi(self, FrmCadastroCliente):
         _translate = QtCore.QCoreApplication.translate
@@ -526,7 +561,8 @@ class Ui_FrmCadastroCliente(object):
         self.cad_cli_11_ob_fone_pref_label.setText(_translate("FrmCadastroCliente", "Tel. Preferêncial"))
         self.cad_cli_14_obs_label.setText(_translate("FrmCadastroCliente", "Observações"))
         self.cad_cli_13_contato_label.setText(_translate("FrmCadastroCliente", "Nome do Contato"))
-        self.btn_abre_formcapturaimagem.setText(_translate("FrmCadastroCliente", "Foto"))
+        self.btn_abre_formcapturaimagem_frente.setText(_translate("FrmCadastroCliente", "Foto Frente"))
+        self.btn_abre_formcapturaimagem_tras.setText(_translate("FrmCadastroCliente", "Foto Verso"))
 
 
 if __name__ == "__main__":

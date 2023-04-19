@@ -24,13 +24,10 @@ class J_FrmCadastroCliente(QMainWindow):
         self.cliente = Ui_FrmCadastroCliente()
         self.ui = self.cliente
         self.ui.setupUi(self)
+
         # self.ui.btn_cli_cadastrar.clicked.connect(self.btn_cadastra)
         self.ui.btn_cli_sair.clicked.connect(self.close)
-        # self.ui.cad_cli_data_cadastro.setText(datetime.now().strftime('%d/%m/%Y  %H:%M h'))
-        # self.ui.cad_cli_04_ob_cep.returnPressed.connect(self.recebe_dados_correio)
-        # self.ui.cad_cli_04_ob_cep.returnPressed.connect(consulta_cep(self.ui.cad_cli_04_ob_cep.text()))
-
-        self.ui.btn_abre_formcapturaimagem.clicked.connect(self.abre_capturaimagemcliente)
+        self.ui.btn_abre_formcapturaimagem_frente.clicked.connect(self.abre_capturaimagemcliente)
 
         # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
         self.keyPressEvent = lambda event: valida_campo(self, event, None)
@@ -65,10 +62,10 @@ class J_FrmCadastroCliente(QMainWindow):
 
         # Exibe a imagem padrão caso não tenhauma imagem "Foto do cliente"
         pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\icons-câmera.png')
-        self.ui.imagemcamera_label.setPixmap(pixmap)
+        self.ui.imagemcamera_frontal_label.setPixmap(pixmap)
 
         # Centraliza a imagem
-        self.ui.imagemcamera_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.ui.imagemcamera_frontal_label.setAlignment(QtCore.Qt.AlignCenter)
 
         # Definida a janela com o tamanho atual e cancela o redimencionamento da janela atual
         self.setFixedSize(self.size())
@@ -92,11 +89,11 @@ class J_FrmCadastroCliente(QMainWindow):
     @QtCore.pyqtSlot()
     def abre_capturaimagemcliente(self):
         # Importa a classe J_FormCapturaImagemCliente do arquivo Front_CapturaImagemCliente
-        from View.Front_CapturaImagemCliente import J_FormCapturaImagemCliente
+        from View.Front_CapturaImagemCliente import J_FrmCapturaImagemCliente
 
         # Cria uma instância de J_FormCapturaImagemCliente, passando o próprio objeto J_FrmCadastroCliente como
-        # argumento
-        self.frm_capturaimagemcliente = J_FormCapturaImagemCliente(self)
+        # self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self.ui.cad_cli_01_ob_doc.text(), self)
+        self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self, self.ui.cad_cli_01_ob_doc.text())
 
         # Verifica se a câmera foi inicializada com sucesso
         if not self.frm_capturaimagemcliente.verifica_camera():
@@ -105,26 +102,6 @@ class J_FrmCadastroCliente(QMainWindow):
         else:
             # Exibe o formulário J_FormCapturaImagemCliente caso a câmera tenha sido inicializada com sucesso
             self.frm_capturaimagemcliente.show()
-
-    @QtCore.pyqtSlot()
-    def recebe_dados_correio(self):
-        # Função para verifica se o CEP esta correto quando a tecla ENTER é pressionada,
-        # e traz os dados caso seja encontrado na base dos correios
-        logradouro, bairro, localidade, uf = consulta_cep_correio(self.ui.cad_cli_04_ob_cep.text())
-        self.ui.cad_cli_05_ob_end.setText(logradouro)
-        self.ui.cad_cli_09_ob_bairro.setText(bairro)
-        self.ui.cad_cli_10_ob_cidade.setText(localidade)
-        index = self.ui.cad_cli_08_UF.findText(uf, Qt.MatchStartsWith)
-        if index != -1:
-            self.ui.cad_cli_08_UF.setCurrentIndex(index)
-        # Verifica se a função retornou dados e caso não tenha limpa o campo CEP
-        if logradouro == '':
-            self.ui.cad_cli_04_ob_cep.setText('')
-            self.ui.cad_cli_04_ob_cep.setFocus()
-            return False
-        else:
-            self.focusNextChild()
-            return True
 
 
 if __name__ == "__main__":

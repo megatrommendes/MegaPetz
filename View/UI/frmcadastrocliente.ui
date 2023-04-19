@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>934</width>
+    <width>833</width>
     <height>480</height>
    </rect>
   </property>
@@ -899,13 +899,13 @@ border-radius:0px</string>
      <rect>
       <x>630</x>
       <y>10</y>
-      <width>291</width>
-      <height>251</height>
+      <width>191</width>
+      <height>221</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
      <item row="1" column="1" colspan="2">
-      <widget class="QPushButton" name="btn_abre_formcapturaimagem">
+      <widget class="QPushButton" name="btn_abre_formcapturaimagem_frente">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -929,7 +929,7 @@ border-radius:0px
 </string>
        </property>
        <property name="text">
-        <string>Foto</string>
+        <string>Foto Frente</string>
        </property>
        <property name="icon">
         <iconset>
@@ -938,7 +938,76 @@ border-radius:0px
       </widget>
      </item>
      <item row="0" column="0" colspan="4">
-      <widget class="QLabel" name="imagemcamera_label">
+      <widget class="QLabel" name="imagemcamera_frontal_label">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>500</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>250</y>
+      <width>191</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="1" column="1" colspan="2">
+      <widget class="QPushButton" name="btn_abre_formcapturaimagem_tras">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px
+}
+
+QPushButton:hover{
+color:rgb(255, 145, 10);
+background-color: rgb(255, 255, 255);
+border-radius:0px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foto Verso</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../imagens/icons8-câmera-24.png</normaloff>../../imagens/icons8-câmera-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="4">
+      <widget class="QLabel" name="imagemcamera_tras_label">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -982,7 +1051,7 @@ border-radius:0px</string>
   <tabstop>cad_cli_14_obs</tabstop>
   <tabstop>btn_cli_cadastrar</tabstop>
   <tabstop>btn_cli_sair</tabstop>
-  <tabstop>btn_abre_formcapturaimagem</tabstop>
+  <tabstop>btn_abre_formcapturaimagem_frente</tabstop>
  </tabstops>
  <resources/>
  <connections/>

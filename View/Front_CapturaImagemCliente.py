@@ -1,6 +1,6 @@
 import os
-from Model.DAO.FuncoesDAO import Cancela_Tab
-from View.FormCapturaImagemCliente import Ui_formcapturaimagemcliente
+
+from View.FrmCapturaImagemCliente import Ui_frmcapturaimagemcliente
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QMessageBox
 import cv2
 from PyQt5.QtCore import QTimer, Qt, pyqtSignal
@@ -9,17 +9,23 @@ from PyQt5.QtGui import QImage, QPixmap
 from PyQt5 import QtCore, QtGui
 
 
-class J_FormCapturaImagemCliente(QWidget):
-    def __init__(self, frm_cliente):
+class J_FrmCapturaImagemCliente(QWidget):
+    def __init__(self, frm_cliente, CPF):
         super().__init__()
         # Define as variáveis 'documento' e 'frm_cliente' como atributos da classe
         self.frm_cliente = frm_cliente
         # Retorna veradeiro ou falso dependendo se a câmera foi inicializada
         self.camera_initializada = False
-        # Instancia a classe Ui_formcapturaimagemcliente() para criar a interface gráfica
-        self.ui = Ui_formcapturaimagemcliente()
-        # Chama o método 'setupUi()' da classe Ui_formcapturaimagemcliente() para configurar a interface
+        # Instancia a classe Ui_frmcapturaimagemcliente() para criar a interface gráfica
+        self.ui = Ui_frmcapturaimagemcliente()
+        # Chama o método 'setupUi()' da classe Ui_frmcapturaimagemcliente() para configurar a interface
         self.ui.setupUi(self)
+
+        # Atribui o número do CPF do cliente ao nome do arquivo da foto
+        self.nome_arquivo = CPF
+
+        # Centraliza a imagem
+        self.ui.fotoimagemcamera.setAlignment(QtCore.Qt.AlignCenter)
 
         # Inicializa a câmera
         self.camera = cv2.VideoCapture(0)  # instância um objeto cv2.VideoCapture
@@ -43,12 +49,11 @@ class J_FormCapturaImagemCliente(QWidget):
 
         # Conecta os botôes
         self.ui.btn_capturar.clicked.connect(self.captura_imagem)  # conecta o botão capturar a função captura_imagem
-        self.ui.btn_salvar_imagem.clicked.connect(self.mens_bnt_salvar)  # conecta o botão salvar a função mens_bnt_salvar
-        self.ui.btn_cancelar_imagem.clicked.connect(self.cancela_captura_imagem)  # conecta o botão cancelar a função cancela_captura_imagem
+        self.ui.btn_salvar_imagem.clicked.connect(
+            self.mens_bnt_salvar)  # conecta o botão salvar a função mens_bnt_salvar
+        self.ui.btn_cancelar_imagem.clicked.connect(
+            self.cancela_captura_imagem)  # conecta o botão cancelar a função cancela_captura_imagem
         self.ui.btn_sair_imagem.clicked.connect(self.close)  # conecta o botão sair a função close
-
-        # Atribui o número do documento do cliente para que o arquivo seja criado com o nome sendo o numero do documento
-        self.nome_arquivo = frm_cliente.ui.cad_cli_txt_doc01.text()
 
         self.setWindowFlags(
             QtCore.Qt.Window |  # Define que a janela é um objeto Qt de nível superior
@@ -73,7 +78,8 @@ class J_FormCapturaImagemCliente(QWidget):
                                      QMessageBox.Cancel)  # caixa de diálogo para confirmação do usuário
         if reply == QMessageBox.Ok:  # se o usuário confirmar a ação
             # Salva a imagem
-            if self.salvar_imagem(self.frm_cliente):  # chama a função salvar_imagem para salvar a imagem e atualizar a interface
+            if self.salvar_imagem(
+                    self.frm_cliente):  # chama a função salvar_imagem para salvar a imagem e atualizar a interface
                 self.mostra_mensagem("Imagem salva.", "Imagem salva com sucesso")
             else:
                 self.mostra_mensagem("Não foi possível salvar a imagem.", "Erro ao salvar imagem")
@@ -86,12 +92,12 @@ class J_FormCapturaImagemCliente(QWidget):
         # Cria um objeto QPixmap com a imagem atual
         pixmap = QPixmap(self.ui.fotoimagemcamera.pixmap())
         # Define o caminho e nome do arquivo de saída sendo o nome do arquivo o número do documento do cliente
-        caminho = r'C:\BemLimpinho\imagens\foto_cliente\{}.png'.format(self.nome_arquivo)
+        caminho = r'C:\MegaPetz\imagens\foto_cliente\{}.png'.format(self.nome_arquivo)
 
         # Salva a imagem no arquivo
         if pixmap.save(caminho):
             # Exibe a imagem no formulário J_FrmCadastroCliente
-            frm_cliente.ui.imagemcamera_label.setPixmap(pixmap)
+            frm_cliente.ui.imagemcamera_frontal_label.setPixmap(pixmap)
             return True
         else:
             return False
@@ -136,8 +142,8 @@ class J_FormCapturaImagemCliente(QWidget):
 
     @QtCore.pyqtSlot()
     def cancela_captura_imagem(self):
-        pixmap = QPixmap('C:\\BemLimpinho\\imagens\\imagem_icones\\user.png')
-        self.frm_cliente.ui.imagemcamera_label.setPixmap(pixmap)
+        pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\user.png')
+        self.frm_cliente.ui.imagemcamera_frontal_label.setPixmap(pixmap)
         if self.timer.isActive():
             self.timer.stop()
 
@@ -148,7 +154,7 @@ class J_FormCapturaImagemCliente(QWidget):
         self.timer.start(1)
 
         # Remove o arquivo de imagem salvo
-        caminho = r'C:\BemLimpinho\imagens\foto_cliente\{}.png'.format(self.nome_arquivo)
+        caminho = r'C:\MegaPetz\imagens\foto_cliente\{}.png'.format(self.nome_arquivo)
         if os.path.exists(caminho):
             os.remove(caminho)
 
@@ -163,7 +169,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     # Removido o código que cancela a ação da tecla Tab
     documento = "documento"
-    window = J_FormCapturaImagemCliente(documento)
+    window = J_FrmCapturaImagemCliente(documento)
     window.show()
     sys.exit(app.exec_())
 
@@ -178,7 +184,3 @@ Essa classe é responsável por criar e gerenciar uma janela de captura de image
 onde frm_cliente é a janela principal do programa e documento é uma variável que armazena informações
 sobre o número do RG ou CPF.
 '''
-
-
-
-

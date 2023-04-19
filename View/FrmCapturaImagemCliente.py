@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'formcapturaimagemcliente.ui'
+# Form implementation generated from reading ui file 'frmcapturaimagemcliente.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -11,34 +11,26 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_formcapturaimagemcliente(object):
-    def setupUi(self, formcapturaimagemcliente):
-        formcapturaimagemcliente.setObjectName("formcapturaimagemcliente")
-        formcapturaimagemcliente.setWindowModality(QtCore.Qt.ApplicationModal)
-        formcapturaimagemcliente.resize(438, 240)
-        formcapturaimagemcliente.setFocusPolicy(QtCore.Qt.StrongFocus)
+class Ui_frmcapturaimagemcliente(object):
+    def setupUi(self, frmcapturaimagemcliente):
+        frmcapturaimagemcliente.setObjectName("frmcapturaimagemcliente")
+        frmcapturaimagemcliente.setWindowModality(QtCore.Qt.ApplicationModal)
+        frmcapturaimagemcliente.resize(341, 161)
+        frmcapturaimagemcliente.setFocusPolicy(QtCore.Qt.StrongFocus)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../imagens/icon-cachorro-marrom-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        formcapturaimagemcliente.setWindowIcon(icon)
-        formcapturaimagemcliente.setStyleSheet("background-color: rgb(21, 143, 157);")
-        self.fotoimagemcamera = QtWidgets.QLabel(formcapturaimagemcliente)
-        self.fotoimagemcamera.setGeometry(QtCore.QRect(16, 16, 278, 209))
+        frmcapturaimagemcliente.setWindowIcon(icon)
+        frmcapturaimagemcliente.setStyleSheet("background-color: rgb(21, 143, 157);")
+        self.fotoimagemcamera = QtWidgets.QLabel(frmcapturaimagemcliente)
+        self.fotoimagemcamera.setGeometry(QtCore.QRect(10, 10, 191, 141))
         self.fotoimagemcamera.setMinimumSize(QtCore.QSize(0, 0))
         self.fotoimagemcamera.setMaximumSize(QtCore.QSize(500, 500))
         self.fotoimagemcamera.setStyleSheet("background-color:rgb(110, 165, 165);\n"
 "border-radius:5px")
         self.fotoimagemcamera.setText("")
         self.fotoimagemcamera.setObjectName("fotoimagemcamera")
-        self.fotoimagemcamera_2 = QtWidgets.QLabel(formcapturaimagemcliente)
-        self.fotoimagemcamera_2.setGeometry(QtCore.QRect(10, 10, 290, 220))
-        self.fotoimagemcamera_2.setMinimumSize(QtCore.QSize(0, 0))
-        self.fotoimagemcamera_2.setMaximumSize(QtCore.QSize(500, 500))
-        self.fotoimagemcamera_2.setStyleSheet("background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
-        self.fotoimagemcamera_2.setText("")
-        self.fotoimagemcamera_2.setObjectName("fotoimagemcamera_2")
-        self.verticalLayoutWidget = QtWidgets.QWidget(formcapturaimagemcliente)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(310, 10, 121, 221))
+        self.verticalLayoutWidget = QtWidgets.QWidget(frmcapturaimagemcliente)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(210, 10, 121, 141))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -127,27 +119,24 @@ class Ui_formcapturaimagemcliente(object):
         self.btn_sair_imagem.setIcon(icon2)
         self.btn_sair_imagem.setObjectName("btn_sair_imagem")
         self.verticalLayout.addWidget(self.btn_sair_imagem)
-        self.fotoimagemcamera_2.raise_()
-        self.fotoimagemcamera.raise_()
-        self.verticalLayoutWidget.raise_()
 
-        self.retranslateUi(formcapturaimagemcliente)
-        QtCore.QMetaObject.connectSlotsByName(formcapturaimagemcliente)
+        self.retranslateUi(frmcapturaimagemcliente)
+        QtCore.QMetaObject.connectSlotsByName(frmcapturaimagemcliente)
 
-    def retranslateUi(self, formcapturaimagemcliente):
+    def retranslateUi(self, frmcapturaimagemcliente):
         _translate = QtCore.QCoreApplication.translate
-        formcapturaimagemcliente.setWindowTitle(_translate("formcapturaimagemcliente", "Emite Foto do Cliente"))
-        self.btn_capturar.setText(_translate("formcapturaimagemcliente", "Capturar"))
-        self.btn_salvar_imagem.setText(_translate("formcapturaimagemcliente", "Salvar"))
-        self.btn_cancelar_imagem.setText(_translate("formcapturaimagemcliente", "Cancelar"))
-        self.btn_sair_imagem.setText(_translate("formcapturaimagemcliente", "Sair"))
+        frmcapturaimagemcliente.setWindowTitle(_translate("frmcapturaimagemcliente", "Emite Foto do Cliente"))
+        self.btn_capturar.setText(_translate("frmcapturaimagemcliente", "Capturar"))
+        self.btn_salvar_imagem.setText(_translate("frmcapturaimagemcliente", "Salvar"))
+        self.btn_cancelar_imagem.setText(_translate("frmcapturaimagemcliente", "Cancelar"))
+        self.btn_sair_imagem.setText(_translate("frmcapturaimagemcliente", "Sair"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    formcapturaimagemcliente = QtWidgets.QWidget()
-    ui = Ui_formcapturaimagemcliente()
-    ui.setupUi(formcapturaimagemcliente)
-    formcapturaimagemcliente.show()
+    frmcapturaimagemcliente = QtWidgets.QWidget()
+    ui = Ui_frmcapturaimagemcliente()
+    ui.setupUi(frmcapturaimagemcliente)
+    frmcapturaimagemcliente.show()
     sys.exit(app.exec_())
