@@ -64,6 +64,7 @@ class J_FrmCadastroCliente(QMainWindow):
         # Exibe a imagem padrão caso não tenhauma imagem "Foto do cliente"
         pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\icons-câmera.png')
         self.ui.imagemcamera_frontal_label.setPixmap(pixmap)
+        self.ui.imagemcamera_tras_label.setPixmap(pixmap)
 
         # Centraliza a imagem
         self.ui.imagemcamera_frontal_label.setAlignment(QtCore.Qt.AlignCenter)
