@@ -27,7 +27,8 @@ class J_FrmCadastroCliente(QMainWindow):
 
         # self.ui.btn_cli_cadastrar.clicked.connect(self.btn_cadastra)
         self.ui.btn_cli_sair.clicked.connect(self.close)
-        self.ui.btn_abre_formcapturaimagem_frente.clicked.connect(self.abre_capturaimagemcliente)
+        self.ui.btn_abre_formcapturaimagem_frente.clicked.connect(lambda: self.abre_capturaimagemcliente('-FRENTE'))
+        self.ui.btn_abre_formcapturaimagem_tras.clicked.connect(lambda: self.abre_capturaimagemcliente('-VERSO'))
 
         # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
         self.keyPressEvent = lambda event: valida_campo(self, event, None)
@@ -67,6 +68,9 @@ class J_FrmCadastroCliente(QMainWindow):
         # Centraliza a imagem
         self.ui.imagemcamera_frontal_label.setAlignment(QtCore.Qt.AlignCenter)
 
+        # Centraliza a imagem
+        self.ui.imagemcamera_tras_label.setAlignment(QtCore.Qt.AlignCenter)
+
         # Definida a janela com o tamanho atual e cancela o redimencionamento da janela atual
         self.setFixedSize(self.size())
 
@@ -87,13 +91,13 @@ class J_FrmCadastroCliente(QMainWindow):
             obj.focusOutEvent = lambda event, obj=obj, label=label: muda_cor_foco(obj, label, event)
 
     @QtCore.pyqtSlot()
-    def abre_capturaimagemcliente(self):
+    def abre_capturaimagemcliente(self, foto):
         # Importa a classe J_FormCapturaImagemCliente do arquivo Front_CapturaImagemCliente
         from View.Front_CapturaImagemCliente import J_FrmCapturaImagemCliente
 
         # Cria uma instância de J_FormCapturaImagemCliente, passando o próprio objeto J_FrmCadastroCliente como
         # self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self.ui.cad_cli_01_ob_doc.text(), self)
-        self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self, self.ui.cad_cli_01_ob_doc.text())
+        self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self, self.ui.cad_cli_01_ob_doc.text(), foto)
 
         # Verifica se a câmera foi inicializada com sucesso
         if not self.frm_capturaimagemcliente.verifica_camera():
