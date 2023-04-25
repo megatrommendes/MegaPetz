@@ -1,5 +1,6 @@
 import re
 
+
 def valida_cpf(cpf):
     """
         Efetua a validação do CPF, tanto formatação quanto dígito verificadores.

@@ -9,7 +9,7 @@ from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
 from Model.DAO.FuncoesAuxiliares.ValidaTelefone import valida_telefone
 
 
-def valida_campo(self, event, click):
+def valida_campo(self, event):
     if isinstance(event, QKeyEvent):
         if event.key() not in [Qt.Key_Enter, Qt.Key_Return]:
             return
@@ -53,6 +53,7 @@ def valida_campo(self, event, click):
         if valida_cpf(widget_text):
             self.focusNextChild()
         else:
+            envia_mensagem("Erro de validação", "CPF incorreta.")
             current_widget.setText('')
 
     elif 'nasc' in widget_name:

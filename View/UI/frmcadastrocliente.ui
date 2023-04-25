@@ -643,16 +643,21 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px
-}
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+border-radius:5px}
 
 QPushButton:hover{
-color:rgb(255, 145, 10);
-background-color: rgb(255, 255, 255);
-border-radius:0px
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+border-radius:5px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
 }
+
 </string>
        </property>
        <property name="text">
@@ -676,16 +681,21 @@ border-radius:0px
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px
-}
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+border-radius:5px}
 
 QPushButton:hover{
-color:rgb(255, 145, 10);
-background-color: rgb(255, 255, 255);
-border-radius:0px
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+border-radius:5px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
 }
+
 </string>
        </property>
        <property name="text">
@@ -916,16 +926,21 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px
-}
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+border-radius:5px}
 
 QPushButton:hover{
-color:rgb(255, 145, 10);
-background-color: rgb(255, 255, 255);
-border-radius:0px
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+border-radius:5px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
 }
+
 </string>
        </property>
        <property name="text">
@@ -985,16 +1000,21 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px
-}
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+border-radius:5px}
 
 QPushButton:hover{
-color:rgb(255, 145, 10);
-background-color: rgb(255, 255, 255);
-border-radius:0px
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+border-radius:5px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
 }
+
 </string>
        </property>
        <property name="text">

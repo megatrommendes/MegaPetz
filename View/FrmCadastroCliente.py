@@ -283,16 +283,21 @@ class Ui_FrmCadastroCliente(object):
         self.btn_cli_sair.setFont(font)
         self.btn_cli_sair.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_cli_sair.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("../../imagens/icons-sinal-saída.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -305,16 +310,21 @@ class Ui_FrmCadastroCliente(object):
         self.btn_cli_cadastrar.setFont(font)
         self.btn_cli_cadastrar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_cli_cadastrar.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("../../imagens/icon-add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -434,16 +444,21 @@ class Ui_FrmCadastroCliente(object):
         self.btn_abre_formcapturaimagem_frente.setFont(font)
         self.btn_abre_formcapturaimagem_frente.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_abre_formcapturaimagem_frente.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("../../imagens/icons8-câmera-24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -471,16 +486,21 @@ class Ui_FrmCadastroCliente(object):
         self.btn_abre_formcapturaimagem_tras.setFont(font)
         self.btn_abre_formcapturaimagem_tras.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_abre_formcapturaimagem_tras.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         self.btn_abre_formcapturaimagem_tras.setIcon(icon3)
         self.btn_abre_formcapturaimagem_tras.setObjectName("btn_abre_formcapturaimagem_tras")

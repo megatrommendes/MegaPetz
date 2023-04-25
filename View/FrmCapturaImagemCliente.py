@@ -41,16 +41,21 @@ class Ui_frmcapturaimagemcliente(object):
         self.btn_capturar.setFont(font)
         self.btn_capturar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_capturar.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("../../imagens/icon-add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -63,16 +68,21 @@ class Ui_frmcapturaimagemcliente(object):
         self.btn_salvar_imagem.setFont(font)
         self.btn_salvar_imagem.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_salvar_imagem.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("../../imagens/icons-sinal-saída.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -85,16 +95,21 @@ class Ui_frmcapturaimagemcliente(object):
         self.btn_cancelar_imagem.setFont(font)
         self.btn_cancelar_imagem.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_cancelar_imagem.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         self.btn_cancelar_imagem.setIcon(icon1)
         self.btn_cancelar_imagem.setObjectName("btn_cancelar_imagem")
@@ -105,16 +120,21 @@ class Ui_frmcapturaimagemcliente(object):
         self.btn_sair_imagem.setFont(font)
         self.btn_sair_imagem.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_sair_imagem.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px\n"
-"}\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"border-radius:5px}\n"
 "\n"
 "QPushButton:hover{\n"
-"color:rgb(255, 145, 10);\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:0px\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"border-radius:5px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
 "}\n"
+"\n"
 "")
         self.btn_sair_imagem.setIcon(icon2)
         self.btn_sair_imagem.setObjectName("btn_sair_imagem")

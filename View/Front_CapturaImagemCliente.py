@@ -3,10 +3,10 @@ import os
 from View.FrmCapturaImagemCliente import Ui_frmcapturaimagemcliente
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QMessageBox
 import cv2
-from PyQt5.QtCore import QTimer, Qt, pyqtSignal
+from PyQt5.QtCore import QTimer, Qt
 import sys
 from PyQt5.QtGui import QImage, QPixmap
-from PyQt5 import QtCore, QtGui
+from PyQt5 import QtCore
 
 
 class J_FrmCapturaImagemCliente(QWidget):
@@ -146,7 +146,7 @@ class J_FrmCapturaImagemCliente(QWidget):
 
     @QtCore.pyqtSlot()
     def cancela_captura_imagem(self, foto):
-        pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\user.png')
+        pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\icons-câmera.png')
         if foto == '-FRENTE':
             # Exibe a imagem no formulário J_FrmCadastroCliente
             self.formulario.ui.imagemcamera_frontal_label.setPixmap(pixmap)

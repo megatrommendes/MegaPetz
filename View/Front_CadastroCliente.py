@@ -1,9 +1,9 @@
 import sys
 from PyQt5 import QtCore
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QEvent
 from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel
 from View.FrmCadastroCliente import Ui_FrmCadastroCliente
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QKeyEvent
 
 # Funções auxiliares
 from Model.DAO.FuncoesAuxiliares.CancelaTab import Cancela_Tab
@@ -15,7 +15,6 @@ from Model.DAO.FuncoesAuxiliares.FormataTelefone import formata_telefone
 from Model.DAO.FuncoesAuxiliares.FormataCPF import formata_cpf
 from Model.DAO.FuncoesAuxiliares.ValidaCampo import valida_campo
 from Model.DAO.FuncoesAuxiliares.BotaoSalvarCliente import botao_salvar_cliente
-from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
 
 
 class J_FrmCadastroCliente(QMainWindow):
@@ -31,10 +30,13 @@ class J_FrmCadastroCliente(QMainWindow):
         self.ui.btn_abre_formcapturaimagem_tras.clicked.connect(lambda: self.abre_capturaimagemcliente('-VERSO'))
 
         # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
-        self.keyPressEvent = lambda event: valida_campo(self, event, None)
+        self.keyPressEvent = lambda event: valida_campo(self, event)
 
-        # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
-        self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self, None, Qt.LeftButton))
+        # Conecta o evento keyPressEvent do QMainWindow à função botao_salvar_cliente,
+        # passando o valor da tecla enter pressionado
+        #self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self, None, Qt.LeftButton))
+        event = QKeyEvent(QEvent.KeyPress, Qt.Key_Return, Qt.NoModifier)
+        self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self))
 
         self.ui.cad_cli_02_ob_nasc.textChanged.connect(
             lambda text: self.ui.cad_cli_02_ob_nasc.setText(formatar_data(text)))
