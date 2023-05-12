@@ -1,5 +1,7 @@
 import re
 
+from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
+
 
 def valida_cpf(cpf):
     """
@@ -23,6 +25,7 @@ def valida_cpf(cpf):
 
     # Verifica a formatação do CPF utilizando expressão regular
     if not re.match(r'\d{3}\.\d{3}\.\d{3}-\d{2}', cpf):
+        envia_mensagem("Erro de validação", "CPF incorreta.")
         return False
 
     # Obtém apenas os números do CPF, ignorando pontuações
@@ -30,18 +33,21 @@ def valida_cpf(cpf):
 
     # Verifica se o CPF possui 11 números ou se todos são iguais:
     if len(numbers) != 11 or len(set(numbers)) == 1:
+        envia_mensagem("Erro de validação", "CPF incorreta.")
         return False
 
     # Validação do primeiro dígito verificador:
     sum_of_products = sum(a * b for a, b in zip(numbers[0:9], range(10, 1, -1)))
     expected_digit = (sum_of_products * 10 % 11) % 10
     if numbers[9] != expected_digit:
+        envia_mensagem("Erro de validação", "CPF incorreta.")
         return False
 
     # Validação do segundo dígito verificador:
     sum_of_products = sum(a * b for a, b in zip(numbers[0:10], range(11, 1, -1)))
     expected_digit = (sum_of_products * 10 % 11) % 10
     if numbers[10] != expected_digit:
+        envia_mensagem("Erro de validação", "CPF incorreta.")
         return False
 
     return True

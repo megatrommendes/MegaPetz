@@ -4,6 +4,7 @@ from View.FrmPrincipal import Ui_FrmPrincipal
 from PyQt5 import QtCore
 from View.Front_CadastroCliente import J_FrmCadastroCliente
 
+
 class J_FormPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -18,6 +19,7 @@ class J_FormPrincipal(QMainWindow):
     def abre_frmcadastrocliente(self):
         self.frm_cadastracliente = J_FrmCadastroCliente()
         self.frm_cadastracliente.show()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

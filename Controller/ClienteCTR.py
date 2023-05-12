@@ -1,6 +1,7 @@
 from Model.DTO.ClienteDTO import ClienteDTO
 from Model.DAO.ClienteDAO import ClienteDAO
 
+
 class ClienteCTR:
     def ListaTodosClientes(self):
         clienteDAO = ClienteDAO
@@ -16,7 +17,8 @@ class ClienteCTR:
         clienteDAO.LocalizaClientes(ClienteDTO)
 
     def CadastraCliente(documento, nome, end, end_numero, complemento, bairro, cidade, UF, cep, fone_preferencial,
-                                 fone_alternativo, data_nascimento, contato_alternativo, data_cadastro, hora_cadastro, observacao):
+                        fone_alternativo, data_nascimento, contato_alternativo, data_cadastro, hora_cadastro,
+                        observacao):
         clieteDTO = ClienteDTO
         clieteDTO.tb_cli_doc = documento
         clieteDTO.tb_cli_nome = nome

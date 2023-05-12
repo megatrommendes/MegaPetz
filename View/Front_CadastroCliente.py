@@ -3,7 +3,7 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import Qt, QEvent
 from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel
 from View.FrmCadastroCliente import Ui_FrmCadastroCliente
-from PyQt5.QtGui import QPixmap, QKeyEvent
+from PyQt5.QtGui import QPixmap
 
 # Funções auxiliares
 from Model.DAO.FuncoesAuxiliares.CancelaTab import Cancela_Tab
@@ -34,8 +34,7 @@ class J_FrmCadastroCliente(QMainWindow):
 
         # Conecta o evento keyPressEvent do QMainWindow à função botao_salvar_cliente,
         # passando o valor da tecla enter pressionado
-        #self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self, None, Qt.LeftButton))
-        event = QKeyEvent(QEvent.KeyPress, Qt.Key_Return, Qt.NoModifier)
+        # self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self, None, Qt.LeftButton))
         self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self))
 
         self.ui.cad_cli_02_ob_nasc.textChanged.connect(

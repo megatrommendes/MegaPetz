@@ -16,3 +16,4 @@ class ClienteDTO:
         self.tb_cli_data_cadastro = None
         self.tb_cli_hora_cadastro = None
         self.tb_cli_observacao = None
+

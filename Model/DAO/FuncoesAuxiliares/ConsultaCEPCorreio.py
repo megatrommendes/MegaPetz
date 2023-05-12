@@ -15,18 +15,18 @@ def consulta_cep_correio(cep):
         endereco = response.json()
         if "erro" in endereco and endereco["erro"] == True:
             envia_mensagem("Erro de validação.", "CEP não localizado.")
-            return '', '', '', ''
+            return '', '', '', '', False
         else:
             logradouro = endereco.get('logradouro', '')
             if logradouro == '':
                 envia_mensagem("Erro de validação.", "CEP não localizado.")
-                return '', '', '', ''
+                return '', '', '', '', False
             else:
                 logradouro = endereco.get('logradouro', '')
                 bairro = endereco.get('bairro', '')
                 localidade = endereco.get('localidade', '')
                 uf = endereco.get('uf', '')
-                return logradouro, bairro, localidade, uf
+                return logradouro, bairro, localidade, uf, True
     else:
         envia_mensagem("Erro de validação.", "CEP não localizado.")
-        return '', '', '', ''
+        return '', '', '', '', False

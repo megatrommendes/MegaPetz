@@ -1,12 +1,13 @@
 from PyQt5.QtGui import QKeyEvent
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLineEdit, QComboBox, QPlainTextEdit
+from PyQt5.QtWidgets import QLineEdit, QComboBox, QPlainTextEdit, QMainWindow
 
 from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 from Model.DAO.FuncoesAuxiliares.ValidaCPF import valida_cpf
 from Model.DAO.FuncoesAuxiliares.ValidaData import valida_data
 from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
 from Model.DAO.FuncoesAuxiliares.ValidaTelefone import valida_telefone
+from Model.DAO.FuncoesAuxiliares.ValidaTexto import valida_texto
 
 
 def valida_campo(self, event):
@@ -25,12 +26,39 @@ def valida_campo(self, event):
     elif isinstance(current_widget, QComboBox):
         widget_text = current_widget.currentText()
 
-    if 'cep' in widget_name:
+    if 'doc' in widget_name:
+        if valida_cpf(widget_text):
+            self.focusNextChild()
+        else:
+            current_widget.setText('')
+
+    elif 'nasc' in widget_name:
+        if valida_data(self, widget_text):
+            self.focusNextChild()
+        else:
+            current_widget.setText('')
+
+    elif 'fone_pref' in widget_name:
+        if valida_telefone(widget_text) is True:
+            self.focusNextChild()
+        else:
+            current_widget.setText('')
+
+    elif 'fone_alt' in widget_name:
+        if widget_text != '':
+            if valida_telefone(widget_text) is True:
+                self.focusNextChild()
+            else:
+                current_widget.setText('')
+        else:
+            self.focusNextChild()
+
+    elif 'cep' in widget_name:
         widget_cep = self.findChild(QLineEdit, widget_name)
         for combo_box in self.findChildren(QComboBox):
             if 'UF' in combo_box.objectName():
                 widget_uf = combo_box
-        logradouro, bairro, localidade, uf = consulta_cep_correio(widget_text)
+        logradouro, bairro, localidade, uf, validacao = consulta_cep_correio(widget_text)
         for widget in self.findChildren(QLineEdit):
             if 'end' in widget.objectName():
                 widget.setText(logradouro)
@@ -47,44 +75,13 @@ def valida_campo(self, event):
             widget_cep.setText('')
         else:
             self.focusNextChild()
+            self.focusNextChild()
         widget_name = widget_cep.objectName()
 
-    elif 'doc' in widget_name:
-        if valida_cpf(widget_text):
-            self.focusNextChild()
-        else:
-            envia_mensagem("Erro de validação", "CPF incorreta.")
-            current_widget.setText('')
-
-    elif 'nasc' in widget_name:
-        if valida_data(widget_text):
-            self.focusNextChild()
-        else:
-            envia_mensagem("Erro de validação", "Data incorreta.")
-            current_widget.setText('')
-
-    elif 'fone_pref' in widget_name:
-        if valida_telefone(widget_text) is True:
-            self.focusNextChild()
-        else:
-            envia_mensagem("Erro de validação", "Número de telefone incorreto.")
-            current_widget.setText('')
-
-    elif 'fone_alt' in widget_name:
-        if widget_text != '':
-            if valida_telefone(widget_text) is True:
-                self.focusNextChild()
-            else:
-                envia_mensagem("Erro de validação", "Número de telefone incorreto.")
-                current_widget.setText('')
-        else:
-            self.focusNextChild()
-
     elif 'ob' in widget_name:
-        if widget_text != '':
+        if valida_texto(widget_text) is True:
             self.focusNextChild()
         else:
-            envia_mensagem("Erro de validação", "Esse campo é obrigatório.")
             current_widget.setText('')
 
     elif 'ob' not in widget_name:
