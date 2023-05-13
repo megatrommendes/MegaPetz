@@ -1,12 +1,14 @@
 import os
+import cv2
+import sys
+from PyQt5 import QtCore
+from PyQt5.QtCore import QTimer, Qt
+from PyQt5.QtGui import QImage, QPixmap
+from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QMessageBox
 
 from View.FrmCapturaImagemCliente import Ui_frmcapturaimagemcliente
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QMessageBox
-import cv2
-from PyQt5.QtCore import QTimer, Qt
-import sys
-from PyQt5.QtGui import QImage, QPixmap
-from PyQt5 import QtCore
+from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
+
 
 
 class J_FrmCapturaImagemCliente(QWidget):
@@ -32,8 +34,8 @@ class J_FrmCapturaImagemCliente(QWidget):
         # Verifica se a câmera foi inicializada com sucesso
         if not self.camera.isOpened():
             # Exibe uma mensagem de erro
-            QMessageBox.critical(self, "Erro de câmera",
-                                 "Não foi possível inicializar a câmera! Verifique se o dispositivo está ativo.")
+            envia_mensagem("Erro de câmera",
+                           "Não foi possível inicializar a câmera! Verifique se o dispositivo está ativo.")
             self.camera_initializada = False
         else:
             self.camera_initializada = True
@@ -52,7 +54,8 @@ class J_FrmCapturaImagemCliente(QWidget):
         self.ui.btn_salvar_imagem.clicked.connect(lambda: self.mens_bnt_salvar(foto))
         # conecta o botão salvar a função mens_bnt_salvar
 
-        self.ui.btn_cancelar_imagem.clicked.connect(lambda: self.cancela_captura_imagem(foto))  # connect o botão cancelar a função cancela_captura_imagem
+        self.ui.btn_cancelar_imagem.clicked.connect(
+            lambda: self.cancela_captura_imagem(foto))  # connect o botão cancelar a função cancela_captura_imagem
         self.ui.btn_sair_imagem.clicked.connect(self.close)  # conecta o botão sair a função close
 
         self.setWindowFlags(
