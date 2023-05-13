@@ -12,7 +12,7 @@ from Model.DAO.FuncoesFormularios.VerificaDocumentoBD import verifica_documento_
 def valida_dados_cliente(self):
     widgets = sorted(self.findChildren(QLineEdit), key=lambda w: w.objectName())
     i = 0
-    ok = True  # variável que será retornada no final
+    ok = True  # variável que será retornada no final informando se a validação foi bem sucedida
     documento = ''  # variável que armazena o número do documento do cliente e envia para verificação no BD
 
     while i < len(widgets):  # enquanto houver widgets a serem verificados
