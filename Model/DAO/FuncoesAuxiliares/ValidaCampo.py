@@ -8,6 +8,7 @@ from Model.DAO.FuncoesAuxiliares.ValidaData import valida_data
 from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
 from Model.DAO.FuncoesAuxiliares.ValidaTelefone import valida_telefone
 from Model.DAO.FuncoesAuxiliares.ValidaTexto import valida_texto
+from Model.DAO.FuncoesFormularios.VerificaDocumentoBD import verifica_documento_bd
 
 
 def valida_campo(self, event):
@@ -28,7 +29,11 @@ def valida_campo(self, event):
 
     if 'doc' in widget_name:
         if valida_cpf(widget_text):
-            self.focusNextChild()
+            if verifica_documento_bd(widget_text):
+                self.focusNextChild()
+            else:
+                current_widget.setText('')
+
         else:
             current_widget.setText('')
 

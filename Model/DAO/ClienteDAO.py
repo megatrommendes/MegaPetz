@@ -18,7 +18,6 @@ class ClienteDAO:
         buttonClicked = msgBox.exec()
 
         if buttonClicked == QMessageBox.Yes:
-            print(cliente.tb_cli_doc)
             if verifica_documento_bd(cliente.tb_cli_doc):
                 conn = ConexaoSQL
                 db = conn.getConexao(ConexaoSQL)
@@ -49,7 +48,6 @@ class ClienteDAO:
                 envia_mensagem('Cadastra Cliente', 'Cadastro salvo com sucesso!')
                 limpa_campos(self)
             else:
-                envia_mensagem('Cadastra Cliente', 'O documento informado já está cadastrado na base de dados!')
                 limpa_campos(self)
                 return False
 

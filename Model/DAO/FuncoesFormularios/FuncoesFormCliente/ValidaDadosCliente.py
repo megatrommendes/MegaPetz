@@ -1,28 +1,37 @@
 from PyQt5.QtWidgets import QLineEdit
+
 from Model.DAO.FuncoesAuxiliares.ValidaCPF import valida_cpf
 from Model.DAO.FuncoesAuxiliares.ValidaData import valida_data
 from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
 from Model.DAO.FuncoesAuxiliares.ValidaTelefone import valida_telefone
 from Model.DAO.FuncoesAuxiliares.ValidaTexto import valida_texto
+from Model.DAO.FuncoesFormularios.VerificaDocumentoBD import verifica_documento_bd
 
 
+# Valida os dados do cliente antes de enviar para serem gravados no Banco de Dados
 def valida_dados_cliente(self):
     widgets = sorted(self.findChildren(QLineEdit), key=lambda w: w.objectName())
     i = 0
     ok = True  # variável que será retornada no final
-    documento = ''
+    documento = ''  # variável que armazena o número do documento do cliente e envia para verificação no BD
 
     while i < len(widgets):  # enquanto houver widgets a serem verificados
         nome_widget = str(widgets[i].objectName())
 
         if 'doc' in nome_widget:
-            if valida_cpf(widgets[i].text()) is False:  # se o nome do widget contém 'doc'
+            if valida_cpf(widgets[i].text()):
+                if verifica_documento_bd(widgets[i].text()) is False:
+                    widgets[i].setFocus()
+                    widgets[i].setText('')
+                    ok = False
+                    break
+                else:
+                    documento = widgets[i].text()
+            else:
                 widgets[i].setFocus()
                 widgets[i].setText('')
                 ok = False
                 break
-            else:
-                documento = widgets[i].text()
 
         if ('nasc' in nome_widget) and (
                 valida_data(self, widgets[i].text()) is False):  # se o nome do widget contém 'nasc'

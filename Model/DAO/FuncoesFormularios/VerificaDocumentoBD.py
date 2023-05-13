@@ -1,6 +1,8 @@
 from DataBase.ConexaoSQL import ConexaoSQL
+from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 
 
+# Verifica se o numero do documento já existe na Base de Dados
 def verifica_documento_bd(documento):
     conn = ConexaoSQL
     db = conn.getConexao(ConexaoSQL)
@@ -11,4 +13,5 @@ def verifica_documento_bd(documento):
     if resultado is None:
         return True
     else:
+        envia_mensagem('Cadastra Cliente', 'O documento informado já está cadastrado na base de dados!')
         return False

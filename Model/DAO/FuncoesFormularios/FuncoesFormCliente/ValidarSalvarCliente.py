@@ -5,13 +5,19 @@ from Model.DAO.FuncoesFormularios.FuncoesFormCliente.ArmazenaDadosCliente import
 
 
 def validar_salvar_cliente(self):
+    # Valida os dados do cliente e armazena o número do documento
     ok, documento = valida_dados_cliente(self)
+
     if ok:
+        # Armazena o número do documento do cliente e envia para ClienteCTR
         armazena_dados_cliente(self, documento)
+
+        # Define o foco em um QLineEdit com 'doc' em seu nome
         for widget in self.findChildren(QWidget):
             if isinstance(widget, QLineEdit) and 'doc' in widget.objectName():
                 widget.setFocus()
                 break
+
 
 
 
