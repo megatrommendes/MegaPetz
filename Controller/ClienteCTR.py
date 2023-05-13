@@ -1,13 +1,17 @@
+from PyQt5 import QtCore
+
 from Model.DTO.ClienteDTO import ClienteDTO
 from Model.DAO.ClienteDAO import ClienteDAO
 
 
 class ClienteCTR:
+    @QtCore.pyqtSlot()
     def ListaTodosClientes(self):
         clienteDAO = ClienteDAO
         query = clienteDAO.ListaTodosClientes(self)
         return query
 
+    @QtCore.pyqtSlot()
     def LocalizaClientes(doc, lista, nome):
         clienteDTO = ClienteDTO
         clienteDTO.tb_cli_doc = doc
@@ -16,9 +20,11 @@ class ClienteCTR:
         clienteDAO = ClienteDAO
         clienteDAO.LocalizaClientes(ClienteDTO)
 
-    def CadastraCliente(documento, nome, end, end_numero, complemento, bairro, cidade, UF, cep, fone_preferencial,
-                        fone_alternativo, data_nascimento, contato_alternativo, data_cadastro, hora_cadastro,
-                        observacao):
+    @QtCore.pyqtSlot()
+    def carrega_dados_cliente(self, documento, nome, end, end_numero, complemento, bairro, cidade, UF, cep,
+                              fone_preferencial,
+                              fone_alternativo, data_nascimento, contato_alternativo, data_cadastro, hora_cadastro,
+                              observacao):
         clieteDTO = ClienteDTO
         clieteDTO.tb_cli_doc = documento
         clieteDTO.tb_cli_nome = nome
@@ -37,5 +43,5 @@ class ClienteCTR:
         clieteDTO.tb_cli_hora_cadastro = hora_cadastro
         clieteDTO.tb_cli_observacao = observacao
         clienteDAO = ClienteDAO
-        if clienteDAO.CadastraClientes(ClienteDTO) is False:
+        if clienteDAO.grava_dados_cliente(self, ClienteDTO) is False:
             return False

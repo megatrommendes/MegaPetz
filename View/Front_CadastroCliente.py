@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtCore
-from PyQt5.QtCore import Qt, QEvent
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel
 from View.FrmCadastroCliente import Ui_FrmCadastroCliente
 from PyQt5.QtGui import QPixmap
@@ -14,7 +14,7 @@ from Model.DAO.FuncoesAuxiliares.FormataCEP import formata_cep
 from Model.DAO.FuncoesAuxiliares.FormataTelefone import formata_telefone
 from Model.DAO.FuncoesAuxiliares.FormataCPF import formata_cpf
 from Model.DAO.FuncoesAuxiliares.ValidaCampo import valida_campo
-from Model.DAO.FuncoesAuxiliares.BotaoSalvarCliente import botao_salvar_cliente
+from Model.DAO.FuncoesFormularios.FuncoesFormCliente.ValidarSalvarCliente import validar_salvar_cliente
 
 
 class J_FrmCadastroCliente(QMainWindow):
@@ -35,7 +35,7 @@ class J_FrmCadastroCliente(QMainWindow):
         # Conecta o evento keyPressEvent do QMainWindow à função botao_salvar_cliente,
         # passando o valor da tecla enter pressionado
         # self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self, None, Qt.LeftButton))
-        self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self))
+        self.ui.btn_cli_cadastrar.clicked.connect(lambda: validar_salvar_cliente(self))
 
         self.ui.cad_cli_02_ob_nasc.textChanged.connect(
             lambda text: self.ui.cad_cli_02_ob_nasc.setText(formatar_data(text)))
@@ -92,7 +92,6 @@ class J_FrmCadastroCliente(QMainWindow):
             # Define a função lambda para o evento focusOut
             obj.focusOutEvent = lambda event, obj=obj, label=label: muda_cor_foco(obj, label, event)
 
-    @QtCore.pyqtSlot()
     def abre_capturaimagemcliente(self, foto):
         # Importa a classe J_FormCapturaImagemCliente do arquivo Front_CapturaImagemCliente
         from View.Front_CapturaImagemCliente import J_FrmCapturaImagemCliente
@@ -115,41 +114,3 @@ if __name__ == "__main__":
     window = J_FrmCadastroCliente()
     window.show()
     sys.exit(app.exec_())
-
-'''
-    @QtCore.pyqtSlot()
-    def btn_cadastra(self):
-        documento = self.ui.cad_cli_txt_doc01.text()
-        nome = self.ui.cad_cli_txt_nome0.text()
-        end = self.ui.cad_cli_txt_end0.text()
-        end_numero = self.ui.cad_cli_txt_end_numero0.text()
-        complemento = self.ui.cad_cli_txt_complemento.text()
-        UF = str(self.ui.comboBox_UF.currentText())
-        bairro = self.ui.cad_cli_txt_bairro0.text()
-        cidade = self.ui.cad_cli_txt_cidade0.text()
-        cep = self.ui.cad_cli_txt_cepC.text()
-        fone_preferencial = self.ui.cad_cli_txt_fone_preferencial0.text()
-        fone_alternativo = self.ui.cad_cli_txt_fone_alternativo.text()
-        data_nascimento = self.ui.cad_cli_txt_data_nasc0D.text()
-        contato_alternativo = self.ui.cad_cli_txt_contato_alternativo.text()
-        data_cadastro = datetime.now().strftime('%d/%m/%Y')
-        hora_cadastro = datetime.now().strftime('%H:%Mh')
-        observacao = self.ui.cad_cli_txt_observacao.document().toPlainText()
-        cliente = ClienteCTR
-        if cliente.CadastraCliente(documento, nome, end, end_numero, complemento, bairro, cidade, UF, cep,
-                                   fone_preferencial, fone_alternativo, data_nascimento, contato_alternativo,
-                                   data_cadastro, hora_cadastro, observacao) != False:
-            self.ui.cad_cli_txt_doc01.setText('')
-            self.ui.cad_cli_txt_nome0.setText('')
-            self.ui.cad_cli_txt_end0.setText('')
-            self.ui.cad_cli_txt_end_numero0.setText('')
-            self.ui.cad_cli_txt_complemento.setText('')
-            self.ui.cad_cli_txt_bairro0.setText('')
-            self.ui.cad_cli_txt_cidade0.setText('')
-            self.ui.cad_cli_txt_cepC.setText('')
-            self.ui.cad_cli_txt_fone_preferencial0.setText('')
-            self.ui.cad_cli_txt_fone_alternativo.setText('')
-            self.ui.cad_cli_txt_data_nasc0D.setText('')
-            self.ui.cad_cli_txt_contato_alternativo.setText('')
-            self.ui.cad_cli_txt_observacao.clear()
-'''
