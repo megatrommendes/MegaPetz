@@ -32,7 +32,7 @@ class J_FrmCadastraAlteraCliente(QMainWindow):
             self.setWindowTitle('Alteração de Cliente')
 
         self.ui.btn_cli_sair.clicked.connect(self.close)
-        self.ui.btn_cli_cancelar.clicked.connect(lambda: (limpa_campos(self),  abilita_campo(self), reposiciona_foco(self)))
+        self.ui.btn_cli_cancelar.clicked.connect(lambda: (limpa_campos(self), abilita_campo(self), reposiciona_foco(self)))
         self.ui.btn_abre_formcapturaimagem_frente.clicked.connect(lambda: self.abre_capturaimagemcliente('-FRENTE'))
         self.ui.btn_abre_formcapturaimagem_tras.clicked.connect(lambda: self.abre_capturaimagemcliente('-VERSO'))
 
