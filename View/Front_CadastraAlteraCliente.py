@@ -32,14 +32,15 @@ class J_FrmCadastraAlteraCliente(QMainWindow):
             self.setWindowTitle('Alteração de Cliente')
 
         self.ui.btn_cli_sair.clicked.connect(self.close)
-        self.ui.btn_cli_cancelar.clicked.connect(lambda: (limpa_campos(self), abilita_campo(self), reposiciona_foco(self)))
         self.ui.btn_abre_formcapturaimagem_frente.clicked.connect(lambda: self.abre_capturaimagemcliente('-FRENTE'))
         self.ui.btn_abre_formcapturaimagem_tras.clicked.connect(lambda: self.abre_capturaimagemcliente('-VERSO'))
+        self.ui.btn_cli_cancelar.clicked.connect(
+            lambda: (limpa_campos(self), abilita_campo(self), reposiciona_foco(self)))
 
         # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
         self.keyPressEvent = lambda event: valida_campo(self, event, operacao)
 
-        # Conecta o evento keyPressEvent do QMainWindow à função botao_salvar_cliente,
+        # Conecta o evento keyPressEvent do QMainWindow à função botao_salvar_cliente
         self.ui.btn_cli_cadastrar.clicked.connect(lambda: validar_salvar_cliente(self, operacao))
 
         self.ui.cad_cli_02_ob_nasc.textChanged.connect(
