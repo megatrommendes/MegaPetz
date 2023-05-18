@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>833</width>
+    <width>923</width>
     <height>480</height>
    </rect>
   </property>
@@ -60,15 +60,15 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>11</x>
-      <y>11</y>
-      <width>611</width>
+      <x>120</x>
+      <y>10</y>
+      <width>591</width>
       <height>461</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="4" column="0">
-      <widget class="QLabel" name="cad_cli_05_ob_end_label">
+     <item row="10" column="0">
+      <widget class="QLabel" name="cad_cli_11_ob_fone_pref_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -83,38 +83,15 @@ background-color: rgb(255, 145, 10);
 border-radius:0px</string>
        </property>
        <property name="text">
-        <string>Endereço</string>
+        <string>Tel. Preferêncial</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="11" column="0">
-      <widget class="QLineEdit" name="cad_cli_11_ob_fone_pref">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="maxLength">
-        <number>14</number>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="1">
-      <widget class="QLabel" name="cad_cli_12_fone_alt_label">
+     <item row="12" column="0">
+      <widget class="QLabel" name="cad_cli_14_obs_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -129,15 +106,15 @@ background-color: rgb(255, 145, 10);
 border-radius:0px</string>
        </property>
        <property name="text">
-        <string>Tel. Alternativo</string>
+        <string>Observações</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="13" column="0" colspan="6">
-      <widget class="QPlainTextEdit" name="cad_cli_14_obs">
+     <item row="0" column="1">
+      <widget class="QLabel" name="cad_cli_02_ob_nasc_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -145,26 +122,19 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
+background-color: rgb(255, 145, 10);
 border-radius:0px</string>
+       </property>
+       <property name="text">
+        <string>Data. Nascimento</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="10" column="6">
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>13</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="cad_cli_03_ob_nome_label">
+     <item row="2" column="5">
+      <widget class="QLabel" name="cad_cli_04_ob_cep_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -179,38 +149,15 @@ background-color: rgb(255, 145, 10);
 border-radius:0px</string>
        </property>
        <property name="text">
-        <string>Nome</string>
+        <string>CEP</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="cad_cli_07_complemento_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
-       </property>
-       <property name="text">
-        <string>Complemento</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="3" colspan="3">
-      <widget class="QLineEdit" name="cad_cli_10_ob_cidade">
+     <item row="11" column="3" colspan="3">
+      <widget class="QLineEdit" name="cad_cli_13_contato">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -225,30 +172,7 @@ background-color:rgb(110, 165, 165);
 border-radius:0px</string>
        </property>
        <property name="maxLength">
-        <number>40</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="cad_cli_01_ob_doc_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
-       </property>
-       <property name="text">
-        <string>CPF</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+        <number>60</number>
        </property>
       </widget>
      </item>
@@ -347,8 +271,62 @@ border-radius:0px</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="5">
-      <widget class="QLabel" name="cad_cli_04_ob_cep_label">
+     <item row="9" column="0" colspan="2">
+      <widget class="QLineEdit" name="cad_cli_09_ob_bairro">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="maxLength">
+        <number>40</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="5">
+      <widget class="QLineEdit" name="cad_cli_03_ob_nome">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="maxLength">
+        <number>62</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="5">
+      <widget class="QLineEdit" name="cad_cli_05_ob_end">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="maxLength">
+        <number>62</number>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3">
+      <widget class="QLabel" name="cad_cli_13_contato_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -363,19 +341,22 @@ background-color: rgb(255, 145, 10);
 border-radius:0px</string>
        </property>
        <property name="text">
-        <string>CEP</string>
+        <string>Nome do Contato</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QLabel" name="cad_cli_02_ob_nasc_label">
+     <item row="2" column="0">
+      <widget class="QLabel" name="cad_cli_03_ob_nome_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
         </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
@@ -383,7 +364,162 @@ background-color: rgb(255, 145, 10);
 border-radius:0px</string>
        </property>
        <property name="text">
-        <string>Data. Nascimento</string>
+        <string>Nome</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="cad_cli_07_complemento_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px</string>
+       </property>
+       <property name="text">
+        <string>Complemento</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3" colspan="3">
+      <widget class="QLineEdit" name="cad_cli_10_ob_cidade">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="maxLength">
+        <number>40</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="cad_cli_01_ob_doc_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px</string>
+       </property>
+       <property name="text">
+        <string>CPF</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="5">
+      <widget class="QLineEdit" name="cad_cli_07_complemento">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="maxLength">
+        <number>62</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QLineEdit" name="cad_cli_06_ob_num">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>5</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="5">
+      <widget class="QLineEdit" name="cad_cli_04_ob_cep">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>9</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="cad_cli_12_fone_alt">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>14</number>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -539,6 +675,29 @@ border-radius:0px</string>
        </item>
       </widget>
      </item>
+     <item row="6" column="5">
+      <widget class="QLabel" name="cad_cli_08_UF_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 145, 10);
+border-radius:0px</string>
+       </property>
+       <property name="text">
+        <string>Estado</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
       <widget class="QLineEdit" name="cad_cli_01_ob_doc">
        <property name="font">
@@ -571,8 +730,8 @@ border-radius:0px</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="5">
-      <widget class="QLabel" name="cad_cli_08_UF_label">
+     <item row="10" column="1">
+      <widget class="QLabel" name="cad_cli_12_fone_alt_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -587,211 +746,15 @@ background-color: rgb(255, 145, 10);
 border-radius:0px</string>
        </property>
        <property name="text">
-        <string>Estado</string>
+        <string>Tel. Alternativo</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="3" column="0" colspan="5">
-      <widget class="QLineEdit" name="cad_cli_03_ob_nome">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="maxLength">
-        <number>62</number>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0" colspan="5">
-      <widget class="QLineEdit" name="cad_cli_05_ob_end">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="maxLength">
-        <number>62</number>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="2" colspan="3">
-      <widget class="QPushButton" name="btn_cli_sair">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-color:rgb(255,255, 255);
-background-color: rgb(0, 0, 47);
-border-radius:5px}
-
-QPushButton:hover{
-color: rgb(0, 0, 47);
-background-color: rgb(192, 206, 255);
-border-radius:5px}
-
-QPushButton:pressed {
-    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
-        stop: 0 rgb(255, 255, 255));
-    border-color: rgb(0, 0, 47);
-}
-
-</string>
-       </property>
-       <property name="text">
-        <string>Sair</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../imagens/icons-sinal-saída.png</normaloff>../../imagens/icons-sinal-saída.png</iconset>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="1">
-      <widget class="QPushButton" name="btn_cli_cadastrar">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-color:rgb(255,255, 255);
-background-color: rgb(0, 0, 47);
-border-radius:5px}
-
-QPushButton:hover{
-color: rgb(0, 0, 47);
-background-color: rgb(192, 206, 255);
-border-radius:5px}
-
-QPushButton:pressed {
-    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
-        stop: 0 rgb(255, 255, 255));
-    border-color: rgb(0, 0, 47);
-}
-
-</string>
-       </property>
-       <property name="text">
-        <string>Salvar</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="0" colspan="2">
-      <widget class="QLineEdit" name="cad_cli_09_ob_bairro">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="maxLength">
-        <number>40</number>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="0">
-      <widget class="QLabel" name="cad_cli_11_ob_fone_pref_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
-       </property>
-       <property name="text">
-        <string>Tel. Preferêncial</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="0">
-      <widget class="QLabel" name="cad_cli_14_obs_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
-       </property>
-       <property name="text">
-        <string>Observações</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="3" colspan="3">
-      <widget class="QLineEdit" name="cad_cli_13_contato">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="maxLength">
-        <number>60</number>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="1">
-      <widget class="QLineEdit" name="cad_cli_12_fone_alt">
+     <item row="11" column="0">
+      <widget class="QLineEdit" name="cad_cli_11_ob_fone_pref">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -808,16 +771,27 @@ border-radius:0px</string>
        <property name="maxLength">
         <number>14</number>
        </property>
-       <property name="cursorPosition">
-        <number>0</number>
-       </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="10" column="3">
-      <widget class="QLabel" name="cad_cli_13_contato_label">
+     <item row="13" column="0" colspan="6">
+      <widget class="QPlainTextEdit" name="cad_cli_14_obs">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:0px</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="cad_cli_05_ob_end_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -832,82 +806,32 @@ background-color: rgb(255, 145, 10);
 border-radius:0px</string>
        </property>
        <property name="text">
-        <string>Nome do Contato</string>
+        <string>Endereço</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="7" column="0" colspan="5">
-      <widget class="QLineEdit" name="cad_cli_07_complemento">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
+     <item row="7" column="6">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
        </property>
-       <property name="maxLength">
-        <number>62</number>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="5">
-      <widget class="QLineEdit" name="cad_cli_06_ob_num">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="maxLength">
-        <number>5</number>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="5">
-      <widget class="QLineEdit" name="cad_cli_04_ob_cep">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="maxLength">
-        <number>9</number>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
+      </spacer>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>630</x>
+      <x>720</x>
       <y>10</y>
       <width>191</width>
       <height>221</height>
@@ -981,7 +905,7 @@ border-radius:0px</string>
    <widget class="QWidget" name="gridLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>630</x>
+      <x>720</x>
       <y>250</y>
       <width>191</width>
       <height>221</height>
@@ -1052,6 +976,132 @@ border-radius:0px</string>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>7</y>
+      <width>101</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="btn_cli_cancelar">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+border-radius:5px}
+
+QPushButton:hover{
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+border-radius:5px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Cancelar</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_cli_cadastrar">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+border-radius:5px}
+
+QPushButton:hover{
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+border-radius:5px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Salvar</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_cli_sair">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+border-radius:5px}
+
+QPushButton:hover{
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+border-radius:5px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Sair</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../imagens/icons-sinal-saída.png</normaloff>../../imagens/icons-sinal-saída.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
  <tabstops>
@@ -1069,8 +1119,6 @@ border-radius:0px</string>
   <tabstop>cad_cli_12_fone_alt</tabstop>
   <tabstop>cad_cli_13_contato</tabstop>
   <tabstop>cad_cli_14_obs</tabstop>
-  <tabstop>btn_cli_cadastrar</tabstop>
-  <tabstop>btn_cli_sair</tabstop>
   <tabstop>btn_abre_formcapturaimagem_frente</tabstop>
  </tabstops>
  <resources/>

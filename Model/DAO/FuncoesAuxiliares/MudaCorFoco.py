@@ -1,6 +1,7 @@
 from PyQt5.QtGui import QFocusEvent
 from PyQt5.QtWidgets import QComboBox, QLineEdit, QPlainTextEdit
 
+
 # Função que recebe um objeto e um evento de foco, e define a cor de fundo e estilo do objeto com base no tipo de
 # objeto e no tipo de evento
 def muda_cor_foco(obj, label, event):

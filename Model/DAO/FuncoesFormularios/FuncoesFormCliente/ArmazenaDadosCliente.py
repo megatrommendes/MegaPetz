@@ -3,7 +3,8 @@ from datetime import datetime
 from Controller.ClienteCTR import ClienteCTR
 
 
-def armazena_dados_cliente(self, documento):
+def armazena_dados_cliente(self, operacao, documento):
+    doc = self.ui.cad_cli_01_ob_doc.text()
     nome = self.ui.cad_cli_03_ob_nome.text()
     end = self.ui.cad_cli_05_ob_end.text()
     end_numero = self.ui.cad_cli_06_ob_num.text()
@@ -21,8 +22,7 @@ def armazena_dados_cliente(self, documento):
     observacao = self.ui.cad_cli_14_obs.document().toPlainText()
     cliente = ClienteCTR
 
-    if not cliente.carrega_dados_cliente(self, documento, nome, end, end_numero, complemento, bairro, cidade,
-                                         UF, cep,
-                                         fone_preferencial, fone_alternativo, data_nascimento, contato_alternativo,
-                                         data_cadastro, hora_cadastro, observacao):
+    if not cliente.carrega_dados_cliente(self, operacao, documento, doc, nome, end, end_numero, complemento, bairro,
+                                         cidade, UF, cep, fone_preferencial, fone_alternativo, data_nascimento,
+                                         contato_alternativo, data_cadastro, hora_cadastro, observacao):
         return False

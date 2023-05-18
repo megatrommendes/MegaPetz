@@ -1,26 +1,28 @@
-import sys
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel
-from View.FrmCadastroCliente import Ui_FrmCadastroCliente
+
+from Model.DAO.FuncoesAuxiliares.AbilitaCampo import abilita_campo
+from Model.DAO.FuncoesAuxiliares.LimpaCampos import limpa_campos
+from Model.DAO.FuncoesAuxiliares.ReposicionaFoco import reposiciona_foco
+from View.FrmCadastraAlteraCliente import Ui_FrmCadastraAlteraCliente
 from PyQt5.QtGui import QPixmap
 
 # Funções auxiliares
-from Model.DAO.FuncoesAuxiliares.CancelaTab import Cancela_Tab
 from Model.DAO.FuncoesAuxiliares.MudaCorFoco import muda_cor_foco
 from Model.DAO.FuncoesAuxiliares.FormataData import formatar_data
 from Model.DAO.FuncoesAuxiliares.SoNumero import so_numero
 from Model.DAO.FuncoesAuxiliares.FormataCEP import formata_cep
 from Model.DAO.FuncoesAuxiliares.FormataTelefone import formata_telefone
 from Model.DAO.FuncoesAuxiliares.FormataCPF import formata_cpf
-from Model.DAO.FuncoesAuxiliares.ValidaCampo import valida_campo
+from Model.DAO.FuncoesFormularios.ValidaCampo import valida_campo
 from Model.DAO.FuncoesFormularios.FuncoesFormCliente.ValidarSalvarCliente import validar_salvar_cliente
 
 
-class J_FrmCadastroCliente(QMainWindow):
+class J_FrmCadastraAlteraCliente(QMainWindow):
     def __init__(self, operacao):
         super().__init__()
-        self.cliente = Ui_FrmCadastroCliente()
+        self.cliente = Ui_FrmCadastraAlteraCliente()
         self.ui = self.cliente
         self.ui.setupUi(self)
 
@@ -29,8 +31,8 @@ class J_FrmCadastroCliente(QMainWindow):
         elif operacao == 'A':
             self.setWindowTitle('Alteração de Cliente')
 
-        # self.ui.btn_cli_cadastrar.clicked.connect(self.btn_cadastra)
         self.ui.btn_cli_sair.clicked.connect(self.close)
+        self.ui.btn_cli_cancelar.clicked.connect(lambda: (limpa_campos(self),  abilita_campo(self), reposiciona_foco(self)))
         self.ui.btn_abre_formcapturaimagem_frente.clicked.connect(lambda: self.abre_capturaimagemcliente('-FRENTE'))
         self.ui.btn_abre_formcapturaimagem_tras.clicked.connect(lambda: self.abre_capturaimagemcliente('-VERSO'))
 
@@ -38,7 +40,6 @@ class J_FrmCadastroCliente(QMainWindow):
         self.keyPressEvent = lambda event: valida_campo(self, event, operacao)
 
         # Conecta o evento keyPressEvent do QMainWindow à função botao_salvar_cliente,
-        # passando o valor da tecla enter pressionado
         self.ui.btn_cli_cadastrar.clicked.connect(lambda: validar_salvar_cliente(self, operacao))
 
         self.ui.cad_cli_02_ob_nasc.textChanged.connect(
@@ -113,7 +114,5 @@ class J_FrmCadastroCliente(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = Cancela_Tab(sys.argv)  # chama a classe "Cancela_Tab" que cancela a ação da tecla Tab
-    window = J_FrmCadastroCliente(operacao)
+    window = Ui_FrmCadastraAlteraCliente()
     window.show()
-    sys.exit(app.exec_())

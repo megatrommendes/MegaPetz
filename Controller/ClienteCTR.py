@@ -21,12 +21,12 @@ class ClienteCTR:
         clienteDAO.LocalizaClientes(ClienteDTO)
 
     @QtCore.pyqtSlot()
-    def carrega_dados_cliente(self, documento, nome, end, end_numero, complemento, bairro, cidade, UF, cep,
+    def carrega_dados_cliente(self, operacao, documento, doc, nome, end, end_numero, complemento, bairro, cidade, UF, cep,
                               fone_preferencial,
                               fone_alternativo, data_nascimento, contato_alternativo, data_cadastro, hora_cadastro,
                               observacao):
         clieteDTO = ClienteDTO
-        clieteDTO.tb_cli_doc = documento
+        clieteDTO.tb_cli_doc = doc
         clieteDTO.tb_cli_nome = nome
         clieteDTO.tb_cli_endereco = end
         clieteDTO.tb_cli_numero = end_numero
@@ -43,5 +43,5 @@ class ClienteCTR:
         clieteDTO.tb_cli_hora_cadastro = hora_cadastro
         clieteDTO.tb_cli_observacao = observacao
         clienteDAO = ClienteDAO
-        if clienteDAO.grava_dados_cliente(self, ClienteDTO) is False:
+        if clienteDAO.grava_dados_cliente(self, operacao, ClienteDTO) is False:
             return False

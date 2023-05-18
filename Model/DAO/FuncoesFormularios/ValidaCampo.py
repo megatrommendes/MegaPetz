@@ -1,6 +1,6 @@
 from PyQt5.QtGui import QKeyEvent
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLineEdit, QComboBox, QPlainTextEdit, QMainWindow
+from PyQt5.QtWidgets import QLineEdit, QComboBox, QPlainTextEdit, QLabel
 
 from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 from Model.DAO.FuncoesAuxiliares.ValidaCPF import valida_cpf
@@ -12,7 +12,7 @@ from Model.DAO.FuncoesFormularios.VerificaDocumentoBD import verifica_documento_
 
 
 def valida_campo(self, event, operacao):
-    widgets_ordenados = sorted(self.findChildren((QLineEdit, QPlainTextEdit, QComboBox)), key=lambda w: w.objectName())
+    widgets_ordenados = sorted(self.findChildren((QLineEdit, QPlainTextEdit, QComboBox, QLabel)), key=lambda w: w.objectName())
     todos_widgets = {widget.objectName(): widget for widget in widgets_ordenados}
     if isinstance(event, QKeyEvent):
         if event.key() not in [Qt.Key_Enter, Qt.Key_Return]:
@@ -32,7 +32,10 @@ def valida_campo(self, event, operacao):
     if 'doc' in widget_name:
         if valida_cpf(widget_text):
             if verifica_documento_bd(todos_widgets, operacao, widget_text):
-                self.focusNextChild()
+                if operacao == "A":
+                    current_widget.setEnabled(False)
+                else:
+                    self.focusNextChild()
             else:
                 if operacao == "C" or operacao == "L":
                     current_widget.setText('')
