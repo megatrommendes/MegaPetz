@@ -11,7 +11,9 @@ from Model.DAO.FuncoesAuxiliares.ValidaTexto import valida_texto
 from Model.DAO.FuncoesFormularios.VerificaDocumentoBD import verifica_documento_bd
 
 
-def valida_campo(self, event):
+def valida_campo(self, event, operacao):
+    widgets_ordenados = sorted(self.findChildren((QLineEdit, QPlainTextEdit, QComboBox)), key=lambda w: w.objectName())
+    todos_widgets = {widget.objectName(): widget for widget in widgets_ordenados}
     if isinstance(event, QKeyEvent):
         if event.key() not in [Qt.Key_Enter, Qt.Key_Return]:
             return
@@ -29,10 +31,11 @@ def valida_campo(self, event):
 
     if 'doc' in widget_name:
         if valida_cpf(widget_text):
-            if verifica_documento_bd(widget_text):
+            if verifica_documento_bd(todos_widgets, operacao, widget_text):
                 self.focusNextChild()
             else:
-                current_widget.setText('')
+                if operacao == "C" or operacao == "L":
+                    current_widget.setText('')
 
         else:
             current_widget.setText('')

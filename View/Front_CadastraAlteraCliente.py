@@ -18,11 +18,16 @@ from Model.DAO.FuncoesFormularios.FuncoesFormCliente.ValidarSalvarCliente import
 
 
 class J_FrmCadastroCliente(QMainWindow):
-    def __init__(self):
+    def __init__(self, operacao):
         super().__init__()
         self.cliente = Ui_FrmCadastroCliente()
         self.ui = self.cliente
         self.ui.setupUi(self)
+
+        if operacao == 'C':
+            self.setWindowTitle('Cadastro de Cliente')
+        elif operacao == 'A':
+            self.setWindowTitle('Alteração de Cliente')
 
         # self.ui.btn_cli_cadastrar.clicked.connect(self.btn_cadastra)
         self.ui.btn_cli_sair.clicked.connect(self.close)
@@ -30,12 +35,11 @@ class J_FrmCadastroCliente(QMainWindow):
         self.ui.btn_abre_formcapturaimagem_tras.clicked.connect(lambda: self.abre_capturaimagemcliente('-VERSO'))
 
         # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
-        self.keyPressEvent = lambda event: valida_campo(self, event)
+        self.keyPressEvent = lambda event: valida_campo(self, event, operacao)
 
         # Conecta o evento keyPressEvent do QMainWindow à função botao_salvar_cliente,
         # passando o valor da tecla enter pressionado
-        # self.ui.btn_cli_cadastrar.clicked.connect(lambda: botao_salvar_cliente(self, None, Qt.LeftButton))
-        self.ui.btn_cli_cadastrar.clicked.connect(lambda: validar_salvar_cliente(self))
+        self.ui.btn_cli_cadastrar.clicked.connect(lambda: validar_salvar_cliente(self, operacao))
 
         self.ui.cad_cli_02_ob_nasc.textChanged.connect(
             lambda text: self.ui.cad_cli_02_ob_nasc.setText(formatar_data(text)))
@@ -97,7 +101,6 @@ class J_FrmCadastroCliente(QMainWindow):
         from View.Front_CapturaImagemCliente import J_FrmCapturaImagemCliente
 
         # Cria uma instância de J_FormCapturaImagemCliente, passando o próprio objeto J_FrmCadastroCliente como
-        # self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self.ui.cad_cli_01_ob_doc.text(), self)
         self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self, self.ui.cad_cli_01_ob_doc.text(), foto)
 
         # Verifica se a câmera foi inicializada com sucesso
@@ -111,6 +114,6 @@ class J_FrmCadastroCliente(QMainWindow):
 
 if __name__ == "__main__":
     app = Cancela_Tab(sys.argv)  # chama a classe "Cancela_Tab" que cancela a ação da tecla Tab
-    window = J_FrmCadastroCliente()
+    window = J_FrmCadastroCliente(operacao)
     window.show()
     sys.exit(app.exec_())
