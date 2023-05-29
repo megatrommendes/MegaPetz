@@ -10,9 +10,8 @@ from View.FrmCapturaImagemCliente import Ui_frmcapturaimagemcliente
 from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 
 
-
 class J_FrmCapturaImagemCliente(QWidget):
-    def __init__(self, formulario, CPF, foto):
+    def __init__(self, formulario, CPF, nomeImagem):
         super().__init__()
         # Define as variáveis 'documento' e 'frm_cliente' como atributos da classe
         self.formulario = formulario
@@ -24,7 +23,7 @@ class J_FrmCapturaImagemCliente(QWidget):
         self.ui.setupUi(self)
 
         # Atribui o número do CPF do cliente ao nome do arquivo da foto
-        self.nome_arquivo = CPF + foto
+        self.nome_arquivo = CPF + nomeImagem
 
         # Centraliza a imagem
         self.ui.fotoimagemcamera.setAlignment(QtCore.Qt.AlignCenter)
@@ -50,12 +49,13 @@ class J_FrmCapturaImagemCliente(QWidget):
         self.imagemcamera_layout.setContentsMargins(0, 0, 0, 0)  # define as margens do layout como zero
 
         # Conecta os botôes
-        self.ui.btn_capturar.clicked.connect(self.captura_imagem)  # conecta o botão capturar a função captura_imagem
-        self.ui.btn_salvar_imagem.clicked.connect(lambda: self.mens_bnt_salvar(foto))
+        # self.ui.btn_capturar.clicked.connect(self.captura_imagem)  # conecta o botão capturar a função captura_imagem
+        self.ui.btn_capturar.clicked.connect(lambda: self.captura_imagem(formulario, nomeImagem))
+        #self.ui.btn_salvar_imagem.clicked.connect(lambda: self.mens_bnt_salvar(nomeImagem))
         # conecta o botão salvar a função mens_bnt_salvar
 
         self.ui.btn_cancelar_imagem.clicked.connect(
-            lambda: self.cancela_captura_imagem(foto))  # connect o botão cancelar a função cancela_captura_imagem
+            lambda: self.cancela_captura_imagem(nomeImagem))  # connect o botão cancelar a função cancela_captura_imagem
         self.ui.btn_sair_imagem.clicked.connect(self.close)  # conecta o botão sair a função close
 
         self.setWindowFlags(
@@ -72,7 +72,7 @@ class J_FrmCapturaImagemCliente(QWidget):
         return self.camera_initializada
 
     @QtCore.pyqtSlot()
-    def mens_bnt_salvar(self, foto):
+    def mens_bnt_salvar(self, nomeImagem):
         if self.timer.isActive():  # se o timer estiver ativo, para ele
             self.timer.stop()
         # Pergunta ao usuário se deseja salvar a imagem
@@ -83,7 +83,7 @@ class J_FrmCapturaImagemCliente(QWidget):
             # Salva a imagem
             if self.salvar_imagem(
                     self.formulario,
-                    foto):  # chama a função salvar_imagem para salvar a imagem e atualizar a interface
+                    nomeImagem):  # chama a função salvar_imagem para salvar a imagem e atualizar a interface
                 self.mostra_mensagem("Imagem salva.", "Imagem salva com sucesso")
             else:
                 self.mostra_mensagem("Não foi possível salvar a imagem.", "Erro ao salvar imagem")
@@ -92,15 +92,19 @@ class J_FrmCapturaImagemCliente(QWidget):
             self.mostra_mensagem("A imagem não foi salva.", "Imagem cancelada")
 
     @QtCore.pyqtSlot()
-    def salvar_imagem(self, frm_cliente, foto):
+    def salvar_imagem(self, frm_cliente, nomeImagem):
         # Cria um objeto QPixmap com a imagem atual
-        pixmap = QPixmap(self.ui.fotoimagemcamera.pixmap())
+        if nomeImagem == '-FRENTE':
+            pixmap = QPixmap(frm_cliente.ui.imagemcamera_frontal_label.pixmap())
+        else:
+            pixmap = QPixmap(frm_cliente.ui.imagemcamera_tras_label.pixmap())
+
         # Define o caminho e nome do arquivo de saída sendo o nome do arquivo o número do documento do cliente
         caminho = r'C:\MegaPetz\imagens\foto_cliente\{}.png'.format(self.nome_arquivo)
 
         # Salva a imagem no arquivo
         if pixmap.save(caminho):
-            if foto == '-FRENTE':
+            if nomeImagem == '-FRENTE':
                 # Exibe a imagem no formulário J_FrmCadastroCliente
                 frm_cliente.ui.imagemcamera_frontal_label.setPixmap(pixmap)
             else:
@@ -137,7 +141,7 @@ class J_FrmCapturaImagemCliente(QWidget):
             self.ui.fotoimagemcamera.setPixmap(pixmap)
 
     @QtCore.pyqtSlot()
-    def captura_imagem(self):
+    def captura_imagem(self, frm_cliente, nomeImagem):
         # Captura uma imagem e exibe no QLabel
         ret, frame = self.camera.read()
         if ret:
@@ -146,11 +150,18 @@ class J_FrmCapturaImagemCliente(QWidget):
             pixmap = pixmap.scaled(self.ui.fotoimagemcamera.size(), Qt.KeepAspectRatio)
             self.ui.fotoimagemcamera.setPixmap(pixmap)
             self.timer.stop()
+            pixmap = QPixmap(self.ui.fotoimagemcamera.pixmap())
+            if nomeImagem == '-FRENTE':
+                # Exibe a imagem no formulário J_FrmCadastroCliente
+                frm_cliente.ui.imagemcamera_frontal_label.setPixmap(pixmap)
+            else:
+                frm_cliente.ui.imagemcamera_tras_label.setPixmap(pixmap)
+            return True
 
     @QtCore.pyqtSlot()
-    def cancela_captura_imagem(self, foto):
+    def cancela_captura_imagem(self, nomeImagem):
         pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\icons-câmera.png')
-        if foto == '-FRENTE':
+        if nomeImagem == '-FRENTE':
             # Exibe a imagem no formulário J_FrmCadastroCliente
             self.formulario.ui.imagemcamera_frontal_label.setPixmap(pixmap)
         else:
@@ -165,9 +176,9 @@ class J_FrmCapturaImagemCliente(QWidget):
         self.timer.start(1)
 
         # Remove o arquivo de imagem salvo
-        caminho = r'C:\MegaPetz\imagens\foto_cliente\{}.png'.format(self.nome_arquivo)
-        if os.path.exists(caminho):
-            os.remove(caminho)
+        #caminho = r'C:\MegaPetz\imagens\foto_cliente\{}.png'.format(self.nome_arquivo)
+        #if os.path.exists(caminho):
+        #    os.remove(caminho)
 
     @QtCore.pyqtSlot()
     def closeEvent(self, event):

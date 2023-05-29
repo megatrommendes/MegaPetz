@@ -15,26 +15,35 @@ class Ui_frmcapturaimagemcliente(object):
     def setupUi(self, frmcapturaimagemcliente):
         frmcapturaimagemcliente.setObjectName("frmcapturaimagemcliente")
         frmcapturaimagemcliente.setWindowModality(QtCore.Qt.ApplicationModal)
-        frmcapturaimagemcliente.resize(341, 161)
+        frmcapturaimagemcliente.resize(323, 159)
         frmcapturaimagemcliente.setFocusPolicy(QtCore.Qt.StrongFocus)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../imagens/icon-cachorro-marrom-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         frmcapturaimagemcliente.setWindowIcon(icon)
-        frmcapturaimagemcliente.setStyleSheet("background-color: rgb(21, 143, 157);")
+        frmcapturaimagemcliente.setStyleSheet("background-color:rgb(42, 66, 76);")
         self.fotoimagemcamera = QtWidgets.QLabel(frmcapturaimagemcliente)
         self.fotoimagemcamera.setGeometry(QtCore.QRect(10, 10, 191, 141))
         self.fotoimagemcamera.setMinimumSize(QtCore.QSize(0, 0))
         self.fotoimagemcamera.setMaximumSize(QtCore.QSize(500, 500))
-        self.fotoimagemcamera.setStyleSheet("background-color:rgb(110, 165, 165);\n"
-"border-radius:5px")
+        self.fotoimagemcamera.setStyleSheet("color: rgb(255, 255, 255);\n"
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.fotoimagemcamera.setText("")
         self.fotoimagemcamera.setObjectName("fotoimagemcamera")
         self.verticalLayoutWidget = QtWidgets.QWidget(frmcapturaimagemcliente)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(210, 10, 121, 141))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(215, 6, 101, 141))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.line = QtWidgets.QFrame(self.verticalLayoutWidget)
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.verticalLayout.addWidget(self.line)
         self.btn_capturar = QtWidgets.QPushButton(self.verticalLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -43,52 +52,35 @@ class Ui_frmcapturaimagemcliente(object):
         self.btn_capturar.setStyleSheet("QPushButton{\n"
 "color:rgb(255,255, 255);\n"
 "background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:hover{\n"
 "color: rgb(0, 0, 47);\n"
 "background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
 "        stop: 0 rgb(255, 255, 255));\n"
 "    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
+"border-radius:3px}\n"
 "")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("../../imagens/icon-add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_capturar.setIcon(icon1)
         self.btn_capturar.setObjectName("btn_capturar")
         self.verticalLayout.addWidget(self.btn_capturar)
-        self.btn_salvar_imagem = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.btn_salvar_imagem.setFont(font)
-        self.btn_salvar_imagem.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_salvar_imagem.setStyleSheet("QPushButton{\n"
-"color:rgb(255,255, 255);\n"
-"background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
-"\n"
-"QPushButton:hover{\n"
-"color: rgb(0, 0, 47);\n"
-"background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
-"        stop: 0 rgb(255, 255, 255));\n"
-"    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
-"")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../../imagens/icons-sinal-saída.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_salvar_imagem.setIcon(icon2)
-        self.btn_salvar_imagem.setObjectName("btn_salvar_imagem")
-        self.verticalLayout.addWidget(self.btn_salvar_imagem)
+        self.line_2 = QtWidgets.QFrame(self.verticalLayoutWidget)
+        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+        self.verticalLayout.addWidget(self.line_2)
         self.btn_cancelar_imagem = QtWidgets.QPushButton(self.verticalLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -97,23 +89,33 @@ class Ui_frmcapturaimagemcliente(object):
         self.btn_cancelar_imagem.setStyleSheet("QPushButton{\n"
 "color:rgb(255,255, 255);\n"
 "background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:hover{\n"
 "color: rgb(0, 0, 47);\n"
 "background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
 "        stop: 0 rgb(255, 255, 255));\n"
 "    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
+"border-radius:3px}\n"
 "")
         self.btn_cancelar_imagem.setIcon(icon1)
         self.btn_cancelar_imagem.setObjectName("btn_cancelar_imagem")
         self.verticalLayout.addWidget(self.btn_cancelar_imagem)
+        self.line_4 = QtWidgets.QFrame(self.verticalLayoutWidget)
+        self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_4.setObjectName("line_4")
+        self.verticalLayout.addWidget(self.line_4)
         self.btn_sair_imagem = QtWidgets.QPushButton(self.verticalLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -122,23 +124,41 @@ class Ui_frmcapturaimagemcliente(object):
         self.btn_sair_imagem.setStyleSheet("QPushButton{\n"
 "color:rgb(255,255, 255);\n"
 "background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:hover{\n"
 "color: rgb(0, 0, 47);\n"
 "background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
 "        stop: 0 rgb(255, 255, 255));\n"
 "    border-color: rgb(0, 0, 47);\n"
-"}\n"
+"border-radius:3px}\n"
 "\n"
 "")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("../../imagens/icons-sinal-saída.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_sair_imagem.setIcon(icon2)
         self.btn_sair_imagem.setObjectName("btn_sair_imagem")
         self.verticalLayout.addWidget(self.btn_sair_imagem)
+        self.line_3 = QtWidgets.QFrame(self.verticalLayoutWidget)
+        self.line_3.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_3.setObjectName("line_3")
+        self.verticalLayout.addWidget(self.line_3)
+        self.line_5 = QtWidgets.QFrame(frmcapturaimagemcliente)
+        self.line_5.setGeometry(QtCore.QRect(195, 10, 20, 141))
+        self.line_5.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_5.setObjectName("line_5")
 
         self.retranslateUi(frmcapturaimagemcliente)
         QtCore.QMetaObject.connectSlotsByName(frmcapturaimagemcliente)
@@ -147,16 +167,5 @@ class Ui_frmcapturaimagemcliente(object):
         _translate = QtCore.QCoreApplication.translate
         frmcapturaimagemcliente.setWindowTitle(_translate("frmcapturaimagemcliente", "Emite Foto do Cliente"))
         self.btn_capturar.setText(_translate("frmcapturaimagemcliente", "Capturar"))
-        self.btn_salvar_imagem.setText(_translate("frmcapturaimagemcliente", "Salvar"))
         self.btn_cancelar_imagem.setText(_translate("frmcapturaimagemcliente", "Cancelar"))
         self.btn_sair_imagem.setText(_translate("frmcapturaimagemcliente", "Sair"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    frmcapturaimagemcliente = QtWidgets.QWidget()
-    ui = Ui_frmcapturaimagemcliente()
-    ui.setupUi(frmcapturaimagemcliente)
-    frmcapturaimagemcliente.show()
-    sys.exit(app.exec_())

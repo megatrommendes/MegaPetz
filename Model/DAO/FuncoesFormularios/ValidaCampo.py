@@ -2,7 +2,6 @@ from PyQt5.QtGui import QKeyEvent
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLineEdit, QComboBox, QPlainTextEdit, QLabel
 
-from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 from Model.DAO.FuncoesAuxiliares.ValidaCPF import valida_cpf
 from Model.DAO.FuncoesAuxiliares.ValidaData import valida_data
 from Model.DAO.FuncoesAuxiliares.ConsultaCEPCorreio import consulta_cep_correio
@@ -12,7 +11,8 @@ from Model.DAO.FuncoesFormularios.VerificaDocumentoBD import verifica_documento_
 
 
 def valida_campo(self, event, operacao):
-    widgets_ordenados = sorted(self.findChildren((QLineEdit, QPlainTextEdit, QComboBox, QLabel)), key=lambda w: w.objectName())
+    widgets_ordenados = sorted(self.findChildren((QLineEdit, QPlainTextEdit, QComboBox, QLabel)),
+                               key=lambda w: w.objectName())
     todos_widgets = {widget.objectName(): widget for widget in widgets_ordenados}
     if isinstance(event, QKeyEvent):
         if event.key() not in [Qt.Key_Enter, Qt.Key_Return]:
@@ -31,15 +31,22 @@ def valida_campo(self, event, operacao):
 
     if 'doc' in widget_name:
         if valida_cpf(widget_text):
+            # Verifica se o numero do documente existe na base de dados
             if verifica_documento_bd(todos_widgets, operacao, widget_text):
-                if operacao == "A":
-                    current_widget.setEnabled(False)
-                else:
-                    self.focusNextChild()
-            else:
-                if operacao == "C" or operacao == "L":
-                    current_widget.setText('')
 
+                # Operação for "A" ativa o modo de alteração do cadastro e carrega os dados do cliente no formulário
+                if operacao == 'A':
+                    current_widget.setEnabled(False)
+
+                # Operação for "C" se o cadastro existe, caso exista emite mensagem, caso não libera o cadastro
+                if operacao == 'C':
+                    current_widget.setEnabled(False)
+
+                # Operação for "L" ativa o modo de consulta e exibe os dados na tela caso encontrado
+                if operacao == 'CC':
+                    current_widget.setText('')
+            else:
+                current_widget.setText('')
         else:
             current_widget.setText('')
 

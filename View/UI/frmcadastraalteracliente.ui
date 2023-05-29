@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>923</width>
-    <height>480</height>
+    <width>808</width>
+    <height>516</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -48,7 +48,7 @@
     <normaloff>imagens/icon-cachorro-marrom-30.png</normaloff>imagens/icon-cachorro-marrom-30.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(21, 143, 157);</string>
+   <string notr="true">background-color:rgb(42, 66, 76);</string>
   </property>
   <property name="iconSize">
    <size>
@@ -60,10 +60,10 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>10</y>
+      <x>8</x>
+      <y>9</y>
       <width>591</width>
-      <height>461</height>
+      <height>496</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
@@ -79,8 +79,8 @@
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Tel. Preferêncial</string>
@@ -102,8 +102,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Observações</string>
@@ -122,8 +122,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Data. Nascimento</string>
@@ -145,8 +145,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>CEP</string>
@@ -168,8 +168,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="maxLength">
         <number>60</number>
@@ -188,8 +191,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Cidade</string>
@@ -211,8 +214,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Bairro</string>
@@ -231,8 +234,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="inputMask">
         <string notr="true"/>
@@ -260,8 +266,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Número</string>
@@ -280,8 +286,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="maxLength">
         <number>40</number>
@@ -297,8 +306,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="maxLength">
         <number>62</number>
@@ -317,8 +329,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="maxLength">
         <number>62</number>
@@ -337,8 +352,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Nome do Contato</string>
@@ -360,8 +375,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Nome</string>
@@ -383,8 +398,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Complemento</string>
@@ -406,8 +421,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="maxLength">
         <number>40</number>
@@ -426,8 +444,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>CPF</string>
@@ -446,8 +464,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="maxLength">
         <number>62</number>
@@ -463,8 +484,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="inputMask">
         <string/>
@@ -486,8 +510,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="inputMask">
         <string/>
@@ -509,8 +536,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="inputMask">
         <string/>
@@ -535,8 +565,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);;
+border-radius:3px</string>
        </property>
        <item>
         <property name="text">
@@ -687,8 +720,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Estado</string>
@@ -710,8 +743,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);;
+border-radius:3px</string>
        </property>
        <property name="inputMask">
         <string notr="true"/>
@@ -742,8 +778,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Tel. Alternativo</string>
@@ -762,8 +798,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="inputMask">
         <string/>
@@ -785,8 +824,11 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
       </widget>
      </item>
@@ -802,8 +844,8 @@ border-radius:0px</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(255, 145, 10);
-border-radius:0px</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
        <property name="text">
         <string>Endereço</string>
@@ -831,15 +873,21 @@ border-radius:0px</string>
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>10</y>
-      <width>191</width>
-      <height>221</height>
+      <x>608</x>
+      <y>32</y>
+      <width>190</width>
+      <height>141</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="1" column="1" colspan="2">
+     <item row="1" column="1">
       <widget class="QPushButton" name="btn_abre_formcapturaimagem_frente">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -852,23 +900,28 @@ border-radius:0px</string>
         <string notr="true">QPushButton{
 color:rgb(255,255, 255);
 background-color: rgb(0, 0, 47);
-border-radius:5px}
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
 
 QPushButton:hover{
 color: rgb(0, 0, 47);
 background-color: rgb(192, 206, 255);
-border-radius:5px}
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
 
 QPushButton:pressed {
     background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
         stop: 0 rgb(255, 255, 255));
     border-color: rgb(0, 0, 47);
-}
-
+border-radius:3px}
 </string>
        </property>
        <property name="text">
-        <string>Foto Frente</string>
+        <string>  Adicionar  </string>
        </property>
        <property name="icon">
         <iconset>
@@ -876,7 +929,7 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
-     <item row="0" column="0" colspan="4">
+     <item row="0" column="0" colspan="3">
       <widget class="QLabel" name="imagemcamera_frontal_label">
        <property name="minimumSize">
         <size>
@@ -892,85 +945,21 @@ QPushButton:pressed {
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
        <property name="text">
         <string/>
        </property>
       </widget>
      </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="gridLayoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>720</x>
-      <y>250</y>
-      <width>191</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_4">
-     <item row="1" column="1" colspan="2">
-      <widget class="QPushButton" name="btn_abre_formcapturaimagem_tras">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-color:rgb(255,255, 255);
-background-color: rgb(0, 0, 47);
-border-radius:5px}
-
-QPushButton:hover{
-color: rgb(0, 0, 47);
-background-color: rgb(192, 206, 255);
-border-radius:5px}
-
-QPushButton:pressed {
-    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
-        stop: 0 rgb(255, 255, 255));
-    border-color: rgb(0, 0, 47);
-}
-
-</string>
-       </property>
-       <property name="text">
-        <string>Foto Verso</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../imagens/icons8-câmera-24.png</normaloff>../../imagens/icons8-câmera-24.png</iconset>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0" colspan="4">
-      <widget class="QLabel" name="imagemcamera_tras_label">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>500</width>
-         <height>500</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:0px</string>
-       </property>
-       <property name="text">
-        <string/>
+     <item row="2" column="1">
+      <widget class="Line" name="line_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>
@@ -979,51 +968,13 @@ border-radius:0px</string>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>7</y>
+      <x>654</x>
+      <y>401</y>
       <width>101</width>
-      <height>81</height>
+      <height>96</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="btn_cli_cancelar">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-color:rgb(255,255, 255);
-background-color: rgb(0, 0, 47);
-border-radius:5px}
-
-QPushButton:hover{
-color: rgb(0, 0, 47);
-background-color: rgb(192, 206, 255);
-border-radius:5px}
-
-QPushButton:pressed {
-    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
-        stop: 0 rgb(255, 255, 255));
-    border-color: rgb(0, 0, 47);
-}
-
-</string>
-       </property>
-       <property name="text">
-        <string>Cancelar</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
-       </property>
-      </widget>
-     </item>
      <item>
       <widget class="QPushButton" name="btn_cli_cadastrar">
        <property name="font">
@@ -1038,19 +989,24 @@ QPushButton:pressed {
         <string notr="true">QPushButton{
 color:rgb(255,255, 255);
 background-color: rgb(0, 0, 47);
-border-radius:5px}
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
 
 QPushButton:hover{
 color: rgb(0, 0, 47);
 background-color: rgb(192, 206, 255);
-border-radius:5px}
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
 
 QPushButton:pressed {
     background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
         stop: 0 rgb(255, 255, 255));
     border-color: rgb(0, 0, 47);
-}
-
+border-radius:3px}
 </string>
        </property>
        <property name="text">
@@ -1059,6 +1015,63 @@ QPushButton:pressed {
        <property name="icon">
         <iconset>
          <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_cli_cancelar">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
+
+QPushButton:hover{
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
+border-radius:3px}
+</string>
+       </property>
+       <property name="text">
+        <string>Cancelar</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../imagens/icon-add.png</normaloff>../../imagens/icon-add.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>
@@ -1076,19 +1089,24 @@ QPushButton:pressed {
         <string notr="true">QPushButton{
 color:rgb(255,255, 255);
 background-color: rgb(0, 0, 47);
-border-radius:5px}
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
 
 QPushButton:hover{
 color: rgb(0, 0, 47);
 background-color: rgb(192, 206, 255);
-border-radius:5px}
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
 
 QPushButton:pressed {
     background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
         stop: 0 rgb(255, 255, 255));
     border-color: rgb(0, 0, 47);
-}
-
+border-radius:3px}
 </string>
        </property>
        <property name="text">
@@ -1101,6 +1119,217 @@ QPushButton:pressed {
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>607</x>
+      <y>221</y>
+      <width>195</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btn_abre_formcapturaimagem_tras">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color:rgb(255,255, 255);
+background-color: rgb(0, 0, 47);
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
+
+QPushButton:hover{
+color: rgb(0, 0, 47);
+background-color: rgb(192, 206, 255);
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px}
+
+QPushButton:pressed {
+    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,
+        stop: 0 rgb(255, 255, 255));
+    border-color: rgb(0, 0, 47);
+border-radius:3px}
+</string>
+       </property>
+       <property name="text">
+        <string>  Adicionar  </string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../imagens/icons8-câmera-24.png</normaloff>../../imagens/icons8-câmera-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="0">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="1">
+      <widget class="Line" name="line_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QLabel" name="imagemcamera_tras_label">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>500</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);;
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>587</x>
+      <y>3</y>
+      <width>20</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cad_cli_imagem_frente">
+    <property name="geometry">
+     <rect>
+      <x>608</x>
+      <y>8</y>
+      <width>191</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Foto Frente</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cad_cli_imagem_tras">
+    <property name="geometry">
+     <rect>
+      <x>607</x>
+      <y>197</y>
+      <width>191</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+    </property>
+    <property name="text">
+     <string>Foto Verso</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="Line" name="line_8">
+    <property name="geometry">
+     <rect>
+      <x>602</x>
+      <y>495</y>
+      <width>195</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
    </widget>
   </widget>
  </widget>
@@ -1119,7 +1348,6 @@ QPushButton:pressed {
   <tabstop>cad_cli_12_fone_alt</tabstop>
   <tabstop>cad_cli_13_contato</tabstop>
   <tabstop>cad_cli_14_obs</tabstop>
-  <tabstop>btn_abre_formcapturaimagem_frente</tabstop>
  </tabstops>
  <resources/>
  <connections/>

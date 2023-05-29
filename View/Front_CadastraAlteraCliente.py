@@ -1,6 +1,6 @@
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel
+from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, QLabel, QHBoxLayout
 
 from Model.DAO.FuncoesAuxiliares.AbilitaCampo import abilita_campo
 from Model.DAO.FuncoesAuxiliares.LimpaCampos import limpa_campos
@@ -35,7 +35,9 @@ class J_FrmCadastraAlteraCliente(QMainWindow):
         self.ui.btn_abre_formcapturaimagem_frente.clicked.connect(lambda: self.abre_capturaimagemcliente('-FRENTE'))
         self.ui.btn_abre_formcapturaimagem_tras.clicked.connect(lambda: self.abre_capturaimagemcliente('-VERSO'))
         self.ui.btn_cli_cancelar.clicked.connect(
-            lambda: (limpa_campos(self), abilita_campo(self), reposiciona_foco(self)))
+            lambda: (limpa_campos(self), abilita_campo(self), reposiciona_foco(self),
+                     self.ui.imagemcamera_frontal_label.setPixmap(pixmap),
+                     self.ui.imagemcamera_tras_label.setPixmap(pixmap)))
 
         # Conecta o evento keyPressEvent do QMainWindow à função valida_campo
         self.keyPressEvent = lambda event: valida_campo(self, event, operacao)
@@ -68,13 +70,18 @@ class J_FrmCadastraAlteraCliente(QMainWindow):
             QtCore.Qt.WindowSystemMenuHint  # Exibe um menu de sistema para a janela
         )
 
-        # Exibe a imagem padrão caso não tenhauma imagem "Foto do cliente"
+        # Exibe a imagem padrão caso não tenha uma imagem "Foto do cliente"
         pixmap = QPixmap('C:\\MegaPetz\\imagens\\imagem_icones\\icons-câmera.png')
         self.ui.imagemcamera_frontal_label.setPixmap(pixmap)
         self.ui.imagemcamera_tras_label.setPixmap(pixmap)
 
         # Centraliza a imagem
         self.ui.imagemcamera_frontal_label.setAlignment(QtCore.Qt.AlignCenter)
+
+        # Cria um layout para o QLabel que exibe a imagem
+        self.imagemcamera_layout = QHBoxLayout(
+            self.ui.imagemcamera_frontal_label)  # instância um objeto QHBoxLayout para o QLabel
+        self.imagemcamera_layout.setContentsMargins(0, 0, 0, 0)  # define as margens do layout como zero
 
         # Centraliza a imagem
         self.ui.imagemcamera_tras_label.setAlignment(QtCore.Qt.AlignCenter)
@@ -98,12 +105,12 @@ class J_FrmCadastraAlteraCliente(QMainWindow):
             # Define a função lambda para o evento focusOut
             obj.focusOutEvent = lambda event, obj=obj, label=label: muda_cor_foco(obj, label, event)
 
-    def abre_capturaimagemcliente(self, foto):
+    def abre_capturaimagemcliente(self, nomeImagem):
         # Importa a classe J_FormCapturaImagemCliente do arquivo Front_CapturaImagemCliente
         from View.Front_CapturaImagemCliente import J_FrmCapturaImagemCliente
 
-        # Cria uma instância de J_FormCapturaImagemCliente, passando o próprio objeto J_FrmCadastroCliente como
-        self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self, self.ui.cad_cli_01_ob_doc.text(), foto)
+        # Cria uma instância de J_FormCapturaImagemCliente, passando o próprio objeto J_FrmCapturaImagemCliente como
+        self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self, self.ui.cad_cli_01_ob_doc.text(), nomeImagem)
 
         # Verifica se a câmera foi inicializada com sucesso
         if not self.frm_capturaimagemcliente.verifica_camera():

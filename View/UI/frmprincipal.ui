@@ -20,27 +20,20 @@
    <string>Bem Limpinho</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(21, 143, 157);</string>
+   <string notr="true">background-color:rgb(42, 66, 76);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>761</width>
-      <height>551</height>
+      <x>0</x>
+      <y>-4</y>
+      <width>786</width>
+      <height>10</height>
      </rect>
     </property>
-    <property name="minimumSize">
-     <size>
-      <width>451</width>
-      <height>371</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(156, 202, 206);
-border-radius:5px</string>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>
@@ -83,7 +76,9 @@ border-radius:5px</string>
       <string>Usuário</string>
      </property>
      <addaction name="actionCadastra_Usu_rio"/>
+     <addaction name="separator"/>
      <addaction name="actionAltera_Senha"/>
+     <addaction name="separator"/>
      <addaction name="actionControle_de_Acesso"/>
     </widget>
     <widget class="QMenu" name="menuCliente">
@@ -98,8 +93,11 @@ border-radius:5px</string>
       <string>Cliente</string>
      </property>
      <addaction name="actionCadasta_Cliente"/>
+     <addaction name="separator"/>
      <addaction name="actionAltera_Cliente"/>
+     <addaction name="separator"/>
      <addaction name="actionConsulta_Cliente"/>
+     <addaction name="separator"/>
      <addaction name="actionExclui_Cliente"/>
     </widget>
     <widget class="QMenu" name="menuMascote">
@@ -114,11 +112,15 @@ border-radius:5px</string>
       <string>Mascote</string>
      </property>
      <addaction name="actionCadastro_Mascote"/>
+     <addaction name="separator"/>
      <addaction name="actionAltera_Mascote"/>
+     <addaction name="separator"/>
      <addaction name="actionConsulta_Mascote"/>
+     <addaction name="separator"/>
      <addaction name="actionExclui_Mascote"/>
     </widget>
     <addaction name="menuCliente"/>
+    <addaction name="separator"/>
     <addaction name="menuMascote"/>
     <addaction name="separator"/>
     <addaction name="actionProduto"/>

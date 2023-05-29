@@ -88,17 +88,5 @@ def valida_dados_cliente(self, operacao):
                 break
 
         i += 1  # avançar para o próximo widget
+
     return ok, documento
-
-
-'''   
-
-
-
-def limpar_campos(parent_widget):
-    for child_widget in parent_widget.findChildren((QLineEdit, QPlainTextEdit)):
-        if isinstance(child_widget, QLineEdit) or isinstance(child_widget, QPlainTextEdit):
-            #child_widget.clear()
-            child_widget.setFocus()
-            print(child_widget.objectName())
-'''

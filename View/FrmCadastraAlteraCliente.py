@@ -15,7 +15,7 @@ class Ui_FrmCadastraAlteraCliente(object):
     def setupUi(self, FrmCadastraAlteraCliente):
         FrmCadastraAlteraCliente.setObjectName("FrmCadastraAlteraCliente")
         FrmCadastraAlteraCliente.setWindowModality(QtCore.Qt.ApplicationModal)
-        FrmCadastraAlteraCliente.resize(923, 480)
+        FrmCadastraAlteraCliente.resize(808, 516)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(49)
         sizePolicy.setVerticalStretch(0)
@@ -28,12 +28,12 @@ class Ui_FrmCadastraAlteraCliente(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("imagens/icon-cachorro-marrom-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FrmCadastraAlteraCliente.setWindowIcon(icon)
-        FrmCadastraAlteraCliente.setStyleSheet("background-color: rgb(21, 143, 157);")
+        FrmCadastraAlteraCliente.setStyleSheet("background-color:rgb(42, 66, 76);")
         FrmCadastraAlteraCliente.setIconSize(QtCore.QSize(30, 30))
         self.centralwidget = QtWidgets.QWidget(FrmCadastraAlteraCliente)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(120, 10, 591, 461))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(8, 9, 591, 496))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -44,8 +44,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_11_ob_fone_pref_label.setFont(font)
         self.cad_cli_11_ob_fone_pref_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_11_ob_fone_pref_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_11_ob_fone_pref_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_11_ob_fone_pref_label.setObjectName("cad_cli_11_ob_fone_pref_label")
         self.gridLayout_2.addWidget(self.cad_cli_11_ob_fone_pref_label, 10, 0, 1, 1)
@@ -55,8 +55,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_14_obs_label.setFont(font)
         self.cad_cli_14_obs_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_14_obs_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_14_obs_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_14_obs_label.setObjectName("cad_cli_14_obs_label")
         self.gridLayout_2.addWidget(self.cad_cli_14_obs_label, 12, 0, 1, 1)
@@ -65,8 +65,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_02_ob_nasc_label.setFont(font)
         self.cad_cli_02_ob_nasc_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_02_ob_nasc_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_02_ob_nasc_label.setObjectName("cad_cli_02_ob_nasc_label")
         self.gridLayout_2.addWidget(self.cad_cli_02_ob_nasc_label, 0, 1, 1, 1)
@@ -76,8 +76,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_04_ob_cep_label.setFont(font)
         self.cad_cli_04_ob_cep_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_04_ob_cep_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_04_ob_cep_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_04_ob_cep_label.setObjectName("cad_cli_04_ob_cep_label")
         self.gridLayout_2.addWidget(self.cad_cli_04_ob_cep_label, 2, 5, 1, 1)
@@ -87,8 +87,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_13_contato.setFont(font)
         self.cad_cli_13_contato.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_13_contato.setMaxLength(60)
         self.cad_cli_13_contato.setObjectName("cad_cli_13_contato")
         self.gridLayout_2.addWidget(self.cad_cli_13_contato, 11, 3, 1, 3)
@@ -98,8 +101,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_10_ob_cidade_label.setFont(font)
         self.cad_cli_10_ob_cidade_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_10_ob_cidade_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_10_ob_cidade_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_10_ob_cidade_label.setObjectName("cad_cli_10_ob_cidade_label")
         self.gridLayout_2.addWidget(self.cad_cli_10_ob_cidade_label, 8, 3, 1, 1)
@@ -109,8 +112,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_09_ob_bairro_label.setFont(font)
         self.cad_cli_09_ob_bairro_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_09_ob_bairro_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_09_ob_bairro_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_09_ob_bairro_label.setObjectName("cad_cli_09_ob_bairro_label")
         self.gridLayout_2.addWidget(self.cad_cli_09_ob_bairro_label, 8, 0, 1, 1)
@@ -119,8 +122,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_02_ob_nasc.setFont(font)
         self.cad_cli_02_ob_nasc.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_02_ob_nasc.setInputMask("")
         self.cad_cli_02_ob_nasc.setText("")
         self.cad_cli_02_ob_nasc.setMaxLength(10)
@@ -133,8 +139,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_06_ob_num_label.setFont(font)
         self.cad_cli_06_ob_num_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_06_ob_num_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_06_ob_num_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_06_ob_num_label.setObjectName("cad_cli_06_ob_num_label")
         self.gridLayout_2.addWidget(self.cad_cli_06_ob_num_label, 4, 5, 1, 1)
@@ -143,8 +149,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_09_ob_bairro.setFont(font)
         self.cad_cli_09_ob_bairro.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_09_ob_bairro.setMaxLength(40)
         self.cad_cli_09_ob_bairro.setObjectName("cad_cli_09_ob_bairro")
         self.gridLayout_2.addWidget(self.cad_cli_09_ob_bairro, 9, 0, 1, 2)
@@ -153,8 +162,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_03_ob_nome.setFont(font)
         self.cad_cli_03_ob_nome.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_03_ob_nome.setMaxLength(62)
         self.cad_cli_03_ob_nome.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.cad_cli_03_ob_nome.setObjectName("cad_cli_03_ob_nome")
@@ -164,8 +176,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_05_ob_end.setFont(font)
         self.cad_cli_05_ob_end.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_05_ob_end.setMaxLength(62)
         self.cad_cli_05_ob_end.setObjectName("cad_cli_05_ob_end")
         self.gridLayout_2.addWidget(self.cad_cli_05_ob_end, 5, 0, 1, 5)
@@ -175,8 +190,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_13_contato_label.setFont(font)
         self.cad_cli_13_contato_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_13_contato_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_13_contato_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_13_contato_label.setObjectName("cad_cli_13_contato_label")
         self.gridLayout_2.addWidget(self.cad_cli_13_contato_label, 10, 3, 1, 1)
@@ -186,8 +201,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_03_ob_nome_label.setFont(font)
         self.cad_cli_03_ob_nome_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_03_ob_nome_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_03_ob_nome_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_03_ob_nome_label.setObjectName("cad_cli_03_ob_nome_label")
         self.gridLayout_2.addWidget(self.cad_cli_03_ob_nome_label, 2, 0, 1, 1)
@@ -197,8 +212,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_07_complemento_label.setFont(font)
         self.cad_cli_07_complemento_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_07_complemento_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_07_complemento_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_07_complemento_label.setObjectName("cad_cli_07_complemento_label")
         self.gridLayout_2.addWidget(self.cad_cli_07_complemento_label, 6, 0, 1, 1)
@@ -208,8 +223,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_10_ob_cidade.setFont(font)
         self.cad_cli_10_ob_cidade.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_10_ob_cidade.setMaxLength(40)
         self.cad_cli_10_ob_cidade.setObjectName("cad_cli_10_ob_cidade")
         self.gridLayout_2.addWidget(self.cad_cli_10_ob_cidade, 9, 3, 1, 3)
@@ -219,8 +237,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_01_ob_doc_label.setFont(font)
         self.cad_cli_01_ob_doc_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_01_ob_doc_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_01_ob_doc_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_01_ob_doc_label.setObjectName("cad_cli_01_ob_doc_label")
         self.gridLayout_2.addWidget(self.cad_cli_01_ob_doc_label, 0, 0, 1, 1)
@@ -229,8 +247,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_07_complemento.setFont(font)
         self.cad_cli_07_complemento.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_07_complemento.setMaxLength(62)
         self.cad_cli_07_complemento.setObjectName("cad_cli_07_complemento")
         self.gridLayout_2.addWidget(self.cad_cli_07_complemento, 7, 0, 1, 5)
@@ -239,8 +260,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_06_ob_num.setFont(font)
         self.cad_cli_06_ob_num.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_06_ob_num.setInputMask("")
         self.cad_cli_06_ob_num.setMaxLength(5)
         self.cad_cli_06_ob_num.setAlignment(QtCore.Qt.AlignCenter)
@@ -251,8 +275,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_04_ob_cep.setFont(font)
         self.cad_cli_04_ob_cep.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_04_ob_cep.setInputMask("")
         self.cad_cli_04_ob_cep.setMaxLength(9)
         self.cad_cli_04_ob_cep.setAlignment(QtCore.Qt.AlignCenter)
@@ -263,8 +290,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_12_fone_alt.setFont(font)
         self.cad_cli_12_fone_alt.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_12_fone_alt.setInputMask("")
         self.cad_cli_12_fone_alt.setMaxLength(14)
         self.cad_cli_12_fone_alt.setCursorPosition(0)
@@ -276,8 +306,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_08_UF.setFont(font)
         self.cad_cli_08_UF.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);;\n"
+"border-radius:3px")
         self.cad_cli_08_UF.setObjectName("cad_cli_08_UF")
         self.cad_cli_08_UF.addItem("")
         self.cad_cli_08_UF.addItem("")
@@ -313,8 +346,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_08_UF_label.setFont(font)
         self.cad_cli_08_UF_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_08_UF_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_08_UF_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_08_UF_label.setObjectName("cad_cli_08_UF_label")
         self.gridLayout_2.addWidget(self.cad_cli_08_UF_label, 6, 5, 1, 1)
@@ -324,8 +357,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_01_ob_doc.setFont(font)
         self.cad_cli_01_ob_doc.setFocusPolicy(QtCore.Qt.WheelFocus)
         self.cad_cli_01_ob_doc.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);;\n"
+"border-radius:3px")
         self.cad_cli_01_ob_doc.setInputMask("")
         self.cad_cli_01_ob_doc.setMaxLength(14)
         self.cad_cli_01_ob_doc.setEchoMode(QtWidgets.QLineEdit.Normal)
@@ -339,8 +375,8 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_12_fone_alt_label.setFont(font)
         self.cad_cli_12_fone_alt_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_12_fone_alt_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_12_fone_alt_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_12_fone_alt_label.setObjectName("cad_cli_12_fone_alt_label")
         self.gridLayout_2.addWidget(self.cad_cli_12_fone_alt_label, 10, 1, 1, 1)
@@ -349,8 +385,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_11_ob_fone_pref.setFont(font)
         self.cad_cli_11_ob_fone_pref.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_11_ob_fone_pref.setInputMask("")
         self.cad_cli_11_ob_fone_pref.setMaxLength(14)
         self.cad_cli_11_ob_fone_pref.setAlignment(QtCore.Qt.AlignCenter)
@@ -361,8 +400,11 @@ class Ui_FrmCadastraAlteraCliente(object):
         font.setPointSize(12)
         self.cad_cli_14_obs.setFont(font)
         self.cad_cli_14_obs.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.cad_cli_14_obs.setObjectName("cad_cli_14_obs")
         self.gridLayout_2.addWidget(self.cad_cli_14_obs, 13, 0, 1, 6)
         self.cad_cli_05_ob_end_label = QtWidgets.QLabel(self.gridLayoutWidget)
@@ -371,20 +413,25 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_05_ob_end_label.setFont(font)
         self.cad_cli_05_ob_end_label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cad_cli_05_ob_end_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 145, 10);\n"
-"border-radius:0px")
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
         self.cad_cli_05_ob_end_label.setAlignment(QtCore.Qt.AlignCenter)
         self.cad_cli_05_ob_end_label.setObjectName("cad_cli_05_ob_end_label")
         self.gridLayout_2.addWidget(self.cad_cli_05_ob_end_label, 4, 0, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(13, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_2.addItem(spacerItem, 7, 6, 1, 1)
         self.gridLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(720, 10, 191, 221))
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(608, 32, 190, 141))
         self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.btn_abre_formcapturaimagem_frente = QtWidgets.QPushButton(self.gridLayoutWidget_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_abre_formcapturaimagem_frente.sizePolicy().hasHeightForWidth())
+        self.btn_abre_formcapturaimagem_frente.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_abre_formcapturaimagem_frente.setFont(font)
@@ -392,107 +439,53 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.btn_abre_formcapturaimagem_frente.setStyleSheet("QPushButton{\n"
 "color:rgb(255,255, 255);\n"
 "background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:hover{\n"
 "color: rgb(0, 0, 47);\n"
 "background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
 "        stop: 0 rgb(255, 255, 255));\n"
 "    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
+"border-radius:3px}\n"
 "")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("../../imagens/icons8-câmera-24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_abre_formcapturaimagem_frente.setIcon(icon1)
         self.btn_abre_formcapturaimagem_frente.setObjectName("btn_abre_formcapturaimagem_frente")
-        self.gridLayout_3.addWidget(self.btn_abre_formcapturaimagem_frente, 1, 1, 1, 2)
+        self.gridLayout_3.addWidget(self.btn_abre_formcapturaimagem_frente, 1, 1, 1, 1)
         self.imagemcamera_frontal_label = QtWidgets.QLabel(self.gridLayoutWidget_2)
         self.imagemcamera_frontal_label.setMinimumSize(QtCore.QSize(0, 0))
         self.imagemcamera_frontal_label.setMaximumSize(QtCore.QSize(500, 500))
         self.imagemcamera_frontal_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px;")
         self.imagemcamera_frontal_label.setText("")
         self.imagemcamera_frontal_label.setObjectName("imagemcamera_frontal_label")
-        self.gridLayout_3.addWidget(self.imagemcamera_frontal_label, 0, 0, 1, 4)
-        self.gridLayoutWidget_3 = QtWidgets.QWidget(self.centralwidget)
-        self.gridLayoutWidget_3.setGeometry(QtCore.QRect(720, 250, 191, 221))
-        self.gridLayoutWidget_3.setObjectName("gridLayoutWidget_3")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.gridLayoutWidget_3)
-        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_4.setObjectName("gridLayout_4")
-        self.btn_abre_formcapturaimagem_tras = QtWidgets.QPushButton(self.gridLayoutWidget_3)
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.btn_abre_formcapturaimagem_tras.setFont(font)
-        self.btn_abre_formcapturaimagem_tras.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_abre_formcapturaimagem_tras.setStyleSheet("QPushButton{\n"
-"color:rgb(255,255, 255);\n"
-"background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
-"\n"
-"QPushButton:hover{\n"
-"color: rgb(0, 0, 47);\n"
-"background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
-"        stop: 0 rgb(255, 255, 255));\n"
-"    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
-"")
-        self.btn_abre_formcapturaimagem_tras.setIcon(icon1)
-        self.btn_abre_formcapturaimagem_tras.setObjectName("btn_abre_formcapturaimagem_tras")
-        self.gridLayout_4.addWidget(self.btn_abre_formcapturaimagem_tras, 1, 1, 1, 2)
-        self.imagemcamera_tras_label = QtWidgets.QLabel(self.gridLayoutWidget_3)
-        self.imagemcamera_tras_label.setMinimumSize(QtCore.QSize(0, 0))
-        self.imagemcamera_tras_label.setMaximumSize(QtCore.QSize(500, 500))
-        self.imagemcamera_tras_label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color:rgb(110, 165, 165);\n"
-"border-radius:0px")
-        self.imagemcamera_tras_label.setText("")
-        self.imagemcamera_tras_label.setObjectName("imagemcamera_tras_label")
-        self.gridLayout_4.addWidget(self.imagemcamera_tras_label, 0, 0, 1, 4)
+        self.gridLayout_3.addWidget(self.imagemcamera_frontal_label, 0, 0, 1, 3)
+        self.line_5 = QtWidgets.QFrame(self.gridLayoutWidget_2)
+        self.line_5.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_5.setObjectName("line_5")
+        self.gridLayout_3.addWidget(self.line_5, 2, 1, 1, 1)
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 7, 101, 81))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(654, 401, 101, 96))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.btn_cli_cancelar = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.btn_cli_cancelar.setFont(font)
-        self.btn_cli_cancelar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_cli_cancelar.setStyleSheet("QPushButton{\n"
-"color:rgb(255,255, 255);\n"
-"background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
-"\n"
-"QPushButton:hover{\n"
-"color: rgb(0, 0, 47);\n"
-"background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
-"        stop: 0 rgb(255, 255, 255));\n"
-"    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
-"")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../../imagens/icon-add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_cli_cancelar.setIcon(icon2)
-        self.btn_cli_cancelar.setObjectName("btn_cli_cancelar")
-        self.verticalLayout.addWidget(self.btn_cli_cancelar)
         self.btn_cli_cadastrar = QtWidgets.QPushButton(self.verticalLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -501,23 +494,70 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.btn_cli_cadastrar.setStyleSheet("QPushButton{\n"
 "color:rgb(255,255, 255);\n"
 "background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:hover{\n"
 "color: rgb(0, 0, 47);\n"
 "background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
 "        stop: 0 rgb(255, 255, 255));\n"
 "    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
+"border-radius:3px}\n"
 "")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("../../imagens/icon-add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_cli_cadastrar.setIcon(icon2)
         self.btn_cli_cadastrar.setObjectName("btn_cli_cadastrar")
         self.verticalLayout.addWidget(self.btn_cli_cadastrar)
+        self.line_3 = QtWidgets.QFrame(self.verticalLayoutWidget)
+        self.line_3.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_3.setObjectName("line_3")
+        self.verticalLayout.addWidget(self.line_3)
+        self.btn_cli_cancelar = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.btn_cli_cancelar.setFont(font)
+        self.btn_cli_cancelar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_cli_cancelar.setStyleSheet("QPushButton{\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
+"border-radius:3px}\n"
+"")
+        self.btn_cli_cancelar.setIcon(icon2)
+        self.btn_cli_cancelar.setObjectName("btn_cli_cancelar")
+        self.verticalLayout.addWidget(self.btn_cli_cancelar)
+        self.line_2 = QtWidgets.QFrame(self.verticalLayoutWidget)
+        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+        self.verticalLayout.addWidget(self.line_2)
         self.btn_cli_sair = QtWidgets.QPushButton(self.verticalLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -526,25 +566,124 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.btn_cli_sair.setStyleSheet("QPushButton{\n"
 "color:rgb(255,255, 255);\n"
 "background-color: rgb(0, 0, 47);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:hover{\n"
 "color: rgb(0, 0, 47);\n"
 "background-color: rgb(192, 206, 255);\n"
-"border-radius:5px}\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
 "        stop: 0 rgb(255, 255, 255));\n"
 "    border-color: rgb(0, 0, 47);\n"
-"}\n"
-"\n"
+"border-radius:3px}\n"
 "")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("../../imagens/icons-sinal-saída.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_cli_sair.setIcon(icon3)
         self.btn_cli_sair.setObjectName("btn_cli_sair")
         self.verticalLayout.addWidget(self.btn_cli_sair)
+        self.gridLayoutWidget_4 = QtWidgets.QWidget(self.centralwidget)
+        self.gridLayoutWidget_4.setGeometry(QtCore.QRect(607, 221, 195, 141))
+        self.gridLayoutWidget_4.setObjectName("gridLayoutWidget_4")
+        self.gridLayout_5 = QtWidgets.QGridLayout(self.gridLayoutWidget_4)
+        self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_5.setObjectName("gridLayout_5")
+        self.btn_abre_formcapturaimagem_tras = QtWidgets.QPushButton(self.gridLayoutWidget_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_abre_formcapturaimagem_tras.sizePolicy().hasHeightForWidth())
+        self.btn_abre_formcapturaimagem_tras.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.btn_abre_formcapturaimagem_tras.setFont(font)
+        self.btn_abre_formcapturaimagem_tras.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_abre_formcapturaimagem_tras.setStyleSheet("QPushButton{\n"
+"color:rgb(255,255, 255);\n"
+"background-color: rgb(0, 0, 47);\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: rgb(0, 0, 47);\n"
+"background-color: rgb(192, 206, 255);\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);\n"
+"border-radius:3px}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qradialgradient(cx: 0.5, cy: 0.5, radius: 1, fx: 0.5, fy: 0.5,\n"
+"        stop: 0 rgb(255, 255, 255));\n"
+"    border-color: rgb(0, 0, 47);\n"
+"border-radius:3px}\n"
+"")
+        self.btn_abre_formcapturaimagem_tras.setIcon(icon1)
+        self.btn_abre_formcapturaimagem_tras.setObjectName("btn_abre_formcapturaimagem_tras")
+        self.gridLayout_5.addWidget(self.btn_abre_formcapturaimagem_tras, 1, 1, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_5.addItem(spacerItem1, 1, 2, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_5.addItem(spacerItem2, 1, 0, 1, 1)
+        self.line_4 = QtWidgets.QFrame(self.gridLayoutWidget_4)
+        self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_4.setObjectName("line_4")
+        self.gridLayout_5.addWidget(self.line_4, 2, 1, 1, 1)
+        self.imagemcamera_tras_label = QtWidgets.QLabel(self.gridLayoutWidget_4)
+        self.imagemcamera_tras_label.setMinimumSize(QtCore.QSize(0, 0))
+        self.imagemcamera_tras_label.setMaximumSize(QtCore.QSize(500, 500))
+        self.imagemcamera_tras_label.setStyleSheet("color: rgb(255, 255, 255);\n"
+"        background-color: transparent;\n"
+"        border-style: solid;\n"
+"        border-width: 1px;\n"
+"        border-color: rgb(103, 120, 138);;\n"
+"border-radius:3px")
+        self.imagemcamera_tras_label.setText("")
+        self.imagemcamera_tras_label.setObjectName("imagemcamera_tras_label")
+        self.gridLayout_5.addWidget(self.imagemcamera_tras_label, 0, 0, 1, 3)
+        self.line_6 = QtWidgets.QFrame(self.centralwidget)
+        self.line_6.setGeometry(QtCore.QRect(587, 3, 20, 501))
+        self.line_6.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line_6.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_6.setObjectName("line_6")
+        self.cad_cli_imagem_frente = QtWidgets.QLabel(self.centralwidget)
+        self.cad_cli_imagem_frente.setGeometry(QtCore.QRect(608, 8, 191, 19))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.cad_cli_imagem_frente.setFont(font)
+        self.cad_cli_imagem_frente.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.cad_cli_imagem_frente.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
+        self.cad_cli_imagem_frente.setAlignment(QtCore.Qt.AlignCenter)
+        self.cad_cli_imagem_frente.setObjectName("cad_cli_imagem_frente")
+        self.cad_cli_imagem_tras = QtWidgets.QLabel(self.centralwidget)
+        self.cad_cli_imagem_tras.setGeometry(QtCore.QRect(607, 197, 191, 19))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.cad_cli_imagem_tras.setFont(font)
+        self.cad_cli_imagem_tras.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.cad_cli_imagem_tras.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color:rgb(110, 165, 165);\n"
+"border-radius:3px")
+        self.cad_cli_imagem_tras.setAlignment(QtCore.Qt.AlignCenter)
+        self.cad_cli_imagem_tras.setObjectName("cad_cli_imagem_tras")
+        self.line_8 = QtWidgets.QFrame(self.centralwidget)
+        self.line_8.setGeometry(QtCore.QRect(602, 495, 195, 20))
+        self.line_8.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_8.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_8.setObjectName("line_8")
         FrmCadastraAlteraCliente.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(FrmCadastraAlteraCliente)
@@ -562,7 +701,6 @@ class Ui_FrmCadastraAlteraCliente(object):
         FrmCadastraAlteraCliente.setTabOrder(self.cad_cli_11_ob_fone_pref, self.cad_cli_12_fone_alt)
         FrmCadastraAlteraCliente.setTabOrder(self.cad_cli_12_fone_alt, self.cad_cli_13_contato)
         FrmCadastraAlteraCliente.setTabOrder(self.cad_cli_13_contato, self.cad_cli_14_obs)
-        FrmCadastraAlteraCliente.setTabOrder(self.cad_cli_14_obs, self.btn_abre_formcapturaimagem_frente)
 
     def retranslateUi(self, FrmCadastraAlteraCliente):
         _translate = QtCore.QCoreApplication.translate
@@ -608,8 +746,10 @@ class Ui_FrmCadastraAlteraCliente(object):
         self.cad_cli_08_UF_label.setText(_translate("FrmCadastraAlteraCliente", "Estado"))
         self.cad_cli_12_fone_alt_label.setText(_translate("FrmCadastraAlteraCliente", "Tel. Alternativo"))
         self.cad_cli_05_ob_end_label.setText(_translate("FrmCadastraAlteraCliente", "Endereço"))
-        self.btn_abre_formcapturaimagem_frente.setText(_translate("FrmCadastraAlteraCliente", "Foto Frente"))
-        self.btn_abre_formcapturaimagem_tras.setText(_translate("FrmCadastraAlteraCliente", "Foto Verso"))
-        self.btn_cli_cancelar.setText(_translate("FrmCadastraAlteraCliente", "Cancelar"))
+        self.btn_abre_formcapturaimagem_frente.setText(_translate("FrmCadastraAlteraCliente", "  Adicionar  "))
         self.btn_cli_cadastrar.setText(_translate("FrmCadastraAlteraCliente", "Salvar"))
+        self.btn_cli_cancelar.setText(_translate("FrmCadastraAlteraCliente", "Cancelar"))
         self.btn_cli_sair.setText(_translate("FrmCadastraAlteraCliente", "Sair"))
+        self.btn_abre_formcapturaimagem_tras.setText(_translate("FrmCadastraAlteraCliente", "  Adicionar  "))
+        self.cad_cli_imagem_frente.setText(_translate("FrmCadastraAlteraCliente", "Foto Frente"))
+        self.cad_cli_imagem_tras.setText(_translate("FrmCadastraAlteraCliente", "Foto Verso"))

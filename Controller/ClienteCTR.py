@@ -6,9 +6,9 @@ from Model.DAO.ClienteDAO import ClienteDAO
 
 class ClienteCTR:
     @QtCore.pyqtSlot()
-    def ListaTodosClientes(self):
+    def lista_cliente(self):
         clienteDAO = ClienteDAO
-        query = clienteDAO.ListaTodosClientes(self)
+        query = clienteDAO.carrega_cliente(self)
         return query
 
     @QtCore.pyqtSlot()
