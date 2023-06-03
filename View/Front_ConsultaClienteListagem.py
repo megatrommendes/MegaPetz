@@ -58,7 +58,7 @@ class J_FrmConsultaClienteListagem(QMainWindow):
 
         # Atualizar o QLabel com o número de registros
         total_registros = len(self.lista_clientes)
-        self.ui.total_registros_label.setText(str(total_registros)+' ')
+        self.ui.total_registros_label.setText(str(total_registros) + ' ')
 
         # Criar um filtro de proxy para realizar a filtragem
         self.proxy_model = QSortFilterProxyModel(self)
@@ -172,16 +172,15 @@ class J_FrmConsultaClienteListagem(QMainWindow):
             pixmap_verso = self.carregar_imagem(file_path_verso)
             self.formulario.ui.imagemcamera_tras_label.setPixmap(pixmap_verso)
 
-            #self.formulario.ui.cad_cli_00_doc_localiza.setFocus()
+            # self.formulario.ui.cad_cli_00_doc_localiza.setFocus()
 
-        if self.operacao == "AC":
+        if self.operacao == "CM":
             # Preencher os QLineEdit correspondentes
             self.formulario.ui.cad_cli_03_ob_nome.setText(str(nome))
             self.formulario.ui.cad_cli_05_ob_end.setText(str(endereco))
             self.formulario.ui.cad_cli_06_ob_num.setText(str(numero))
-            #self.formulario.ui.cad_cli_07_complemento.setText(str(complemento))
+            # self.formulario.ui.cad_cli_07_complemento.setText(str(complemento))
             self.formulario.ui.cad_cli_11_ob_fone_pref.setText(str(fone_pref))
-
 
             # Verificar se algum item está selecionado
             if not proxy_index.isValid():
@@ -195,4 +194,3 @@ class J_FrmConsultaClienteListagem(QMainWindow):
         pixmap = QPixmap(file_path) if file_info.exists() else QPixmap(
             'C:/MegaPetz/imagens/imagem_icones/icons-câmera.png')
         return pixmap
-

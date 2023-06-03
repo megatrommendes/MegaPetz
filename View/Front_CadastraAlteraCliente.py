@@ -106,19 +106,19 @@ class J_FrmCadastraAlteraCliente(QMainWindow):
             obj.focusOutEvent = lambda event, obj=obj, label=label: muda_cor_foco(obj, label, event)
 
     def abre_capturaimagemcliente(self, nomeImagem):
-        # Importa a classe J_FormCapturaImagemCliente do arquivo Front_CapturaImagemCliente
-        from View.Front_CapturaImagemCliente import J_FrmCapturaImagemCliente
+        # Importa a classe J_FormCapturaImagem do arquivo Front_CapturaImagemCliente
+        from View.Front_CapturaImagem import J_FrmCapturaImagem
 
         # Cria uma instância de J_FormCapturaImagemCliente, passando o próprio objeto J_FrmCapturaImagemCliente como
-        self.frm_capturaimagemcliente = J_FrmCapturaImagemCliente(self, self.ui.cad_cli_01_ob_doc.text(), nomeImagem)
+        self.frm_capturaimagem = J_FrmCapturaImagem(self, self.ui.cad_cli_01_ob_doc.text(), nomeImagem)
 
         # Verifica se a câmera foi inicializada com sucesso
-        if not self.frm_capturaimagemcliente.verifica_camera():
+        if not self.frm_capturaimagem.verifica_camera():
             # Fecha o formulário J_FormCapturaImagemCliente caso a câmera não tenha sido inicializada com sucesso
-            self.frm_capturaimagemcliente.close()
+            self.frm_capturaimagem.close()
         else:
             # Exibe o formulário J_FormCapturaImagemCliente caso a câmera tenha sido inicializada com sucesso
-            self.frm_capturaimagemcliente.show()
+            self.frm_capturaimagem.show()
 
 
 if __name__ == "__main__":

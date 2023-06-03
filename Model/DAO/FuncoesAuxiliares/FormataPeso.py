@@ -9,6 +9,9 @@ def formata_peso(text):
     formatted_text = ''
     for i in range(len(text)):
         if i == 2:
-            formatted_text += '-'
+            formatted_text += '.'
         formatted_text += text[i]
+
     return formatted_text
+
+

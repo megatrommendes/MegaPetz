@@ -6,11 +6,11 @@ from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QMessageBox
 
-from View.FrmCapturaImagemCliente import Ui_frmcapturaimagemcliente
+from View.FrmCapturaImagem import Ui_frmcapturaimagem
 from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 
 
-class J_FrmCapturaImagemCliente(QWidget):
+class J_FrmCapturaImagem(QWidget):
     def __init__(self, formulario, CPF, nomeImagem):
         super().__init__()
         # Define as variáveis 'documento' e 'frm_cliente' como atributos da classe
@@ -18,7 +18,7 @@ class J_FrmCapturaImagemCliente(QWidget):
         # Retorna veradeiro ou falso dependendo se a câmera foi inicializada
         self.camera_initializada = False
         # Instancia a classe Ui_frmcapturaimagemcliente() para criar a interface gráfica
-        self.ui = Ui_frmcapturaimagemcliente()
+        self.ui = Ui_frmcapturaimagem()
         # Chama o método 'setupUi()' da classe Ui_frmcapturaimagemcliente() para configurar a interface
         self.ui.setupUi(self)
 

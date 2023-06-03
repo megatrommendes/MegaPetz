@@ -3,7 +3,7 @@ import sys
 from Model.DAO.FuncoesAuxiliares.CancelaTab import Cancela_Tab
 from View.FrmPrincipal import Ui_FrmPrincipal
 from PyQt5 import QtCore
-from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtWidgets import QMainWindow
 
 from View.Front_CadastraAlteraCliente import J_FrmCadastraAlteraCliente
 from View.Front_ConsultaCliente import J_FrmConsultaCliente
@@ -40,16 +40,16 @@ class J_FormPrincipal(QMainWindow):
         """)
 
         self.ui.actionCadasta_Cliente.triggered.connect(lambda: self.abre_FrmCadastraAlteraCliente('C'))  # coloca o
-        # formulário em mode de Cadastro
+        # formulário em mode de Cadastro de Cliente
 
         self.ui.actionAltera_Cliente.triggered.connect(lambda: self.abre_FrmCadastraAlteraCliente('A'))  # coloca o
-        # formulário em mode de Anteração
+        # formulário em mode de Anteração de cliente e retorna os dados localizados para a alteração
 
         self.ui.actionConsulta_Cliente.triggered.connect(lambda: self.abre_FrmConsultaCliente('CC'))  # Informa que os
-        # dados retornados devem retornar para o formulário Consulta Cliente
+        # dados retornados devem ser exibidos noformulário Consulta Cliente
 
-        self.ui.actionCadastro_Mascote.triggered.connect(lambda: self.abre_FrmCadastraAlteraAnimal('AC'))# Informa que os
-        # dados retornados devem retornar para o formulário CadastraAlteraAnimal
+        self.ui.actionCadastro_Mascote.triggered.connect(lambda: self.abre_FrmCadastraAlteraAnimal('CM'))  # Informa
+        # que os dados retornados devem devem ser exibidos no formulário Cadastra Animal
 
         self.ui.actionFinalizar_Aplicativo.triggered.connect(self.close)
         self.setWindowFlags(

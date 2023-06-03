@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'frmcapturaimagemcliente.ui'
+# Form implementation generated from reading ui file 'frmcapturaimagem.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -11,17 +11,17 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_frmcapturaimagemcliente(object):
-    def setupUi(self, frmcapturaimagemcliente):
-        frmcapturaimagemcliente.setObjectName("frmcapturaimagemcliente")
-        frmcapturaimagemcliente.setWindowModality(QtCore.Qt.ApplicationModal)
-        frmcapturaimagemcliente.resize(323, 159)
-        frmcapturaimagemcliente.setFocusPolicy(QtCore.Qt.StrongFocus)
+class Ui_frmcapturaimagem(object):
+    def setupUi(self, frmcapturaimagem):
+        frmcapturaimagem.setObjectName("frmcapturaimagem")
+        frmcapturaimagem.setWindowModality(QtCore.Qt.ApplicationModal)
+        frmcapturaimagem.resize(332, 159)
+        frmcapturaimagem.setFocusPolicy(QtCore.Qt.StrongFocus)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../imagens/icon-cachorro-marrom-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        frmcapturaimagemcliente.setWindowIcon(icon)
-        frmcapturaimagemcliente.setStyleSheet("background-color:rgb(42, 66, 76);")
-        self.fotoimagemcamera = QtWidgets.QLabel(frmcapturaimagemcliente)
+        frmcapturaimagem.setWindowIcon(icon)
+        frmcapturaimagem.setStyleSheet("background-color:rgb(42, 66, 76);")
+        self.fotoimagemcamera = QtWidgets.QLabel(frmcapturaimagem)
         self.fotoimagemcamera.setGeometry(QtCore.QRect(10, 10, 191, 141))
         self.fotoimagemcamera.setMinimumSize(QtCore.QSize(0, 0))
         self.fotoimagemcamera.setMaximumSize(QtCore.QSize(500, 500))
@@ -33,8 +33,8 @@ class Ui_frmcapturaimagemcliente(object):
 "border-radius:3px;")
         self.fotoimagemcamera.setText("")
         self.fotoimagemcamera.setObjectName("fotoimagemcamera")
-        self.verticalLayoutWidget = QtWidgets.QWidget(frmcapturaimagemcliente)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(215, 6, 101, 141))
+        self.verticalLayoutWidget = QtWidgets.QWidget(frmcapturaimagem)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(221, 6, 101, 141))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -154,18 +154,18 @@ class Ui_frmcapturaimagemcliente(object):
         self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_3.setObjectName("line_3")
         self.verticalLayout.addWidget(self.line_3)
-        self.line_5 = QtWidgets.QFrame(frmcapturaimagemcliente)
-        self.line_5.setGeometry(QtCore.QRect(195, 10, 20, 141))
+        self.line_5 = QtWidgets.QFrame(frmcapturaimagem)
+        self.line_5.setGeometry(QtCore.QRect(201, 10, 20, 141))
         self.line_5.setFrameShape(QtWidgets.QFrame.VLine)
         self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_5.setObjectName("line_5")
 
-        self.retranslateUi(frmcapturaimagemcliente)
-        QtCore.QMetaObject.connectSlotsByName(frmcapturaimagemcliente)
+        self.retranslateUi(frmcapturaimagem)
+        QtCore.QMetaObject.connectSlotsByName(frmcapturaimagem)
 
-    def retranslateUi(self, frmcapturaimagemcliente):
+    def retranslateUi(self, frmcapturaimagem):
         _translate = QtCore.QCoreApplication.translate
-        frmcapturaimagemcliente.setWindowTitle(_translate("frmcapturaimagemcliente", "Emite Foto do Cliente"))
-        self.btn_capturar.setText(_translate("frmcapturaimagemcliente", "Capturar"))
-        self.btn_cancelar_imagem.setText(_translate("frmcapturaimagemcliente", "Cancelar"))
-        self.btn_sair_imagem.setText(_translate("frmcapturaimagemcliente", "Sair"))
+        frmcapturaimagem.setWindowTitle(_translate("frmcapturaimagem", "Cptura Imagem"))
+        self.btn_capturar.setText(_translate("frmcapturaimagem", "Capturar"))
+        self.btn_cancelar_imagem.setText(_translate("frmcapturaimagem", "Cancelar"))
+        self.btn_sair_imagem.setText(_translate("frmcapturaimagem", "Sair"))

@@ -5,12 +5,15 @@
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1072</width>
-    <height>654</height>
+    <width>1223</width>
+    <height>661</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -76,13 +79,27 @@
      <rect>
       <x>10</x>
       <y>14</y>
-      <width>627</width>
-      <height>421</height>
+      <width>776</width>
+      <height>426</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="6" column="5">
-      <widget class="QLabel" name="cad_cli_11_ob_fone_pref_label">
+     <item row="8" column="0" colspan="9">
+      <widget class="Line" name="line_12">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0" colspan="9">
+      <widget class="Line" name="line_13">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="cad_cli_00_doc_localiza_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -97,64 +114,51 @@ background-color:rgb(110, 165, 165);
 border-radius:3px</string>
        </property>
        <property name="text">
-        <string> Fone. Preferêncial </string>
+        <string>Insira o CPF</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="7" column="5">
-      <widget class="QLineEdit" name="cad_cli_11_ob_fone_pref">
+     <item row="9" column="0">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="11" column="8">
+      <widget class="QLabel" name="cad_ani_05_ob_data_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
         </font>
        </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
        </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="maxLength">
-        <number>14</number>
+       <property name="text">
+        <string>Data</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
       </widget>
      </item>
-     <item row="16" column="0" colspan="6">
-      <widget class="QPlainTextEdit" name="cad_ani_10_obs">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="3">
-      <widget class="QComboBox" name="cad_ani_04_ob_cor">
+     <item row="12" column="8">
+      <widget class="QComboBox" name="cad_ani_05_ob_data">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -168,10 +172,75 @@ border-radius:3px;</string>
         border-color: rgb(103, 120, 138);;
 border-radius:3px</string>
        </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Dia(s)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mês(s)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ano(s)</string>
+        </property>
+       </item>
       </widget>
      </item>
-     <item row="13" column="3">
-      <widget class="QLabel" name="cad_ani_04_ob_cor_label">
+     <item row="14" column="4">
+      <widget class="QComboBox" name="cad_ani_08_ob_sexo">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);;
+border-radius:3px</string>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Macho</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Femia</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="16" column="0" colspan="5">
+      <widget class="QPlainTextEdit" name="cad_ani_12_obs">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="4">
+      <widget class="QLabel" name="cad_ani_08_ob_sexo_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -186,22 +255,22 @@ background-color:rgb(110, 165, 165);
 border-radius:3px</string>
        </property>
        <property name="text">
-        <string>Cor</string>
+        <string> Sexo </string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="7" column="4">
-      <widget class="QLineEdit" name="cad_cli_06_ob_num">
+     <item row="12" column="7">
+      <widget class="QLineEdit" name="cad_ani_04_ob_idade">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
         </font>
        </property>
        <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
+        <enum>Qt::WheelFocus</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
@@ -212,70 +281,27 @@ border-radius:3px</string>
 border-radius:3px;</string>
        </property>
        <property name="inputMask">
-        <string/>
+        <string notr="true"/>
        </property>
        <property name="maxLength">
-        <number>5</number>
+        <number>2</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
        <property name="readOnly">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
        </property>
       </widget>
      </item>
-     <item row="7" column="0" colspan="4">
-      <widget class="QLineEdit" name="cad_cli_05_ob_end">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-       <property name="maxLength">
-        <number>62</number>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="4">
-      <widget class="QLabel" name="cad_cli_06_ob_num_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
-       </property>
-       <property name="text">
-        <string> Número </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLineEdit" name="cad_cli_00_doc_localiza">
+     <item row="12" column="6">
+      <widget class="QLineEdit" name="cad_ani_03_ob_nasc">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -312,15 +338,8 @@ border-radius:3px;</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="0" colspan="6">
-      <widget class="Line" name="line_6">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="cad_cli_00_doc_localiza_label">
+     <item row="11" column="6">
+      <widget class="QLabel" name="cad_ani_03_ob_nasc_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -335,7 +354,68 @@ background-color:rgb(110, 165, 165);
 border-radius:3px</string>
        </property>
        <property name="text">
-        <string>Insira o CPF</string>
+        <string> Data Nascimento </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="4">
+      <widget class="QLineEdit" name="cad_ani_02_ob_peso">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::WheelFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="inputMask">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>14</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="7">
+      <widget class="QLabel" name="cad_ani_04_ob_idade_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string> Idade </string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -365,27 +445,81 @@ border-radius:3px</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="cad_cli_05_ob_end_label">
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="cad_cli_00_doc_localiza">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
          <pointsize>12</pointsize>
         </font>
        </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+       <property name="focusPolicy">
+        <enum>Qt::WheelFocus</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
        </property>
-       <property name="text">
-        <string>Endereço</string>
+       <property name="inputMask">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>14</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="0">
+      <widget class="QComboBox" name="cad_ani_06_ob_especie">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);;
+border-radius:3px</string>
+       </property>
+       <property name="currentText">
+        <string/>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Cachorro</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gato</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item row="11" column="0">
@@ -411,268 +545,38 @@ border-radius:3px</string>
        </property>
       </widget>
      </item>
-     <item row="8" column="0" colspan="6">
-      <widget class="Line" name="line_12">
+     <item row="6" column="0">
+      <widget class="QLabel" name="cad_cli_05_ob_end_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string>Endereço</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="8">
+      <widget class="Line" name="line_6">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="0">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="11" column="3">
-      <widget class="QLabel" name="cad_ani_06_ob_nasc_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
-       </property>
-       <property name="text">
-        <string> Data Nascimento </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="4">
-      <widget class="QLineEdit" name="cad_ani_07_ob_idade">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::WheelFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-       <property name="inputMask">
-        <string notr="true"/>
-       </property>
-       <property name="maxLength">
-        <number>14</number>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="readOnly">
-        <bool>false</bool>
-       </property>
-       <property name="cursorMoveStyle">
-        <enum>Qt::LogicalMoveStyle</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="4">
-      <widget class="QLabel" name="cad_ani_07_ob_idade_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
-       </property>
-       <property name="text">
-        <string> Idade </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="5">
-      <widget class="QLineEdit" name="cad_ani_08_ob_peso">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::WheelFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-       <property name="inputMask">
-        <string notr="true"/>
-       </property>
-       <property name="maxLength">
-        <number>14</number>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-       <property name="readOnly">
-        <bool>false</bool>
-       </property>
-       <property name="cursorMoveStyle">
-        <enum>Qt::LogicalMoveStyle</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="1" colspan="2">
-      <widget class="QLabel" name="cad_anis_03_ob_raca_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
-       </property>
-       <property name="text">
-        <string>Raça</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="1" colspan="2">
-      <widget class="QComboBox" name="cad_anis_03_ob_raca">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);;
-border-radius:3px</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="5">
-      <widget class="QLabel" name="cad_ani_08_ob_peso_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
-       </property>
-       <property name="text">
-        <string> Peso </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="3">
-      <widget class="QLineEdit" name="cad_ani_06_ob_nasc">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::WheelFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-       <property name="inputMask">
-        <string notr="true"/>
-       </property>
-       <property name="maxLength">
-        <number>14</number>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-       <property name="readOnly">
-        <bool>false</bool>
-       </property>
-       <property name="cursorMoveStyle">
-        <enum>Qt::LogicalMoveStyle</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="0">
-      <widget class="QComboBox" name="cad_ani_02_ob_especie">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);;
-border-radius:3px</string>
        </property>
       </widget>
      </item>
      <item row="13" column="0">
-      <widget class="QLabel" name="cad_ani_02_ob_especie_label">
+      <widget class="QLabel" name="cad_ani_06_ob_especie_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -687,146 +591,15 @@ background-color:rgb(110, 165, 165);
 border-radius:3px</string>
        </property>
        <property name="text">
-        <string>Especie</string>
+        <string>Espécie</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
-      </widget>
-     </item>
-     <item row="12" column="0" colspan="3">
-      <widget class="QLineEdit" name="cad_ani_01_ob_nome">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::WheelFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-       <property name="inputMask">
-        <string notr="true"/>
-       </property>
-       <property name="maxLength">
-        <number>14</number>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="readOnly">
-        <bool>false</bool>
-       </property>
-       <property name="cursorMoveStyle">
-        <enum>Qt::LogicalMoveStyle</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="5">
-      <widget class="QLabel" name="cad_ani_09_mensalista_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
-       </property>
-       <property name="text">
-        <string> Mensalista </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="5">
-      <widget class="QCheckBox" name="cad_ani_09_mensalista">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-       <property name="text">
-        <string>Sim</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="4">
-      <widget class="QLabel" name="cad_ani_05_ob_sexo_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color:rgb(110, 165, 165);
-border-radius:3px</string>
-       </property>
-       <property name="text">
-        <string> Sexo </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="4">
-      <widget class="QComboBox" name="cad_ani_05_ob_sexo">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);;
-border-radius:3px</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>Macho</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Femia</string>
-        </property>
-       </item>
       </widget>
      </item>
      <item row="15" column="0">
-      <widget class="QLabel" name="cad_ani_10_obs_label">
+      <widget class="QLabel" name="cad_ani_12_obs_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -848,50 +621,24 @@ border-radius:3px</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="0" colspan="5">
-      <widget class="QLineEdit" name="cad_cli_03_ob_nome">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-       </property>
-       <property name="maxLength">
-        <number>62</number>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="0" colspan="6">
-      <widget class="Line" name="line_13">
+     <item row="11" column="3">
+      <spacer name="horizontalSpacer_2">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-      </widget>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
      <item row="0" column="1" rowspan="2" colspan="2">
-      <widget class="QPushButton" name="btn_cli_listagem">
+      <widget class="QPushButton" name="btn_ani_listagem">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
          <horstretch>0</horstretch>
@@ -939,15 +686,511 @@ border-radius:3px}
        </property>
       </widget>
      </item>
+     <item row="13" column="1" colspan="3">
+      <widget class="QLabel" name="cad_ani_07_ob_raca_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string>Raça</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="1" colspan="3">
+      <widget class="QComboBox" name="cad_ani_07_ob_raca">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);;
+border-radius:3px</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0" colspan="4">
+      <widget class="QLineEdit" name="cad_ani_01_ob_nome">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::WheelFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="inputMask">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>14</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="4" colspan="2">
+      <widget class="QLabel" name="cad_ani_02_ob_peso_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string> Peso </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="5">
+      <widget class="QLabel" name="cad_ani_kg_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(255, 67, 10);
+border-radius:3px
+</string>
+       </property>
+       <property name="text">
+        <string> Kg </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="5">
+      <widget class="QLabel" name="cad_ani_kg_label_2">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(255, 67, 10);
+border-radius:3px
+</string>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="text">
+        <string>!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="8">
+      <widget class="QLineEdit" name="cad_cli_05_ob_end">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="maxLength">
+        <number>62</number>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="8">
+      <widget class="QLineEdit" name="cad_cli_06_ob_num">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>5</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="8">
+      <widget class="QLabel" name="cad_cli_06_ob_num_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string> Número </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="7">
+      <widget class="QLineEdit" name="cad_cli_03_ob_nome">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="maxLength">
+        <number>62</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="7" colspan="2">
+      <widget class="QLineEdit" name="cad_cli_11_ob_fone_pref">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>14</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="7">
+      <widget class="QLabel" name="cad_cli_11_ob_fone_pref_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string>Cel. Pref.</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="5" rowspan="2" colspan="4">
+      <widget class="QPlainTextEdit" name="cad_ani_descricao_cor">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="5" colspan="2">
+      <widget class="QLabel" name="cad_ani_09_ob_cor_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string>Cor</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="6">
+      <widget class="QComboBox" name="cad_ani_09_ob_cor">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);;
+border-radius:3px</string>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="7">
+      <widget class="QLabel" name="cad_ani_10_mensalista_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string> Mensalista </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="7">
+      <widget class="QCheckBox" name="cad_ani_10_mensalista">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="text">
+        <string>Sim</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="8">
+      <widget class="QLabel" name="cad_ani_11_ob_dia_pagamento_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(110, 165, 165);
+border-radius:3px</string>
+       </property>
+       <property name="text">
+        <string>Dia Pag.</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="8">
+      <widget class="QLineEdit" name="cad_ani_11_ob_dia_pagamento">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::WheelFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(103, 120, 138);
+border-radius:3px;</string>
+       </property>
+       <property name="inputMask">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="Line" name="line_4">
     <property name="geometry">
      <rect>
-      <x>637</x>
+      <x>787</x>
       <y>10</y>
       <width>20</width>
-      <height>631</height>
+      <height>641</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -960,8 +1203,8 @@ border-radius:3px}
    <widget class="Line" name="line_8">
     <property name="geometry">
      <rect>
-      <x>655</x>
-      <y>635</y>
+      <x>806</x>
+      <y>643</y>
       <width>406</width>
       <height>16</height>
      </rect>
@@ -973,8 +1216,8 @@ border-radius:3px}
    <widget class="QLabel" name="cad_cli_imagem_frente">
     <property name="geometry">
      <rect>
-      <x>656</x>
-      <y>470</y>
+      <x>806</x>
+      <y>474</y>
       <width>191</width>
       <height>19</height>
      </rect>
@@ -1002,8 +1245,8 @@ border-radius:3px</string>
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>656</x>
-      <y>495</y>
+      <x>806</x>
+      <y>502</y>
       <width>191</width>
       <height>141</height>
      </rect>
@@ -1090,8 +1333,8 @@ border-radius:3px;</string>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>910</x>
-      <y>498</y>
+      <x>1060</x>
+      <y>507</y>
       <width>101</width>
       <height>113</height>
      </rect>
@@ -1105,7 +1348,7 @@ border-radius:3px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_cli_cadastrar">
+      <widget class="QPushButton" name="btn_ani_cadastrar">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1155,7 +1398,7 @@ border-radius:3px}
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_cli_cancelar">
+      <widget class="QPushButton" name="btn_ani_cancelar">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1205,7 +1448,7 @@ border-radius:3px}
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_cli_sair">
+      <widget class="QPushButton" name="btn_ani_sair">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1260,14 +1503,14 @@ border-radius:3px}
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>440</y>
-      <width>626</width>
+      <y>447</y>
+      <width>776</width>
       <height>201</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_6">
      <item row="1" column="0">
-      <widget class="QComboBox" name="cad_ani_12_servico">
+      <widget class="QComboBox" name="cad_ani_13_servico">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1308,7 +1551,7 @@ border-radius:3px;</string>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QComboBox" name="cad_ani_12_produto">
+      <widget class="QComboBox" name="cad_ani_14_produto">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1325,7 +1568,7 @@ border-radius:3px</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="cad_ani_12_produto_label">
+      <widget class="QLabel" name="cad_ani_14_produto_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1348,7 +1591,7 @@ border-radius:3px</string>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="cad_ani_12_servico_label">
+      <widget class="QLabel" name="cad_ani_13_servico_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1375,7 +1618,7 @@ border-radius:3px</string>
    <widget class="QWidget" name="gridLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>656</x>
+      <x>806</x>
       <y>43</y>
       <width>406</width>
       <height>415</height>
@@ -1399,7 +1642,7 @@ border-radius:3px;</string>
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>655</x>
+      <x>806</x>
       <y>13</y>
       <width>258</width>
       <height>23</height>
@@ -1407,7 +1650,7 @@ border-radius:3px;</string>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="cad_cli_11_ob_fone_pref_label_2">
+      <widget class="QLabel" name="cad_cli_15_ob_fone_pref_label">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1430,7 +1673,7 @@ border-radius:3px</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_cli_adicionar">
+      <widget class="QPushButton" name="btn_ani_adicionar_mascote">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -1479,26 +1722,28 @@ border-radius:3px}
  <tabstops>
   <tabstop>cad_cli_00_doc_localiza</tabstop>
   <tabstop>cad_ani_01_ob_nome</tabstop>
-  <tabstop>cad_ani_06_ob_nasc</tabstop>
-  <tabstop>cad_ani_07_ob_idade</tabstop>
-  <tabstop>cad_ani_08_ob_peso</tabstop>
-  <tabstop>cad_ani_02_ob_especie</tabstop>
-  <tabstop>cad_anis_03_ob_raca</tabstop>
-  <tabstop>cad_ani_04_ob_cor</tabstop>
-  <tabstop>cad_ani_05_ob_sexo</tabstop>
-  <tabstop>cad_ani_09_mensalista</tabstop>
-  <tabstop>cad_ani_10_obs</tabstop>
-  <tabstop>cad_ani_12_servico</tabstop>
-  <tabstop>cad_ani_12_produto</tabstop>
-  <tabstop>btn_abre_formcapturaimagem_frente</tabstop>
-  <tabstop>btn_cli_adicionar</tabstop>
-  <tabstop>btn_cli_cadastrar</tabstop>
-  <tabstop>btn_cli_cancelar</tabstop>
-  <tabstop>btn_cli_sair</tabstop>
+  <tabstop>cad_ani_02_ob_peso</tabstop>
+  <tabstop>cad_ani_03_ob_nasc</tabstop>
+  <tabstop>cad_ani_04_ob_idade</tabstop>
+  <tabstop>cad_ani_05_ob_data</tabstop>
+  <tabstop>cad_ani_06_ob_especie</tabstop>
+  <tabstop>cad_ani_07_ob_raca</tabstop>
+  <tabstop>cad_ani_08_ob_sexo</tabstop>
+  <tabstop>cad_ani_09_ob_cor</tabstop>
+  <tabstop>cad_ani_10_mensalista</tabstop>
+  <tabstop>cad_ani_11_ob_dia_pagamento</tabstop>
+  <tabstop>cad_ani_12_obs</tabstop>
+  <tabstop>cad_ani_13_servico</tabstop>
   <tabstop>_servicos</tabstop>
+  <tabstop>cad_ani_14_produto</tabstop>
   <tabstop>tableWidget_produtos</tabstop>
+  <tabstop>btn_ani_adicionar_mascote</tabstop>
   <tabstop>tableWidget_mascotes</tabstop>
-  <tabstop>btn_cli_listagem</tabstop>
+  <tabstop>btn_abre_formcapturaimagem_frente</tabstop>
+  <tabstop>btn_ani_cadastrar</tabstop>
+  <tabstop>btn_ani_cancelar</tabstop>
+  <tabstop>btn_ani_sair</tabstop>
+  <tabstop>btn_ani_listagem</tabstop>
  </tabstops>
  <resources/>
  <connections/>
