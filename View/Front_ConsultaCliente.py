@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QMainWindow, QLineEdit, QComboBox, QPlainTextEdit, Q
 from Model.DAO.FuncoesAuxiliares.MudaCorFoco import muda_cor_foco
 from Model.DAO.FuncoesAuxiliares.FormataCPF import formata_cpf
 from Model.DAO.FuncoesAuxiliares.ReposicionaFoco import reposiciona_foco
-from Model.DAO.FuncoesFormularios.ValidaCampo import valida_campo
+from Model.DAO.FuncoesFormularios.FuncoesFormCliente.ValidaCampoCliente import valida_campo
 from Model.DAO.FuncoesAuxiliares.LimpaCampos import limpa_campos
 from View.FrmConsultaCliente import Ui_FrmConsultaCliente
 from Front_ConsultaClienteListagem import J_FrmConsultaClienteListagem

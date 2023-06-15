@@ -77,7 +77,6 @@ class J_FrmCadastraAlteraAnimal(QMainWindow):
         self.ui.cad_ani_09_ob_cor.currentTextChanged.connect(
             lambda cor_selecionada: atualizar_descricao_cor(cor_selecionada))
 
-
         # self.ui.cad_ani_04_ob_idade.installEventFilter(self)
         self.ui.cad_ani_03_ob_nasc.installEventFilter(self)
 

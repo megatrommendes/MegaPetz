@@ -73,7 +73,6 @@ def valida_campo_animal(self, event, operacao):
             self.ui.cad_ani_05_ob_data.setEnabled(True)
             self.focusNextChild()
 
-
     elif 'ob' in widget_name:
         if valida_texto(widget_text):
             self.focusNextChild()

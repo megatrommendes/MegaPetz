@@ -119,12 +119,18 @@
      <addaction name="separator"/>
      <addaction name="actionExclui_Mascote"/>
     </widget>
+    <widget class="QMenu" name="menuServi_o">
+     <property name="title">
+      <string>Serviço</string>
+     </property>
+     <addaction name="actionCadastra_Servi_o"/>
+    </widget>
     <addaction name="menuCliente"/>
     <addaction name="separator"/>
     <addaction name="menuMascote"/>
     <addaction name="separator"/>
     <addaction name="actionProduto"/>
-    <addaction name="actionServi_o"/>
+    <addaction name="menuServi_o"/>
     <addaction name="separator"/>
     <addaction name="actionAgenda"/>
     <addaction name="menuUsu_rio"/>
@@ -171,11 +177,6 @@
      <weight>75</weight>
      <bold>true</bold>
     </font>
-   </property>
-  </action>
-  <action name="actionServi_o">
-   <property name="text">
-    <string>Serviço</string>
    </property>
   </action>
   <action name="actionAgenda">
@@ -260,6 +261,11 @@
      <weight>75</weight>
      <bold>true</bold>
     </font>
+   </property>
+  </action>
+  <action name="actionCadastra_Servi_o">
+   <property name="text">
+    <string>Cadastra Serviço</string>
    </property>
   </action>
  </widget>

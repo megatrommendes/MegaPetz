@@ -15,7 +15,7 @@ from Model.DAO.FuncoesAuxiliares.SoNumero import so_numero
 from Model.DAO.FuncoesAuxiliares.FormataCEP import formata_cep
 from Model.DAO.FuncoesAuxiliares.FormataTelefone import formata_telefone
 from Model.DAO.FuncoesAuxiliares.FormataCPF import formata_cpf
-from Model.DAO.FuncoesFormularios.ValidaCampo import valida_campo
+from Model.DAO.FuncoesFormularios.FuncoesFormCliente.ValidaCampoCliente import valida_campo
 from Model.DAO.FuncoesFormularios.FuncoesFormCliente.ValidarSalvarCliente import validar_salvar_cliente
 
 

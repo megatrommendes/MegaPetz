@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QMainWindow
 from View.Front_CadastraAlteraCliente import J_FrmCadastraAlteraCliente
 from View.Front_ConsultaCliente import J_FrmConsultaCliente
 from View.Front_CadastraAlteraAnimal import J_FrmCadastraAlteraAnimal
+from View.Front_CadastraServico import J_FrmCadastraServico
 
 
 class J_FormPrincipal(QMainWindow):
@@ -46,14 +47,22 @@ class J_FormPrincipal(QMainWindow):
         # formulário em mode de Anteração de cliente e retorna os dados localizados para a alteração
 
         self.ui.actionConsulta_Cliente.triggered.connect(lambda: self.abre_FrmConsultaCliente('CC'))  # Informa que os
-        # dados retornados devem ser exibidos noformulário Consulta Cliente
+        # dados retornados devem ser exibidos no formulário Consulta Cliente
 
         self.ui.actionCadastro_Mascote.triggered.connect(lambda: self.abre_FrmCadastraAlteraAnimal('CM'))  # Informa
         # que os dados retornados devem devem ser exibidos no formulário Cadastra Animal
 
+        self.ui.actionCadastra_Servi_o.triggered.connect(lambda: self.abre_FrmCadastraServico())
+
         self.ui.actionFinalizar_Aplicativo.triggered.connect(self.close)
+
         self.setWindowFlags(
             QtCore.Qt.Window | QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowTitleHint | QtCore.Qt.WindowSystemMenuHint)
+
+    @QtCore.pyqtSlot()
+    def abre_FrmCadastraServico(self):
+        self.Frm_CadastraServico = J_FrmCadastraServico()
+        self.Frm_CadastraServico.show()
 
     @QtCore.pyqtSlot()
     def abre_FrmCadastraAlteraCliente(self, operacao):

@@ -53,7 +53,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../Users/Usuario/.designer/backup/imagens/icon-cachorro-marrom-30.png</normaloff>../../../Users/Usuario/.designer/backup/imagens/icon-cachorro-marrom-30.png</iconset>
+    <normaloff>../../Users/Usuario/.designer/backup/imagens/icon-cachorro-marrom-30.png</normaloff>../../Users/Usuario/.designer/backup/imagens/icon-cachorro-marrom-30.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -538,7 +538,7 @@ background-color:rgb(110, 165, 165);
 border-radius:3px</string>
        </property>
        <property name="text">
-        <string> Mascote Nome </string>
+        <string>Nome Mascote</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
