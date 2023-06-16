@@ -168,48 +168,48 @@ class Ui_FrmCadastraServico(object):
         self.btn_serv_adicionar.setIcon(icon)
         self.btn_serv_adicionar.setObjectName("btn_serv_adicionar")
         self.gridLayout_2.addWidget(self.btn_serv_adicionar, 4, 15, 1, 3)
-        self.cad_serv_02_preriodo = QtWidgets.QLineEdit(self.gridLayoutWidget)
+        self.cad_serv_02_periodo = QtWidgets.QLineEdit(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.cad_serv_02_preriodo.setFont(font)
-        self.cad_serv_02_preriodo.setFocusPolicy(QtCore.Qt.WheelFocus)
-        self.cad_serv_02_preriodo.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.cad_serv_02_periodo.setFont(font)
+        self.cad_serv_02_periodo.setFocusPolicy(QtCore.Qt.WheelFocus)
+        self.cad_serv_02_periodo.setStyleSheet("color: rgb(255, 255, 255);\n"
 "        background-color: transparent;\n"
 "        border-style: solid;\n"
 "        border-width: 1px;\n"
 "        border-color: rgb(103, 120, 138);\n"
 "border-radius:3px;")
-        self.cad_serv_02_preriodo.setInputMask("")
-        self.cad_serv_02_preriodo.setMaxLength(14)
-        self.cad_serv_02_preriodo.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.cad_serv_02_preriodo.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.cad_serv_02_preriodo.setReadOnly(False)
-        self.cad_serv_02_preriodo.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.cad_serv_02_preriodo.setObjectName("cad_serv_02_preriodo")
-        self.gridLayout_2.addWidget(self.cad_serv_02_preriodo, 1, 5, 1, 2)
+        self.cad_serv_02_periodo.setInputMask("")
+        self.cad_serv_02_periodo.setMaxLength(14)
+        self.cad_serv_02_periodo.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.cad_serv_02_periodo.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.cad_serv_02_periodo.setReadOnly(False)
+        self.cad_serv_02_periodo.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.cad_serv_02_periodo.setObjectName("cad_serv_02_periodo")
+        self.gridLayout_2.addWidget(self.cad_serv_02_periodo, 1, 5, 1, 2)
         spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_2.addItem(spacerItem7, 2, 6, 1, 1)
-        self.cad_serv_02_preriodo_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.cad_serv_02_periodo_label = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.cad_serv_02_preriodo_label.setFont(font)
-        self.cad_serv_02_preriodo_label.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.cad_serv_02_preriodo_label.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.cad_serv_02_periodo_label.setFont(font)
+        self.cad_serv_02_periodo_label.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.cad_serv_02_periodo_label.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color:rgb(110, 165, 165);\n"
 "border-radius:3px")
-        self.cad_serv_02_preriodo_label.setAlignment(QtCore.Qt.AlignCenter)
-        self.cad_serv_02_preriodo_label.setObjectName("cad_serv_02_preriodo_label")
-        self.gridLayout_2.addWidget(self.cad_serv_02_preriodo_label, 0, 5, 1, 2)
-        self.tableView_2 = QtWidgets.QTableView(FrmCadastraServico)
-        self.tableView_2.setGeometry(QtCore.QRect(10, 179, 770, 320))
-        self.tableView_2.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.cad_serv_02_periodo_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.cad_serv_02_periodo_label.setObjectName("cad_serv_02_periodo_label")
+        self.gridLayout_2.addWidget(self.cad_serv_02_periodo_label, 0, 5, 1, 2)
+        self.tableView_cliente = QtWidgets.QTableView(FrmCadastraServico)
+        self.tableView_cliente.setGeometry(QtCore.QRect(10, 179, 770, 320))
+        self.tableView_cliente.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 10pt \"MS Shell Dlg 2\";\n"
 "        background-color: transparent;\n"
 "        border-style: solid;\n"
 "        border-width: 1px;\n"
 "        border-color: rgb(103, 120, 138);\n"
 "border-radius:3px;")
-        self.tableView_2.setObjectName("tableView_2")
+        self.tableView_cliente.setObjectName("tableView_cliente")
         self.cad_serv_04_ob_obs_2 = QtWidgets.QPlainTextEdit(FrmCadastraServico)
         self.cad_serv_04_ob_obs_2.setGeometry(QtCore.QRect(790, 179, 395, 206))
         font = QtGui.QFont()
@@ -345,11 +345,11 @@ class Ui_FrmCadastraServico(object):
 
         self.retranslateUi(FrmCadastraServico)
         QtCore.QMetaObject.connectSlotsByName(FrmCadastraServico)
-        FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_servico, self.cad_serv_02_preriodo)
-        FrmCadastraServico.setTabOrder(self.cad_serv_02_preriodo, self.cad_serv_03_ob_valor)
+        FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_servico, self.cad_serv_02_periodo)
+        FrmCadastraServico.setTabOrder(self.cad_serv_02_periodo, self.cad_serv_03_ob_valor)
         FrmCadastraServico.setTabOrder(self.cad_serv_03_ob_valor, self.cad_serv_04_ob_obs)
-        FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_obs, self.tableView_2)
-        FrmCadastraServico.setTabOrder(self.tableView_2, self.cad_serv_04_ob_obs_2)
+        FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_obs, self.tableView_cliente)
+        FrmCadastraServico.setTabOrder(self.tableView_cliente, self.cad_serv_04_ob_obs_2)
         FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_obs_2, self.btn_serv_adicionar)
         FrmCadastraServico.setTabOrder(self.btn_serv_adicionar, self.btn_serv_cadastrar)
         FrmCadastraServico.setTabOrder(self.btn_serv_cadastrar, self.btn_serv_cancelar)
@@ -363,7 +363,7 @@ class Ui_FrmCadastraServico(object):
         self.cad_serv_04_ob_servico_label.setText(_translate("FrmCadastraServico", "Serviço"))
         self.cad_serv_03_ob_valor_label.setText(_translate("FrmCadastraServico", " Valor "))
         self.btn_serv_adicionar.setText(_translate("FrmCadastraServico", "Adicionar Serviço"))
-        self.cad_serv_02_preriodo_label.setText(_translate("FrmCadastraServico", " Periodo "))
+        self.cad_serv_02_periodo_label.setText(_translate("FrmCadastraServico", " Período "))
         self.btn_serv_cadastrar.setText(_translate("FrmCadastraServico", "Salvar"))
         self.btn_serv_cancelar.setText(_translate("FrmCadastraServico", "Cancelar"))
         self.btn_serv_sair.setText(_translate("FrmCadastraServico", "Sair"))

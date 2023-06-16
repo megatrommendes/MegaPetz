@@ -38,7 +38,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTableView" name="tableView_consulta_cliente">
+      <widget class="QTableView" name="tableView_cliente">
        <property name="font">
         <font>
          <family>MS Shell Dlg 2</family>
@@ -243,7 +243,7 @@ border-radius:3px}
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../Users/Usuario/imagens/icon-add.png</normaloff>../../../Users/Usuario/imagens/icon-add.png</iconset>
+         <normaloff>../../Users/Usuario/imagens/icon-add.png</normaloff>../../Users/Usuario/imagens/icon-add.png</iconset>
        </property>
       </widget>
      </item>
@@ -294,7 +294,7 @@ border-radius:3px}
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../Users/Usuario/imagens/icons-sinal-saída.png</normaloff>../../../Users/Usuario/imagens/icons-sinal-saída.png</iconset>
+         <normaloff>../../Users/Usuario/imagens/icons-sinal-saída.png</normaloff>../../Users/Usuario/imagens/icons-sinal-saída.png</iconset>
        </property>
       </widget>
      </item>

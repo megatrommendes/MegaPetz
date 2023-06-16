@@ -369,7 +369,7 @@ border-radius:3px}
      </widget>
     </item>
     <item row="1" column="5" colspan="2">
-     <widget class="QLineEdit" name="cad_serv_02_preriodo">
+     <widget class="QLineEdit" name="cad_serv_02_periodo">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -420,7 +420,7 @@ border-radius:3px;</string>
      </spacer>
     </item>
     <item row="0" column="5" colspan="2">
-     <widget class="QLabel" name="cad_serv_02_preriodo_label">
+     <widget class="QLabel" name="cad_serv_02_periodo_label">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -435,7 +435,7 @@ background-color:rgb(110, 165, 165);
 border-radius:3px</string>
       </property>
       <property name="text">
-       <string> Periodo </string>
+       <string> Período </string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -444,7 +444,7 @@ border-radius:3px</string>
     </item>
    </layout>
   </widget>
-  <widget class="QTableView" name="tableView_2">
+  <widget class="QTableView" name="tableView_cliente">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -664,10 +664,10 @@ border-radius:3px}
  </widget>
  <tabstops>
   <tabstop>cad_serv_04_ob_servico</tabstop>
-  <tabstop>cad_serv_02_preriodo</tabstop>
+  <tabstop>cad_serv_02_periodo</tabstop>
   <tabstop>cad_serv_03_ob_valor</tabstop>
   <tabstop>cad_serv_04_ob_obs</tabstop>
-  <tabstop>tableView_2</tabstop>
+  <tabstop>tableView_cliente</tabstop>
   <tabstop>cad_serv_04_ob_obs_2</tabstop>
   <tabstop>btn_serv_adicionar</tabstop>
   <tabstop>btn_serv_cadastrar</tabstop>

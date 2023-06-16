@@ -30,29 +30,29 @@ class Ui_FrmConsultaClienteListagem(object):
         self.line_7.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_7.setObjectName("line_7")
         self.verticalLayout_2.addWidget(self.line_7)
-        self.tableView_consulta_cliente = QtWidgets.QTableView(self.verticalLayoutWidget_2)
+        self.tableView_cliente = QtWidgets.QTableView(self.verticalLayoutWidget_2)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.tableView_consulta_cliente.setFont(font)
-        self.tableView_consulta_cliente.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.tableView_consulta_cliente.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.tableView_cliente.setFont(font)
+        self.tableView_cliente.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.tableView_cliente.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 10pt \"MS Shell Dlg 2\";\n"
 "        background-color: transparent;\n"
 "        border-style: solid;\n"
 "        border-width: 1px;\n"
 "        border-color: rgb(103, 120, 138);\n"
 "border-radius:3px;")
-        self.tableView_consulta_cliente.setFrameShape(QtWidgets.QFrame.Box)
-        self.tableView_consulta_cliente.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.tableView_consulta_cliente.setTabKeyNavigation(False)
-        self.tableView_consulta_cliente.setAlternatingRowColors(False)
-        self.tableView_consulta_cliente.setGridStyle(QtCore.Qt.NoPen)
-        self.tableView_consulta_cliente.setObjectName("tableView_consulta_cliente")
-        self.verticalLayout_2.addWidget(self.tableView_consulta_cliente)
+        self.tableView_cliente.setFrameShape(QtWidgets.QFrame.Box)
+        self.tableView_cliente.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.tableView_cliente.setTabKeyNavigation(False)
+        self.tableView_cliente.setAlternatingRowColors(False)
+        self.tableView_cliente.setGridStyle(QtCore.Qt.NoPen)
+        self.tableView_cliente.setObjectName("tableView_cliente")
+        self.verticalLayout_2.addWidget(self.tableView_cliente)
         self.gridLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(8, 7, 851, 59))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
@@ -149,7 +149,7 @@ class Ui_FrmConsultaClienteListagem(object):
 "border-radius:3px}\n"
 "")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../Users/Usuario/imagens/icon-add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("../../Users/Usuario/imagens/icon-add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_cli_listagem.setIcon(icon)
         self.btn_cli_listagem.setObjectName("btn_cli_listagem")
         self.verticalLayout.addWidget(self.btn_cli_listagem)
@@ -187,7 +187,7 @@ class Ui_FrmConsultaClienteListagem(object):
 "\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../../../Users/Usuario/imagens/icons-sinal-saída.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("../../Users/Usuario/imagens/icons-sinal-saída.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_cli_sair.setIcon(icon1)
         self.btn_cli_sair.setObjectName("btn_cli_sair")
         self.verticalLayout.addWidget(self.btn_cli_sair)
@@ -212,3 +212,13 @@ class Ui_FrmConsultaClienteListagem(object):
         self.cad_cli_00_nome_localiza_label.setText(_translate("FrmConsultaClienteListagem", "Insira o Nome"))
         self.btn_cli_listagem.setText(_translate("FrmConsultaClienteListagem", "Confirmar"))
         self.btn_cli_sair.setText(_translate("FrmConsultaClienteListagem", "Sair"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    FrmConsultaClienteListagem = QtWidgets.QMainWindow()
+    ui = Ui_FrmConsultaClienteListagem()
+    ui.setupUi(FrmConsultaClienteListagem)
+    FrmConsultaClienteListagem.show()
+    sys.exit(app.exec_())

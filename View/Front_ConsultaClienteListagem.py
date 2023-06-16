@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QMainWindow, QAbstractItemView, QHeaderView, QMessageBox
+from PyQt5.QtWidgets import QMainWindow, QAbstractItemView, QHeaderView
 from PyQt5.QtGui import QStandardItem, QStandardItemModel, QPixmap, QColor
 from PyQt5.QtCore import Qt, QSortFilterProxyModel, QFileInfo
 from qtpy import QtCore
@@ -32,14 +32,14 @@ class J_FrmConsultaClienteListagem(QMainWindow):
         self.model.setHorizontalHeaderLabels(['Nome', 'Endereço'])
 
         # Configurar o QTableView
-        self.ui.tableView_consulta_cliente.setModel(self.model)
-        self.ui.tableView_consulta_cliente.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.ui.tableView_consulta_cliente.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.ui.tableView_consulta_cliente.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
-        self.ui.tableView_consulta_cliente.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.ui.tableView_cliente.setModel(self.model)
+        self.ui.tableView_cliente.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.tableView_cliente.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.ui.tableView_cliente.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+        self.ui.tableView_cliente.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
         # Definir o estilo da tabela
-        self.ui.tableView_consulta_cliente.setStyleSheet(
+        self.ui.tableView_cliente.setStyleSheet(
             "QTableView { background-color: rgb(40, 40, 40); color: black; "
             "border-style: solid; border-width: 1px; border-color: rgb(103, 120, 138); }"
             "QTableView::item:selected { background-color: rgb(0, 120, 215); color: white; }"
@@ -47,10 +47,10 @@ class J_FrmConsultaClienteListagem(QMainWindow):
         )
 
         # Definir a cor do título da coluna
-        self.ui.tableView_consulta_cliente.horizontalHeader().setStyleSheet("color: black;")
+        self.ui.tableView_cliente.horizontalHeader().setStyleSheet("color: black;")
 
         # Definir o alongamento horizontal para as colunas
-        self.ui.tableView_consulta_cliente.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.ui.tableView_cliente.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         # Carregar todos os clientes
         self.lista_clientes = ClienteDAO.carrega_cliente(self)
@@ -63,20 +63,20 @@ class J_FrmConsultaClienteListagem(QMainWindow):
         # Criar um filtro de proxy para realizar a filtragem
         self.proxy_model = QSortFilterProxyModel(self)
         self.proxy_model.setSourceModel(self.model)
-        self.ui.tableView_consulta_cliente.setModel(self.proxy_model)
+        self.ui.tableView_cliente.setModel(self.proxy_model)
 
         # Definir a coluna pelo qual será feita a ordenação
         self.proxy_model.setSortRole(Qt.DisplayRole)
         self.proxy_model.setSortCaseSensitivity(Qt.CaseInsensitive)
         self.proxy_model.setSortLocaleAware(True)
-        self.ui.tableView_consulta_cliente.setSortingEnabled(True)
-        self.ui.tableView_consulta_cliente.sortByColumn(2, Qt.AscendingOrder)
+        self.ui.tableView_cliente.setSortingEnabled(True)
+        self.ui.tableView_cliente.sortByColumn(2, Qt.AscendingOrder)
 
         # Conectar o sinal textChanged do QLineEdit ao slot de filtro
         self.ui.cad_cli_00_nome_localiza.textChanged.connect(self.filtrar_tabela)
 
         # Conectar o sinal clicked do QTableView à função que atualiza os QLineEdit correspondentes
-        self.ui.tableView_consulta_cliente.clicked.connect(self.atualizar_campos_dados_cliente)
+        self.ui.tableView_cliente.clicked.connect(self.atualizar_campos_dados_cliente)
 
         self.ui.btn_cli_sair.clicked.connect(lambda: self.formulario.ui.cad_cli_00_doc_localiza.setFocus())
         self.ui.btn_cli_sair.clicked.connect(self.close)
@@ -102,7 +102,7 @@ class J_FrmConsultaClienteListagem(QMainWindow):
                 for column in range(self.model.columnCount()):
                     row_items[column].setBackground(QColor(110, 165, 165))  # Verde claro
 
-        self.ui.tableView_consulta_cliente.resizeColumnsToContents()
+        self.ui.tableView_cliente.resizeColumnsToContents()
 
     def filtrar_tabela(self, text):
         # Define o texto de filtro para o QSortFilterProxyModel
@@ -112,7 +112,7 @@ class J_FrmConsultaClienteListagem(QMainWindow):
 
     def atualizar_campos_dados_cliente(self, index):
         # Obter o índice do modelo de proxy correspondente ao índice selecionado
-        proxy_index = self.ui.tableView_consulta_cliente.model().mapToSource(index)
+        proxy_index = self.ui.tableView_cliente.model().mapToSource(index)
 
         # Obter a linha correspondente ao índice do modelo de proxy
         row = proxy_index.row()

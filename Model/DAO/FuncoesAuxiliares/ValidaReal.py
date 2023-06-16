@@ -1,5 +1,6 @@
 from Model.DAO.FuncoesAuxiliares.EnviaMensagem import envia_mensagem
 
+
 def valida_real(text):
     # Remove caracteres não numéricos, exceto a vírgula
     text = ''.join(filter(lambda x: x.isdigit() or x == ',', text))
