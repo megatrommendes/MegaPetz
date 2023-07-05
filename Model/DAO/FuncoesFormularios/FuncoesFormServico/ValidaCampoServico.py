@@ -23,17 +23,19 @@ def valida_campo_servico(self, event):
     if isinstance(current_widget, QLineEdit):
         widget_text = current_widget.text()
 
-    if 'valor' in widget_name:
-        if valida_real(widget_text):
+    if 'periodo' in widget_name and widget_text != '':
+        if valida_hora(widget_text):
             self.focusNextChild()
+            return
         else:
             if isinstance(current_widget, QLineEdit):
                 current_widget.setText('')
             return
 
-    if 'periodo' in widget_name and widget_text != '':
-        if valida_hora(widget_text):
+    if 'valor' in widget_name:
+        if valida_real(widget_text):
             self.focusNextChild()
+            return
         else:
             if isinstance(current_widget, QLineEdit):
                 current_widget.setText('')
@@ -42,6 +44,7 @@ def valida_campo_servico(self, event):
     if 'ob' in widget_name:
         if valida_texto(widget_text):
             self.focusNextChild()
+            return
         else:
             if isinstance(current_widget, QLineEdit):
                 current_widget.setText('')
@@ -49,3 +52,4 @@ def valida_campo_servico(self, event):
 
     elif 'ob' not in widget_name:
         self.focusNextChild()
+        return

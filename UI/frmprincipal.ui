@@ -43,7 +43,7 @@
      <x>0</x>
      <y>0</y>
      <width>782</width>
-     <height>27</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="font">
@@ -266,6 +266,13 @@
   <action name="actionCadastra_Servi_o">
    <property name="text">
     <string>Cadastra Serviço</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
   </action>
  </widget>

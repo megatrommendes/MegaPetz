@@ -47,25 +47,25 @@ class Ui_FrmCadastraServico(object):
         self.gridLayout_2.addWidget(self.cad_serv_04_ob_obs_label, 0, 15, 1, 2)
         spacerItem = QtWidgets.QSpacerItem(5, 40, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_2.addItem(spacerItem, 2, 14, 1, 1)
-        self.cad_serv_03_ob_valor = QtWidgets.QLineEdit(self.gridLayoutWidget)
+        self.cad_serv_03_valor = QtWidgets.QLineEdit(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.cad_serv_03_ob_valor.setFont(font)
-        self.cad_serv_03_ob_valor.setFocusPolicy(QtCore.Qt.WheelFocus)
-        self.cad_serv_03_ob_valor.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.cad_serv_03_valor.setFont(font)
+        self.cad_serv_03_valor.setFocusPolicy(QtCore.Qt.WheelFocus)
+        self.cad_serv_03_valor.setStyleSheet("color: rgb(255, 255, 255);\n"
 "        background-color: transparent;\n"
 "        border-style: solid;\n"
 "        border-width: 1px;\n"
 "        border-color: rgb(103, 120, 138);\n"
 "border-radius:3px;")
-        self.cad_serv_03_ob_valor.setInputMask("")
-        self.cad_serv_03_ob_valor.setMaxLength(14)
-        self.cad_serv_03_ob_valor.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.cad_serv_03_ob_valor.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.cad_serv_03_ob_valor.setReadOnly(False)
-        self.cad_serv_03_ob_valor.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.cad_serv_03_ob_valor.setObjectName("cad_serv_03_ob_valor")
-        self.gridLayout_2.addWidget(self.cad_serv_03_ob_valor, 1, 8, 1, 7)
+        self.cad_serv_03_valor.setInputMask("")
+        self.cad_serv_03_valor.setMaxLength(14)
+        self.cad_serv_03_valor.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.cad_serv_03_valor.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.cad_serv_03_valor.setReadOnly(False)
+        self.cad_serv_03_valor.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.cad_serv_03_valor.setObjectName("cad_serv_03_valor")
+        self.gridLayout_2.addWidget(self.cad_serv_03_valor, 1, 8, 1, 7)
         self.cad_serv_04_ob_obs = QtWidgets.QPlainTextEdit(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -82,47 +82,47 @@ class Ui_FrmCadastraServico(object):
         self.gridLayout_2.addItem(spacerItem1, 0, 18, 1, 1)
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_2.addItem(spacerItem2, 2, 9, 1, 1)
-        self.cad_serv_04_ob_servico_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.cad_serv_01_ob_servico_label = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.cad_serv_04_ob_servico_label.setFont(font)
-        self.cad_serv_04_ob_servico_label.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.cad_serv_04_ob_servico_label.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.cad_serv_01_ob_servico_label.setFont(font)
+        self.cad_serv_01_ob_servico_label.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.cad_serv_01_ob_servico_label.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color:rgb(110, 165, 165);\n"
 "border-radius:3px")
-        self.cad_serv_04_ob_servico_label.setAlignment(QtCore.Qt.AlignCenter)
-        self.cad_serv_04_ob_servico_label.setObjectName("cad_serv_04_ob_servico_label")
-        self.gridLayout_2.addWidget(self.cad_serv_04_ob_servico_label, 0, 0, 1, 2)
-        self.cad_serv_03_ob_valor_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.cad_serv_01_ob_servico_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.cad_serv_01_ob_servico_label.setObjectName("cad_serv_01_ob_servico_label")
+        self.gridLayout_2.addWidget(self.cad_serv_01_ob_servico_label, 0, 0, 1, 2)
+        self.cad_serv_03_valor_label = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.cad_serv_03_ob_valor_label.setFont(font)
-        self.cad_serv_03_ob_valor_label.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.cad_serv_03_ob_valor_label.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.cad_serv_03_valor_label.setFont(font)
+        self.cad_serv_03_valor_label.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.cad_serv_03_valor_label.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color:rgb(110, 165, 165);\n"
 "border-radius:3px")
-        self.cad_serv_03_ob_valor_label.setAlignment(QtCore.Qt.AlignCenter)
-        self.cad_serv_03_ob_valor_label.setObjectName("cad_serv_03_ob_valor_label")
-        self.gridLayout_2.addWidget(self.cad_serv_03_ob_valor_label, 0, 7, 1, 8)
-        self.cad_serv_04_ob_servico = QtWidgets.QLineEdit(self.gridLayoutWidget)
+        self.cad_serv_03_valor_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.cad_serv_03_valor_label.setObjectName("cad_serv_03_valor_label")
+        self.gridLayout_2.addWidget(self.cad_serv_03_valor_label, 0, 7, 1, 8)
+        self.cad_serv_01_ob_servico = QtWidgets.QLineEdit(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.cad_serv_04_ob_servico.setFont(font)
-        self.cad_serv_04_ob_servico.setFocusPolicy(QtCore.Qt.WheelFocus)
-        self.cad_serv_04_ob_servico.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.cad_serv_01_ob_servico.setFont(font)
+        self.cad_serv_01_ob_servico.setFocusPolicy(QtCore.Qt.WheelFocus)
+        self.cad_serv_01_ob_servico.setStyleSheet("color: rgb(255, 255, 255);\n"
 "        background-color: transparent;\n"
 "        border-style: solid;\n"
 "        border-width: 1px;\n"
 "        border-color: rgb(103, 120, 138);\n"
 "border-radius:3px;")
-        self.cad_serv_04_ob_servico.setInputMask("")
-        self.cad_serv_04_ob_servico.setMaxLength(60)
-        self.cad_serv_04_ob_servico.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.cad_serv_04_ob_servico.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.cad_serv_04_ob_servico.setReadOnly(False)
-        self.cad_serv_04_ob_servico.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.cad_serv_04_ob_servico.setObjectName("cad_serv_04_ob_servico")
-        self.gridLayout_2.addWidget(self.cad_serv_04_ob_servico, 1, 0, 1, 5)
+        self.cad_serv_01_ob_servico.setInputMask("")
+        self.cad_serv_01_ob_servico.setMaxLength(100)
+        self.cad_serv_01_ob_servico.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.cad_serv_01_ob_servico.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.cad_serv_01_ob_servico.setReadOnly(False)
+        self.cad_serv_01_ob_servico.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.cad_serv_01_ob_servico.setObjectName("cad_serv_01_ob_servico")
+        self.gridLayout_2.addWidget(self.cad_serv_01_ob_servico, 1, 0, 1, 5)
         spacerItem3 = QtWidgets.QSpacerItem(800, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_2.addItem(spacerItem3, 2, 1, 1, 4)
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -201,7 +201,14 @@ class Ui_FrmCadastraServico(object):
         self.cad_serv_02_periodo_label.setObjectName("cad_serv_02_periodo_label")
         self.gridLayout_2.addWidget(self.cad_serv_02_periodo_label, 0, 5, 1, 2)
         self.tableView_cliente = QtWidgets.QTableView(FrmCadastraServico)
-        self.tableView_cliente.setGeometry(QtCore.QRect(10, 179, 770, 320))
+        self.tableView_cliente.setGeometry(QtCore.QRect(10, 179, 1071, 320))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.tableView_cliente.setFont(font)
         self.tableView_cliente.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 10pt \"MS Shell Dlg 2\";\n"
 "        background-color: transparent;\n"
@@ -210,22 +217,8 @@ class Ui_FrmCadastraServico(object):
 "        border-color: rgb(103, 120, 138);\n"
 "border-radius:3px;")
         self.tableView_cliente.setObjectName("tableView_cliente")
-        self.cad_serv_04_ob_obs_2 = QtWidgets.QPlainTextEdit(FrmCadastraServico)
-        self.cad_serv_04_ob_obs_2.setGeometry(QtCore.QRect(790, 179, 395, 206))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.cad_serv_04_ob_obs_2.setFont(font)
-        self.cad_serv_04_ob_obs_2.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.cad_serv_04_ob_obs_2.setStyleSheet("color: rgb(255, 255, 255);\n"
-"        background-color: transparent;\n"
-"        border-style: solid;\n"
-"        border-width: 1px;\n"
-"        border-color: rgb(103, 120, 138);\n"
-"border-radius:3px;")
-        self.cad_serv_04_ob_obs_2.setReadOnly(True)
-        self.cad_serv_04_ob_obs_2.setObjectName("cad_serv_04_ob_obs_2")
         self.verticalLayoutWidget = QtWidgets.QWidget(FrmCadastraServico)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(938, 390, 101, 113))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(1085, 390, 101, 113))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -345,12 +338,11 @@ class Ui_FrmCadastraServico(object):
 
         self.retranslateUi(FrmCadastraServico)
         QtCore.QMetaObject.connectSlotsByName(FrmCadastraServico)
-        FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_servico, self.cad_serv_02_periodo)
-        FrmCadastraServico.setTabOrder(self.cad_serv_02_periodo, self.cad_serv_03_ob_valor)
-        FrmCadastraServico.setTabOrder(self.cad_serv_03_ob_valor, self.cad_serv_04_ob_obs)
+        FrmCadastraServico.setTabOrder(self.cad_serv_01_ob_servico, self.cad_serv_02_periodo)
+        FrmCadastraServico.setTabOrder(self.cad_serv_02_periodo, self.cad_serv_03_valor)
+        FrmCadastraServico.setTabOrder(self.cad_serv_03_valor, self.cad_serv_04_ob_obs)
         FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_obs, self.tableView_cliente)
-        FrmCadastraServico.setTabOrder(self.tableView_cliente, self.cad_serv_04_ob_obs_2)
-        FrmCadastraServico.setTabOrder(self.cad_serv_04_ob_obs_2, self.btn_serv_adicionar)
+        FrmCadastraServico.setTabOrder(self.tableView_cliente, self.btn_serv_adicionar)
         FrmCadastraServico.setTabOrder(self.btn_serv_adicionar, self.btn_serv_cadastrar)
         FrmCadastraServico.setTabOrder(self.btn_serv_cadastrar, self.btn_serv_cancelar)
         FrmCadastraServico.setTabOrder(self.btn_serv_cancelar, self.btn_serv_sair)
@@ -360,20 +352,10 @@ class Ui_FrmCadastraServico(object):
         FrmCadastraServico.setWindowTitle(_translate("FrmCadastraServico", "Cadastra Serviço"))
         self.cad_ani_kg_label.setText(_translate("FrmCadastraServico", " R$ "))
         self.cad_serv_04_ob_obs_label.setText(_translate("FrmCadastraServico", " Observação "))
-        self.cad_serv_04_ob_servico_label.setText(_translate("FrmCadastraServico", "Serviço"))
-        self.cad_serv_03_ob_valor_label.setText(_translate("FrmCadastraServico", " Valor "))
+        self.cad_serv_01_ob_servico_label.setText(_translate("FrmCadastraServico", "Serviço"))
+        self.cad_serv_03_valor_label.setText(_translate("FrmCadastraServico", " Valor "))
         self.btn_serv_adicionar.setText(_translate("FrmCadastraServico", "Adicionar Serviço"))
         self.cad_serv_02_periodo_label.setText(_translate("FrmCadastraServico", " Período "))
         self.btn_serv_cadastrar.setText(_translate("FrmCadastraServico", "Salvar"))
         self.btn_serv_cancelar.setText(_translate("FrmCadastraServico", "Cancelar"))
         self.btn_serv_sair.setText(_translate("FrmCadastraServico", "Sair"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    FrmCadastraServico = QtWidgets.QWidget()
-    ui = Ui_FrmCadastraServico()
-    ui.setupUi(FrmCadastraServico)
-    FrmCadastraServico.show()
-    sys.exit(app.exec_())

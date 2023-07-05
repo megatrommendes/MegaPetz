@@ -6,7 +6,7 @@ def valida_real(text):
     text = ''.join(filter(lambda x: x.isdigit() or x == ',', text))
 
     # Verifica se a string tem menos de 4 dígitos ou contém a sequência '0,' em qualquer parte
-    if len(text) <= 2 or '0,' in text:
+    if len(text) <= 2:
         envia_mensagem("Erro de validação", "Valor incorreto.")
         return False
     else:

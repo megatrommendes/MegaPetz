@@ -30,7 +30,7 @@ class Ui_FrmPrincipal(object):
         self.line.setObjectName("line")
         FrmPrincipal.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(FrmPrincipal)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 782, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 782, 22))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
@@ -131,6 +131,11 @@ class Ui_FrmPrincipal(object):
         self.actionFinalizar_Aplicativo.setFont(font)
         self.actionFinalizar_Aplicativo.setObjectName("actionFinalizar_Aplicativo")
         self.actionCadastra_Servi_o = QtWidgets.QAction(FrmPrincipal)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.actionCadastra_Servi_o.setFont(font)
         self.actionCadastra_Servi_o.setObjectName("actionCadastra_Servi_o")
         self.menuUsu_rio.addAction(self.actionCadastra_Usu_rio)
         self.menuUsu_rio.addSeparator()
@@ -196,13 +201,3 @@ class Ui_FrmPrincipal(object):
         self.actionExclui_Mascote.setText(_translate("FrmPrincipal", "Exclui Mascote"))
         self.actionFinalizar_Aplicativo.setText(_translate("FrmPrincipal", "Finalizar Aplicativo"))
         self.actionCadastra_Servi_o.setText(_translate("FrmPrincipal", "Cadastra Serviço"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    FrmPrincipal = QtWidgets.QMainWindow()
-    ui = Ui_FrmPrincipal()
-    ui.setupUi(FrmPrincipal)
-    FrmPrincipal.show()
-    sys.exit(app.exec_())

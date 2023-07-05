@@ -29,7 +29,7 @@ class J_FrmCadastraServico(QWidget):
 
         # Definir o cabeçalho das colunas
         self.model = QStandardItemModel()
-        self.model.setHorizontalHeaderLabels(['Serviço', 'Período', 'Valor'])
+        self.model.setHorizontalHeaderLabels(['Serviço', 'Período', 'Valor', 'Observação'])
 
         # Configurar o QTableView
         self.ui.tableView_cliente.setModel(self.model)
@@ -69,17 +69,18 @@ class J_FrmCadastraServico(QWidget):
         self.ui.cad_serv_02_periodo.textChanged.connect(
             lambda text: self.ui.cad_serv_02_periodo.setText(formata_hora(text)))
 
-        self.ui.cad_serv_03_ob_valor.textChanged.connect(
-            lambda text: self.ui.cad_serv_03_ob_valor.setText(formata_real(text)))
+        self.ui.cad_serv_03_valor.textChanged.connect(
+            lambda text: self.ui.cad_serv_03_valor.setText(formata_real(text)))
 
         # Conexão do sinal clicked do botão ao slot de adicionar serviço
         self.ui.btn_serv_adicionar.clicked.connect(self.inserir_texto)
 
     def inserir_texto(self):
         # Obtenção do texto do QLineEdit
-        servico = self.ui.cad_serv_04_ob_servico.text()
+        servico = self.ui.cad_serv_01_ob_servico.text()
         periodo = self.ui.cad_serv_02_periodo.text()
-        valor = self.ui.cad_serv_03_ob_valor.text()
+        valor = self.ui.cad_serv_03_valor.text()
+        observacao = self.ui.cad_serv_04_ob_obs.toPlainText()
 
         # Obtenção do modelo da tabela
         model = self.ui.tableView_cliente.model()
@@ -95,11 +96,13 @@ class J_FrmCadastraServico(QWidget):
         item_servico = QStandardItem(servico)
         item_periodo = QStandardItem(periodo)
         item_valor = QStandardItem(valor)
+        item_observacao = QStandardItem(observacao)
 
         # Definição dos objetos item nas células apropriadas
         model.setItem(model.rowCount() - 1, 0, item_servico)
         model.setItem(model.rowCount() - 1, 1, item_periodo)
         model.setItem(model.rowCount() - 1, 2, item_valor)
+        model.setItem(model.rowCount() - 1, 3, item_observacao)
 
         # Definir cores alternadas para as linhas da tabela
         row_count = model.rowCount()
@@ -114,6 +117,13 @@ class J_FrmCadastraServico(QWidget):
                         # Cor para linhas ímpares (verde claro)
                         item.setBackground(QColor(110, 165, 165))  # Verde claro
 
+        # Configurando o ajuste automático das linhas
+        self.ui.tableView_cliente.resizeColumnsToContents()
+        self.ui.tableView_cliente.resizeRowsToContents()
+
+        # Configurando o ajuste automático das colunas
+        header = self.ui.tableView_cliente.horizontalHeader()
+        header.setSectionResizeMode(QHeaderView.ResizeToContents)
+
         # Atualização da exibição da tabela
         self.ui.tableView_cliente.viewport().update()
-

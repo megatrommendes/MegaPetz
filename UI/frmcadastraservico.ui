@@ -90,7 +90,7 @@ border-radius:3px</string>
      </spacer>
     </item>
     <item row="1" column="8" colspan="7">
-     <widget class="QLineEdit" name="cad_serv_03_ob_valor">
+     <widget class="QLineEdit" name="cad_serv_03_valor">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -177,7 +177,7 @@ border-radius:3px;</string>
      </spacer>
     </item>
     <item row="0" column="0" colspan="2">
-     <widget class="QLabel" name="cad_serv_04_ob_servico_label">
+     <widget class="QLabel" name="cad_serv_01_ob_servico_label">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -200,7 +200,7 @@ border-radius:3px</string>
      </widget>
     </item>
     <item row="0" column="7" colspan="8">
-     <widget class="QLabel" name="cad_serv_03_ob_valor_label">
+     <widget class="QLabel" name="cad_serv_03_valor_label">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -223,7 +223,7 @@ border-radius:3px</string>
      </widget>
     </item>
     <item row="1" column="0" colspan="5">
-     <widget class="QLineEdit" name="cad_serv_04_ob_servico">
+     <widget class="QLineEdit" name="cad_serv_01_ob_servico">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -244,7 +244,7 @@ border-radius:3px;</string>
        <string notr="true"/>
       </property>
       <property name="maxLength">
-       <number>60</number>
+       <number>100</number>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Normal</enum>
@@ -449,9 +449,18 @@ border-radius:3px</string>
     <rect>
      <x>10</x>
      <y>179</y>
-     <width>770</width>
+     <width>1071</width>
      <height>320</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
@@ -463,39 +472,10 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:3px;</string>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="cad_serv_04_ob_obs_2">
-   <property name="geometry">
-    <rect>
-     <x>790</x>
-     <y>179</y>
-     <width>395</width>
-     <height>206</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-        background-color: transparent;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(103, 120, 138);
-border-radius:3px;</string>
-   </property>
-   <property name="readOnly">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>938</x>
+     <x>1085</x>
      <y>390</y>
      <width>101</width>
      <height>113</height>
@@ -663,12 +643,11 @@ border-radius:3px}
   </widget>
  </widget>
  <tabstops>
-  <tabstop>cad_serv_04_ob_servico</tabstop>
+  <tabstop>cad_serv_01_ob_servico</tabstop>
   <tabstop>cad_serv_02_periodo</tabstop>
-  <tabstop>cad_serv_03_ob_valor</tabstop>
+  <tabstop>cad_serv_03_valor</tabstop>
   <tabstop>cad_serv_04_ob_obs</tabstop>
   <tabstop>tableView_cliente</tabstop>
-  <tabstop>cad_serv_04_ob_obs_2</tabstop>
   <tabstop>btn_serv_adicionar</tabstop>
   <tabstop>btn_serv_cadastrar</tabstop>
   <tabstop>btn_serv_cancelar</tabstop>
