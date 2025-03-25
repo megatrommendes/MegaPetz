@@ -1,6 +1,4 @@
 from PyQt5 import QtWidgets, QtCore
-
-
 class Cancela_Tab(QtWidgets.QApplication):
     #  Aqui, a classe Cancela_Tab é uma subclasse da classe QApplication que sobrescreve
     #  o método notify para interceptar os eventos de teclado e cancelar a ação da tecla Tab.

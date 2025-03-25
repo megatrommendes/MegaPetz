@@ -1,0 +1,17 @@
+pyinstaller --onefile --name MegaPetz ^
+--add-data "C:\\MegaPetz\\Model;Model" ^
+--add-data "C:\\MegaPetz\\View;View" ^
+--add-data "C:\\MegaPetz\\View\\FontEnd;View\\FontEnd" ^
+--add-data "C:\\MegaPetz\\View\\BackEnd;View\\BackEnd" ^
+--add-data "C:\\MegaPetz\\Controller;Controller" ^
+--add-data "C:\\MegaPetz\\UI;UI" ^
+--add-data "C:\\MegaPetz\\DataBase;DataBase" ^
+--add-data "C:\\MegaPetz\\Model\\DAO\\FuncoesAuxiliares;Model\\DAO\\FuncoesAuxiliares" ^
+--add-data "C:\\MegaPetz\\Model\\DAO\\FuncoesFormularios\\FuncoesFormAnimal;Model\\DAO\\FuncoesFormularios\\FuncoesFormAnimal" ^
+--add-data "C:\\MegaPetz\\Model\\DAO\\FuncoesFormularios\\FuncoesFormCliente;Model\\DAO\\FuncoesFormularios\\FuncoesFormCliente" ^
+--add-data "C:\\MegaPetz\\Model\\DAO\\FuncoesFormularios\\FuncoesFormServico;Model\\DAO\\FuncoesFormularios\\FuncoesFormServico" ^
+--add-data "C:\\MegaPetz\\Model\\DTO;Model\\DTO" ^
+--hidden-import=requests ^
+--hidden-import=sqlite3 ^
+--hidden-import cv2 ^
+C:\\MegaPetz\\View\\BackEnd\\Back_Principal.py

@@ -13,7 +13,7 @@ def valida_campo_servico(self, event):
     todos_widgets = {widget.objectName(): widget for widget in widgets_ordenados}
     if isinstance(event, QKeyEvent):
         if event.key() not in [Qt.Key_Enter, Qt.Key_Return]:
-            return
+          return
     current_widget = self.focusWidget()
 
     if not isinstance(current_widget, (QLineEdit, QPlainTextEdit)):
@@ -53,3 +53,4 @@ def valida_campo_servico(self, event):
     elif 'ob' not in widget_name:
         self.focusNextChild()
         return
+

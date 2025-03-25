@@ -208,7 +208,7 @@ border-radius:3px</string>
 border-radius:3px</string>
        </property>
        <property name="currentIndex">
-        <number>-1</number>
+        <number>0</number>
        </property>
        <item>
         <property name="text">
@@ -217,7 +217,7 @@ border-radius:3px</string>
        </item>
        <item>
         <property name="text">
-         <string>Femia</string>
+         <string>Femea</string>
         </property>
        </item>
       </widget>
